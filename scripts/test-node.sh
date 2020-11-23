@@ -7,5 +7,5 @@ set -e
 DIR=$1
 CMD=$2
 
-echo "$(cat $DIR/input)" | node "$DIR/$CMD" | diff - "$DIR/output"
+cat "$DIR/input" | node "$DIR/$CMD" | diff - "$DIR/output"
 echo "$DIR / node $CMD ✅"

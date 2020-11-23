@@ -7,5 +7,5 @@ set -e
 DIR=$1
 CMD=$2
 
-echo "$(cat $DIR/input)" | python3 "$DIR/$CMD" | diff - "$DIR/output"
+cat "$DIR/input" | python3 "$DIR/$CMD" | diff - "$DIR/output"
 echo "$DIR / python3 $CMD ✅"

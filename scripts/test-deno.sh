@@ -7,5 +7,5 @@ set -e
 DIR=$1
 CMD=$2
 
-echo "$(cat $DIR/input)" | deno run "$DIR/$CMD" | diff - "$DIR/output"
+cat "$DIR/input" | deno run "$DIR/$CMD" | diff - "$DIR/output"
 echo "$DIR / deno run $CMD ✅"
