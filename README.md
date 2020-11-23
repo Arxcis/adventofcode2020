@@ -17,7 +17,7 @@ $DIR/../scripts/test-py.sh $DIR "solution/super-optimized.py"
 ```
 
 5. Make a Pull Request to the `main` branch.
-6. Get merged!
+6. Merge when the tests pass!
 
 **How are programs tested?**
 
