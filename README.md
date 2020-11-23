@@ -3,17 +3,17 @@ Solving the 2020 edition of https://adventofcode.com/ in many languages, and tes
 
 ## Contributing
 1. Make a branch. Example: `git checkout -b jonas/day-03`
-2. Write a program, in the language of your choice. Example: `vim day-03/cmd/super-optimized.py`
+2. Write a program, in the language of your choice. Example: `vim day-03/solution/super-optimized.py`
 3. Test your program.
 
 ```sh
-cat day-03/input | python3 day-03/cmd/super-optimized.py | diff - day-03/output
+cat day-03/input | python3 day-03/solution/super-optimized.py | diff - day-03/output
 ```
 
 4. Make sure your program is automatically tested by the Github CI, by adding a line of code to `day-03/test.sh`.
 *Example line:*
 ```sh
-$DIR/../scripts/test-py.sh $DIR "cmd/super-optimized.py"
+$DIR/../scripts/test-py.sh $DIR "solution/super-optimized.py"
 ```
 
 5. Make a Pull Request to the `main` branch.
