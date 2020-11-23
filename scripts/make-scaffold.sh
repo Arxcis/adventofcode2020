@@ -26,7 +26,7 @@ set -e
 DIR=$(dirname $(realpath $0))
 
 # Run tests
-# Example: $DIR/../scripts/test-deno.sh "main.deno.ts" $DIR
+# Example: $DIR/../scripts/test-deno.sh $DIR ./cmd/main.deno.ts
 TEST
 
     chmod +x ./day-$i/test.sh
