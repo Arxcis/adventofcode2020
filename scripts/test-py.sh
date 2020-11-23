@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ../test-py.sh DIR                      SOLUTION
-# Example: ../test-py.sh /adventofcode2020/day-03 solution/main.py
+# Example: ../test-py.sh /adventofcode2020/day-03 solutions/main.py
 
 DIR="$1"
 SOLUTION="$2"

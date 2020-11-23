@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ../test-node.sh DIR                      SOLUTION
-# Example: ../test-node.sh /adventofcode2020/day-03 solution/main.node.mjs
+# Example: ../test-node.sh /adventofcode2020/day-03 solutions/main.node.mjs
 
 DIR="$1"
 SOLUTION="$2"
