@@ -1,6 +1,6 @@
 # day-00-example
 
-This example-folder sets the precedence, of how the rest of the folders should be laid out.
+This example-folder sets the precedence, for how the rest of the folders should be laid out.
 
 ## --- Part 1 ---
 

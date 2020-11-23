@@ -1,24 +1,11 @@
-name: test
+name: day-00-example
 on:
   push:
-    branches:
-      - main
-    paths-ignore:
-      - README.md
-
-  pull_request:
-    branches:
-      - main
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
-    paths-ignore:
-      - README.md
+    paths:
+    - 'day-00-example/**'
 
 jobs:
-  day-00-example:
+  test:
     runs-on: ubuntu-latest
     container:
       image: jonasjso/adventofcode2020
