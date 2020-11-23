@@ -1,6 +1,20 @@
 #!/bin/bash
-echo ""
+echo "$ uname -a"
 uname -a
-
 echo ""
-python --version
+
+echo "$ deno --version"
+deno --version
+echo ""
+
+echo "$ go version"
+go version
+echo ""
+
+echo "$ node --version"
+node --version
+echo ""
+
+echo "$ python3 --version"
+python3 --version
+echo ""

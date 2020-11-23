@@ -1,0 +1,17 @@
+name: day-00-example
+on:
+  push:
+    paths:
+    - 'day-00-example/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020
+    steps:
+      - uses: actions/checkout@v2
+      - name: Print versions
+        run: ./scripts/print-versions.sh
+      - name: Run test
+        run: ./day-00-example/test.sh
