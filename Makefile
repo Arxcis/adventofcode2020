@@ -10,4 +10,10 @@ dockerpush:
 versions:
 	./scripts/print-versions.sh
 
-.PHONY: dockerbuild dockerpush test versions
+workflows:
+	./scripts/make-workflows.sh
+
+scaffold:
+	./scripts/make-scaffold.sh
+
+.PHONY: dockerbuild dockerpush test versions workflows scaffold
