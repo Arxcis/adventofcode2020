@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-# Usage:   ../test-py.sh FILENAME  DIR
-# Example: ../test-py.sh main.py   /home/jonas/adventofcode2020/day-00-example
+# Usage:   ../test-py.sh DIR                      CMD
+# Example: ../test-py.sh /adventofcode2020/day-03 cmd/main.py
 
-FILENAME=$1
-DIR=$2
+DIR=$1
+CMD=$2
 
-echo "$(cat $DIR/input)" | python3 "$DIR/cmd/$FILENAME" | diff - "$DIR/output"
-echo "$DIR / python3 $FILENAME ✅"
+echo "$(cat $DIR/input)" | python3 "$DIR/$CMD" | diff - "$DIR/output"
+echo "$DIR / python3 $CMD ✅"

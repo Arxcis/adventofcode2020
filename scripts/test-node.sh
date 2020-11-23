@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-# Usage:   ../test-node.sh FILENAME     DIR
-# Example: ../test-node.sh main.node.ts /home/jonas/adventofcode2020/day-00-example
+# Usage:   ../test-node.sh DIR                      CMD
+# Example: ../test-node.sh /adventofcode2020/day-03 cmd/main.node.mjs
 
-FILENAME=$1
-DIR=$2
+DIR=$1
+CMD=$2
 
-echo "$(cat $DIR/input)" | node "$DIR/cmd/$FILENAME" | diff - "$DIR/output"
-echo "$DIR / node $FILENAME ✅"
+echo "$(cat $DIR/input)" | node "$DIR/$CMD" | diff - "$DIR/output"
+echo "$DIR / node $CMD ✅"
