@@ -13,7 +13,7 @@ versions:
 workflows:
 	./scripts/make-workflows.sh
 
-scaffold:
-	./scripts/make-scaffold.sh
+folders:
+	./scripts/make-folders.sh
 
-.PHONY: dockerbuild dockerpush test versions workflows scaffold
+.PHONY: dockerbuild dockerpush test versions workflows folders
