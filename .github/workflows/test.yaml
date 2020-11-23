@@ -1,0 +1,28 @@
+name: test
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
+
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    paths-ignore:
+      - README.md
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020
+    steps:
+      - uses: actions/checkout@v2
+      - name: Print versions
+        run: ./scripts/print-versions.sh
