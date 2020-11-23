@@ -1,5 +1,5 @@
 test:
-	echo "hello test"
+	./day00-example/test.sh
 
 dockerbuild: Dockerfile
 	docker build . --tag jonasjso/adventofcode2020
@@ -7,6 +7,8 @@ dockerbuild: Dockerfile
 dockerpush:
 	docker push jonasjso/adventofcode2020:latest
 
+versions:
+	./scripts/versions.sh
 
-.PHONY: dockerbuild dockerpush test
+.PHONY: dockerbuild dockerpush test versions
 

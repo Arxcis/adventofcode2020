@@ -18,11 +18,13 @@ on:
       - README.md
 
 jobs:
-  test:
+  day00-example:
     runs-on: ubuntu-latest
     container:
       image: jonasjso/adventofcode2020
     steps:
       - uses: actions/checkout@v2
       - name: Print versions
-        run: ./scripts/print-versions.sh
+        run: ./scripts/versions.sh
+      - name: Test day 00
+        run: ./day00-example/test.sh
