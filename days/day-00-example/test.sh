@@ -2,6 +2,7 @@
 DIR=$(dirname $(realpath $0))
 
 # Run tests
+$DIR/../../scripts/test-bash.sh $DIR "solutions/main.bash"
 $DIR/../../scripts/test-c.sh    $DIR "solutions/main.c"
 $DIR/../../scripts/test-cpp.sh  $DIR "solutions/main.cpp"
 $DIR/../../scripts/test-go.sh   $DIR "solutions/main.go"
