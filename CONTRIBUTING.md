@@ -31,7 +31,7 @@ See `day-00-example/solutions/`, for examples on how to read from `stdin` and ho
 
 To add a support for a new language:
 1. Add a line to the Dockerfile: `apt install <the language you want>`.
-2. Add an example-solution to `./day-00-example/solutions/main.<language-extension>`.
-2. Add a test-script: `touch ./scripts/test-<the-language-you-want>.sh`.
+2. Add an example-solution to `vim ./day-00-example/solutions/main.<language-extension>`.
+2. Add a test-script: `vim ./scripts/test-<the-language-you-want>.sh`.
 3. Make a PR, and we will merge the PR, build and upload a new container to Dockerhub ASAP!
 
