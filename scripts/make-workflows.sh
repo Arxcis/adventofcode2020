@@ -16,10 +16,6 @@ on:
     paths:
       - '${DAY}/**'
 
-  pull_request:
-    paths:
-      - '${DAY}/**'
-
 jobs:
 test:
     runs-on: ubuntu-latest
