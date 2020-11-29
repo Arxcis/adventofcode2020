@@ -22,3 +22,16 @@ cat input.txt | <run-solution> | diff - output.txt
 ```
 See [day-00-example/solutions/](https://github.com/Arxcis/adventofcode2020/tree/main/days/day-00-example/solutions), for examples on how to read from `stdin` and how to write to `stdout` in different languages.
 
+## Languages supported by CI - so far
+
+```
+bash    main.bash
+gcc     main.c -o gcc.out && ./gcc.out
+g++     main.cpp -o g++.out && ./g++.out
+go run  main.go
+javac   Main.java && java Main
+node    main.node.mjs
+php     main.php
+python3 main.py
+rustc   main.rs -o rustc.out && ./rustc.out
+```
