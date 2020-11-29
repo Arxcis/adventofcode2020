@@ -28,9 +28,10 @@ Every solution gets the `input`-challenge delivered to `stdin`, and every soluti
 cat input | <run-solution> | diff - output
 ```
 
-**The CI does not support my favourite language. What do I do?**
+**Which languages are supported?**
 
-If we don't support the language you want to write in, don't worry. Make an issue on `Github`, and we will add it.
+Any langugae you can install via `sudo apt install <language>`. Add the language you want to the `Dockerfile`.
+
 
 ## Status
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
