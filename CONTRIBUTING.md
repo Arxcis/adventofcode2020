@@ -1,20 +1,21 @@
 # Contributing
-1. Make a branch. Example: `git checkout -b jonas/day-03`
-2. Write a solution, in the language of your choice. Example: `vim day-03/solutions/super-optimized.py`
-3. Test your solution.
+1. Pop a can of beer :beer: (or whatever is your poison)
+2. Make a branch. Example: `git checkout -b jonas/day-03`
+3. Write a solution, in the language of your choice. Example: `vim day-03/solutions/super-optimized.py`
+4. Test your solution.
 
 ```sh
 cat day-03/input.txt | python3 day-03/solutions/super-optimized.py | diff - day-03/output.txt
 ```
 
-4. Make sure your solution is automatically tested by the Github CI, by adding a line of code to `day-03/test.sh`.
+5. Make sure your solution is automatically tested by the Github CI, by adding a line of code to `day-03/test.sh`.
 *Example line:*
 ```sh
 $DIR/../../scripts/test-py.sh $DIR "solutions/super-optimized.py"
 ```
 
-5. Make a Pull Request to the `main` branch.
-6. Merge when the tests pass!
+6. Make a Pull Request to the `main` branch.
+7. Merge when the tests pass!
 
 ## How are solutions tested?
 
