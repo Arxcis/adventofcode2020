@@ -5,6 +5,10 @@ echo "$ uname -a"
 uname -a
 echo ""
 
+echo "$ bash --version"
+bash --version
+echo ""
+
 echo "$ gcc version"
 gcc --version
 
