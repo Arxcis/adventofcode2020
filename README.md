@@ -1,5 +1,5 @@
 # adventofcode2020
-Collaboratively solving the 2020 edition of https://adventofcode.com/, and test the solutions using Github CI.
+Collaboratively solve the 2020 edition of https://adventofcode.com/, and test the solutions using Github CI.
 
 ## [CONTRIBUTING.md](./CONTRIBUTING.md)
 
