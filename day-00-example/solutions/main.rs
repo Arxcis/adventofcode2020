@@ -2,11 +2,11 @@ use std::{io, io::prelude::*};
 
 fn main() {
   let stdin = io::stdin();
-  let sum: i64 = stdin
+  let sum = stdin
     .lock()
     .lines()
     .filter_map(|line| line.ok()?.parse::<i64>().ok())
-    .sum();
+    .fold(0, |acc, number| acc + number);
 
   println!("{}", sum);
 }
