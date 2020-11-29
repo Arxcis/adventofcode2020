@@ -10,8 +10,7 @@ import readline from "readline";
   for await (const line of lines) {
     const num = parseInt(line);
     sumAll += num;
-    sumOdd += num % 2 === 0 ? 0 : num
-
+    sumOdd += num % 2 !== 0 ? num : 0
   }
 
   // = Answer

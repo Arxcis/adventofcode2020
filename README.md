@@ -28,10 +28,11 @@ Every solution gets the `input`-challenge delivered to `stdin`, and every soluti
 cat input | <run-solution> | diff - output
 ```
 
-**Which languages are supported?**
+**How do I add support for a programming language?**
 
-Any langugae you can install via `sudo apt install <language>`. Add the language you want to the `Dockerfile`.
-
+To add a support for a new language:
+1. Add a line to the Dockerfile: `apt install <the language you want>`.
+2. Add a test-script: `touch ./scripts/test-<the-language-you-want>.sh`.
 
 ## Status
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
