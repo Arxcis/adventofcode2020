@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020
+      image: jonasjso/adventofcode2020:latest
     steps:
       - uses: actions/checkout@v2
       - name: make test
