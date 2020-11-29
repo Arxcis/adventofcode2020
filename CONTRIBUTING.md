@@ -26,7 +26,7 @@ Every solution gets the `input`-challenge delivered to `stdin`, and every soluti
 #!/bin/bash
 cat input.txt | <run-solution> | diff - output.txt
 ```
-See `day-00-example/solutions/`, for examples on how to read from `stdin` and how to write to `stdout` in different languages.
+See [day-00-example/solutions/](https://github.com/Arxcis/adventofcode2020/tree/main/days/day-00-example/solutions), for examples on how to read from `stdin` and how to write to `stdout` in different languages.
 
 
 ## How do I add support for a programming language?
