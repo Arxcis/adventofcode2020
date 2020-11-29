@@ -1,5 +1,5 @@
 # Contributing
-1. Pop a can of beer :beer: (or whatever is your favourite)
+1. Pop a can of beer :beer: (or whatever is your favourite :popcorn: :lollipop: :champagne: :milk_glass: :wine_glass: :tropical_drink: :chocolate_bar:
 2. Make a branch. Example: `git checkout -b jonas/day-03`
 3. Write a solution, in the language of your choice. Example: `vim day-03/solutions/super-optimized.py`
 4. Test your solution.
