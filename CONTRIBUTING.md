@@ -20,7 +20,7 @@ $DIR/../../scripts/test-py.sh $DIR "solutions/super-optimized.py"
 
 ## How are solutions tested?
 
-Every solution gets the `input`-challenge delivered to `stdin`, and every solution is expected to answer, by writing the `output`-answer to `stdout`. This is identical for every language.
+Every solution gets the `input.txt`-file delivered to `stdin` using `cat`, and whatever is written to `stdout` is compared for equality against `output.txt` using `diff`. This is identical for every language.
 
 ```sh
 #!/bin/bash
