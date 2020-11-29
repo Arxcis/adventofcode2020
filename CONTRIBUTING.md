@@ -10,7 +10,7 @@ cat day-03/input | python3 day-03/solutions/super-optimized.py | diff - day-03/o
 4. Make sure your solution is automatically tested by the Github CI, by adding a line of code to `day-03/test.sh`.
 *Example line:*
 ```sh
-$DIR/../scripts/test-py.sh $DIR "solutions/super-optimized.py"
+$DIR/../../scripts/test-py.sh $DIR "solutions/super-optimized.py"
 ```
 
 5. Make a Pull Request to the `main` branch.
