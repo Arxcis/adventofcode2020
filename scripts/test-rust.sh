@@ -6,8 +6,9 @@ set -e
 
 DIR="$1"
 SOLUTION="$2"
+OUT="rustc.out"
 
-rustc "$DIR/$SOLUTION" -o "$DIR/$SOLUTION.rustc"
-cat "$DIR/input.txt" | "$DIR/$SOLUTION.rustc" | diff - "$DIR/output.txt"
-rm "$DIR/$SOLUTION.rustc"
-echo "$DIR / rustc $SOLUTION.rustc -o run && ./run ✅"
+rustc "$DIR/$SOLUTION" -o "$DIR/$OUT"
+cat "$DIR/input.txt" | "$DIR/$OUT" | diff - "$DIR/output.txt"
+rm "$DIR/$OUT"
+echo "$DIR / rustc $SOLUTION -o $OUT && ./$OUT ✅"
