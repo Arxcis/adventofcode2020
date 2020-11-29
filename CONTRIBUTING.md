@@ -31,9 +31,9 @@ See `day-00-example/solutions/`, for examples on how to read from `stdin` and ho
 
 ## How do I add support for a programming language?
 
-To add a support for a new language:
-1. Add a line to the Dockerfile: `apt install <the language you want>`.
-2. Add an example-solution: `vim ./day-00-example/solutions/main.<language-extension>`.
-2. Add a test-script: `vim ./scripts/test-<the-language-you-want>.sh`.
+To add a support for a new language create an issue OR you can help by:  
+1. Addding a line to the Dockerfile: `apt install <the language you want>`.
+2. Addding an example-solution: `vim ./day-00-example/solutions/main.<language-extension>`.
+2. Adddding  a test-script: `vim ./scripts/test-<the-language-you-want>.sh`.
 3. Make a PR, and we will merge the PR, build and upload a new container to Dockerhub ASAP!
 
