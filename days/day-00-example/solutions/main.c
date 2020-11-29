@@ -1,19 +1,12 @@
 #include <stdio.h>
 
-const int MAX_LINE_WIDTH = 100;
-
 int main() {
-  char line[MAX_LINE_WIDTH];
-  int num = 0;
   int sum_all = 0;
   int sum_odd = 0;
+  const int MAX_LINE = 100;
 
-  for (;;) {
-    fgets(line, MAX_LINE_WIDTH, stdin);
-    if (feof(stdin)) {
-      break;
-    }
-
+  for (char line[MAX_LINE]; fgets(line, MAX_LINE, stdin); ) {
+    int num = 0;
     sscanf(line, "%d", &num);
     sum_all += num;
     sum_odd += (num % 2 != 0) ? num : 0;
@@ -21,5 +14,6 @@ int main() {
 
   printf("%d\n", sum_all);
   printf("%d\n", sum_odd);
+
   return 0;
 }

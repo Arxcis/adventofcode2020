@@ -10,9 +10,8 @@ int main() {
     sum_odd += (num % 2 != 0) ? num : 0;
   }
 
-  std::cout
-    << sum_all << std::endl
-    << sum_odd << std::endl;
+  std::cout << sum_all << std::endl
+            << sum_odd << std::endl;
 
   return 0;
 }
