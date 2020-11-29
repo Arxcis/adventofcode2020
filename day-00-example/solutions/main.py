@@ -11,7 +11,5 @@ for line in fileinput.input():
   sum_all += num
   sum_odd += num if num % 2 != 0 else 0
 
-# = Answer
 print(str(sum_all))
 print(str(sum_odd))
-# ================

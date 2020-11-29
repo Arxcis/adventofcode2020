@@ -13,8 +13,6 @@ import readline from "readline";
     sumOdd += num % 2 !== 0 ? num : 0
   }
 
-  // = Answer
   console.log(`${sumAll}`)
   console.log(`${sumOdd}`)
-  // ================
 })()
