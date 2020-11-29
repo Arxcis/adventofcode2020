@@ -2,7 +2,10 @@ name: day-00-example
 on:
   push:
     paths:
-    - 'day-00-example/**'
+      - 'day-00-example/**'
+  pull_request:
+    paths:
+      - 'day-00-example/**'
 
 jobs:
   test:

@@ -12,9 +12,13 @@ do
   cat > "./.github/workflows/${DAY}.yaml" << WORKFLOW
 name: ${DAY}
 on:
-push:
+  push:
     paths:
-    - '${DAY}/**'
+      - '${DAY}/**'
+
+  pull_request:
+    paths:
+      - '${DAY}/**'
 
 jobs:
 test:
@@ -22,8 +26,8 @@ test:
     container:
     image: jonasjso/adventofcode2020
     steps:
-    - uses: actions/checkout@v2
-    - name: make test
-      run: make test DAY=${DAY}
+      - uses: actions/checkout@v2
+      - name: make test
+        run: make test DAY=${DAY}
 WORKFLOW
 done
