@@ -1,5 +1,7 @@
+# Example: "make test DAY=day-03"
 test:
-	./day-00-example/test.sh
+	./scripts/print-versions.sh;
+	./$(DAY)/test.sh
 
 dockerbuild: Dockerfile
 	docker build . --tag jonasjso/adventofcode2020
