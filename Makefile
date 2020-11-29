@@ -3,7 +3,6 @@ test-all:
 	for day in $$(ls days); do "./days/$$day/test.sh"; done
 
 test:
-	./scripts/print-versions.sh;
 	./days/$(DAY)/test.sh
 
 dockerbuild: Dockerfile

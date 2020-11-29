@@ -23,6 +23,8 @@ jobs:
       image: jonasjso/adventofcode2020:latest
     steps:
       - uses: actions/checkout@v2
+      - name: make versions
+        run: make versions
       - name: make test
         run: make test DAY=${DAY}
 WORKFLOW
