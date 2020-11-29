@@ -5,6 +5,9 @@ echo "$ uname -a"
 uname -a
 echo ""
 
+echo "$ gcc version"
+gcc --version
+
 echo "$ go version"
 go version
 echo ""
