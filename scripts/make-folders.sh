@@ -30,7 +30,8 @@ DIR=$(dirname $(realpath $0))
 # Run tests
 # Example: $DIR/../../scripts/test-rust.sh $DIR ./solutions/main.rs
 
-echo "$DIR / --- Empty --- ✅"
+echo "$DIR / --- Empty --- ❌";
+exit 1337;
 TEST
     chmod +x ./$DAY/test.sh
 done
