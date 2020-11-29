@@ -7,5 +7,5 @@ set -e
 DIR="$1"
 SOLUTION="$2"
 
-cat "$DIR/input" | go run "$DIR/$SOLUTION" | diff - "$DIR/output"
+cat "$DIR/input.txt" | go run "$DIR/$SOLUTION" | diff - "$DIR/output.txt"
 echo "$DIR / go run $SOLUTION ✅"

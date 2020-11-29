@@ -15,11 +15,11 @@ KEEP
 ## --- Part 2 ---
 README
 
-    cat > "./$DAY/input" << INPUT
+    cat > "./$DAY/input.txt" << INPUT
 <insert input>
 INPUT
 
-    cat > "./$DAY/output" << OUTPUT
+    cat > "./$DAY/output.txt" << OUTPUT
 <insert output>
 OUTPUT
 

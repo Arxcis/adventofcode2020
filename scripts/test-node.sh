@@ -7,5 +7,5 @@ set -e
 DIR="$1"
 SOLUTION="$2"
 
-cat "$DIR/input" | node "$DIR/$SOLUTION" | diff - "$DIR/output"
+cat "$DIR/input.txt" | node "$DIR/$SOLUTION" | diff - "$DIR/output.txt"
 echo "$DIR / node $SOLUTION ✅"

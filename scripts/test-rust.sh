@@ -8,6 +8,6 @@ DIR="$1"
 SOLUTION="$2"
 
 rustc "$DIR/$SOLUTION" -o "$DIR/$SOLUTION.rustc"
-cat "$DIR/input" | "$DIR/$SOLUTION.rustc" | diff - "$DIR/output"
+cat "$DIR/input.txt" | "$DIR/$SOLUTION.rustc" | diff - "$DIR/output.txt"
 rm "$DIR/$SOLUTION.rustc"
 echo "$DIR / rustc $SOLUTION.rustc -o run && ./run ✅"

@@ -7,5 +7,5 @@ set -e
 DIR="$1"
 SOLUTION="$2"
 
-cat "$DIR/input" | python3 "$DIR/$SOLUTION" | diff - "$DIR/output"
+cat "$DIR/input.txt" | python3 "$DIR/$SOLUTION" | diff - "$DIR/output.txt"
 echo "$DIR / python3 $SOLUTION ✅"

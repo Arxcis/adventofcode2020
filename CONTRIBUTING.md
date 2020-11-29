@@ -4,7 +4,7 @@
 3. Test your solution.
 
 ```sh
-cat day-03/input | python3 day-03/solutions/super-optimized.py | diff - day-03/output
+cat day-03/input.txt | python3 day-03/solutions/super-optimized.py | diff - day-03/output.txt
 ```
 
 4. Make sure your solution is automatically tested by the Github CI, by adding a line of code to `day-03/test.sh`.
@@ -22,7 +22,7 @@ Every solution gets the `input`-challenge delivered to `stdin`, and every soluti
 
 ```sh
 #!/bin/bash
-cat input | <run-solution> | diff - output
+cat input.txt | <run-solution> | diff - output.txt
 ```
 See `day-00-example/solutions/`, for examples on how to read from `stdin` and how to write to `stdout` in different languages.
 
