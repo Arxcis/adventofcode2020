@@ -23,7 +23,7 @@ $DIR/../../scripts/test-py.sh $DIR "solutions/super-optimized.py"
 Every solution gets the `input.txt`-file delivered to `stdin` using `cat`, and whatever is written to `stdout` is compared for equality against `output.txt` using `diff`. This is identical for every language.
 
 ```sh
-#!/bin/bash
+#!/usr/bin/env bash
 cat input.txt | <run-solution> | diff - output.txt
 ```
 See [day-00-example/solutions/](https://github.com/Arxcis/adventofcode2020/tree/main/days/day-00-example/solutions), for examples on how to read from `stdin` and how to write to `stdout` in different languages.
@@ -31,7 +31,7 @@ See [day-00-example/solutions/](https://github.com/Arxcis/adventofcode2020/tree/
 
 ## How do I add support for a programming language?
 
-To add support for a new language create an issue OR you can help by:  
+To add support for a new language create an issue OR you can help by:
 1. Add a line to the Dockerfile: `apt install <the language you want>`.
 2. Add an example-solution: `vim ./day-00-example/solutions/main.<language-extension>`.
 2. Add  a test-script: `vim ./scripts/test-<the-language-you-want>.sh`.

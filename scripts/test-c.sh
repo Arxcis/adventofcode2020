@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # Usage:   ../test-c.sh DIR     SOLUTION

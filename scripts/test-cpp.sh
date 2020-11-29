@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # Usage:   ../test-cpp.sh DIR     SOLUTION
