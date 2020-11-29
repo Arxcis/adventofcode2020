@@ -1,10 +1,10 @@
 # Example: "make test DAY=day-03"
 test-all:
-	for i in $$(ls | grep day-); do "./$$i/test.sh"; done
+	for day in $$(ls days); do "./days/$$day/test.sh"; done
 
 test:
 	./scripts/print-versions.sh;
-	./$(DAY)/test.sh
+	./days/$(DAY)/test.sh
 
 dockerbuild: Dockerfile
 	docker build . --tag jonasjso/adventofcode2020

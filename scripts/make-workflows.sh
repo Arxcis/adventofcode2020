@@ -10,11 +10,11 @@ for i in {01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,2
 do
   DAY="day-${i}"
   cat > "./.github/workflows/${DAY}.yaml" << WORKFLOW
-name: ${DAY}
+name: days/${DAY}
 on:
   push:
     paths:
-      - '${DAY}/**'
+      - 'days/${DAY}/**'
 
 jobs:
   test:

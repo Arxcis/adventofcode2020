@@ -1,8 +1,8 @@
-name: day-15
+name: days/day-15
 on:
   push:
     paths:
-      - 'day-15/**'
+      - 'days/day-15/**'
 
 jobs:
   test:

@@ -3,7 +3,7 @@
 # Make folders for all the days in the calendar
 for i in {01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25}
 do
-    DAY="day-$i"
+    DAY="days/day-$i"
     rm -r "./$DAY"
     mkdir -p "./$DAY/solutions/"
     cat > "./$DAY/solutions/.keep" << KEEP
@@ -28,7 +28,7 @@ OUTPUT
 DIR=$(dirname $(realpath $0))
 
 # Run tests
-# Example: $DIR/../scripts/test-rust.sh $DIR ./solutions/main.rs
+# Example: $DIR/../../scripts/test-rust.sh $DIR ./solutions/main.rs
 
 echo "$DIR / --- Empty --- ✅"
 TEST
