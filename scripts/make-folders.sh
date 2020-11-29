@@ -25,6 +25,8 @@ OUTPUT
 
     cat > "./$DAY/test.sh" << 'TEST'
 #!/bin/bash
+set -e
+
 DIR=$(dirname $(realpath $0))
 
 # Run tests
