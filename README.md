@@ -6,7 +6,6 @@ Solving the 2020 edition of https://adventofcode.com/ in many languages, and tes
 ## Status
 Here you can see the status of automatic tests run by Github CI:
 
-![days/day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/days/day-00-example/badge.svg)
 ![days/day-01](https://github.com/Arxcis/adventofcode2020/workflows/days/day-01/badge.svg)
 ![days/day-02](https://github.com/Arxcis/adventofcode2020/workflows/days/day-02/badge.svg)
 ![days/day-03](https://github.com/Arxcis/adventofcode2020/workflows/days/day-03/badge.svg)
@@ -32,3 +31,4 @@ Here you can see the status of automatic tests run by Github CI:
 ![days/day-23](https://github.com/Arxcis/adventofcode2020/workflows/days/day-23/badge.svg)
 ![days/day-24](https://github.com/Arxcis/adventofcode2020/workflows/days/day-24/badge.svg)
 ![days/day-25](https://github.com/Arxcis/adventofcode2020/workflows/days/day-25/badge.svg)
+![days/day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/days/day-00-example/badge.svg)
