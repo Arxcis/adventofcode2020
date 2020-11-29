@@ -20,6 +20,10 @@ echo "$ node --version"
 node --version
 echo ""
 
+echo "$ php --version"
+php --version
+echo ""
+
 echo "$ python3 --version"
 python3 --version
 echo ""
