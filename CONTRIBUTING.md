@@ -32,8 +32,8 @@ See [day-00-example/solutions/](https://github.com/Arxcis/adventofcode2020/tree/
 ## How do I add support for a programming language?
 
 To add support for a new language create an issue OR you can help by:  
-1. Addding a line to the Dockerfile: `apt install <the language you want>`.
-2. Addding an example-solution: `vim ./day-00-example/solutions/main.<language-extension>`.
-2. Adddding  a test-script: `vim ./scripts/test-<the-language-you-want>.sh`.
+1. Add a line to the Dockerfile: `apt install <the language you want>`.
+2. Add an example-solution: `vim ./day-00-example/solutions/main.<language-extension>`.
+2. Add  a test-script: `vim ./scripts/test-<the-language-you-want>.sh`.
 3. Make a PR, and we will merge the PR, build and upload a new container to Dockerhub ASAP!
 
