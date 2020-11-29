@@ -1,6 +1,4 @@
 #include <stdio.h>
-#define TRUE 1
-#define FALSE 0
 
 const int MAX_LINE_WIDTH = 100;
 
@@ -10,12 +8,10 @@ int main() {
   int sum_all = 0;
   int sum_odd = 0;
 
-  int reading = TRUE;
-  while (reading) {
+  for (;;) {
     fgets(line, MAX_LINE_WIDTH, stdin);
-    if (feof(stdin) || line[0] == '\n') {
-      reading = FALSE;
-      continue;
+    if (feof(stdin)) {
+      break;
     }
 
     sscanf(line, "%d", &num);
