@@ -1,0 +1,15 @@
+name: day-21
+on:
+  push:
+    paths:
+      - 'day-21/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020
+    steps:
+      - uses: actions/checkout@v2
+      - name: make test
+        run: make test DAY=day-21

@@ -1,6 +1,11 @@
 # adventofcode2020
 Solving the 2020 edition of https://adventofcode.com/ in many languages, and test the solutions using Github CI.
 
+## Status
+Here you can see the status of automatic tests run by Github CI:
+
+![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
+
 ## Contributing
 1. Make a branch. Example: `git checkout -b jonas/day-03`
 2. Write a solution, in the language of your choice. Example: `vim day-03/solutions/super-optimized.py`
@@ -19,7 +24,7 @@ $DIR/../scripts/test-py.sh $DIR "solutions/super-optimized.py"
 5. Make a Pull Request to the `main` branch.
 6. Merge when the tests pass!
 
-**How are solutions tested?**
+### How are solutions tested?
 
 Every solution gets the `input`-challenge delivered to `stdin`, and every solution is expected to answer, by writing the `output`-answer to `stdout`.
 
@@ -27,13 +32,15 @@ Every solution gets the `input`-challenge delivered to `stdin`, and every soluti
 #!/bin/bash
 cat input | <run-solution> | diff - output
 ```
+See `day-00-example/solutions/`, for examples on how to read from `stdin` and how to write to `stdout` in different languages.
 
-**The CI does not support my favourite language. What do I do?**
 
-If we don't support the language you want to write in, don't worry. Make an issue on `Github`, and we will add it.
+### How do I add support for a programming language?
 
-## Status
-![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
+To add a support for a new language:
+1. Add a line to the Dockerfile: `apt install <the language you want>`.
+2. Add a test-script: `touch ./scripts/test-<the-language-you-want>.sh`.
+3. Make a PR, and we will merge the PR, build and upload a new container to Dockerhub ASAP!
 
 ## References
 - Last attempt https://github.com/Arxcis/adventofcode2018/

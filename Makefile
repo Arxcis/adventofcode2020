@@ -1,5 +1,10 @@
+# Example: "make test DAY=day-03"
 test:
-	./day-00-example/test.sh
+	./scripts/print-versions.sh;
+	./$(DAY)/test.sh
+
+test-all:
+	for i in $$(ls | grep day-); do "./$$i/test.sh"; done
 
 dockerbuild: Dockerfile
 	docker build . --tag jonasjso/adventofcode2020
@@ -10,10 +15,4 @@ dockerpush:
 versions:
 	./scripts/print-versions.sh
 
-workflows:
-	./scripts/make-workflows.sh
-
-folders:
-	./scripts/make-folders.sh
-
-.PHONY: dockerbuild dockerpush test versions workflows folders
+.PHONY: dockerbuild dockerpush test test-all versions

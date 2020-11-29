@@ -1,10 +1,8 @@
 #!/bin/bash
+set -e
+
 echo "$ uname -a"
 uname -a
-echo ""
-
-echo "$ deno --version"
-deno --version
 echo ""
 
 echo "$ go version"
@@ -17,4 +15,8 @@ echo ""
 
 echo "$ python3 --version"
 python3 --version
+echo ""
+
+echo "$ rustc --version"
+rustc --version
 echo ""
