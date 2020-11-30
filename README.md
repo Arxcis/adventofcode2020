@@ -32,3 +32,25 @@ Here you can see the status of automatic tests run by Github CI:
 ![days/day-24](https://github.com/Arxcis/adventofcode2020/workflows/days/day-24/badge.svg)
 ![days/day-25](https://github.com/Arxcis/adventofcode2020/workflows/days/day-25/badge.svg)
 ![days/day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/days/day-00-example/badge.svg)
+
+## Getting started if you are running Docker
+
+If you are running docker, you can run tests inside a docker-container by doing:
+```
+make docker.example         // Expect example tests to succeed
+make docker.01              // Expect fail because we don't have any day-01 tests
+make docker.all             // Expect some tests to succeed, some fail
+```
+
+## Getting started if you are not running Docker
+If you are not running docker, you have to install languages we support on your host system. See the [Dockerfile](./Dockerfile) for how you can do this on debian-based systems. You can run the tests directly on your host system by doing:
+```
+make test.example           // Expect example tests to succeed
+make test.01                // Expect fail because we don't have any day-01 tests
+make test.all               // Expect some tests to succeed, some fail
+```
+
+
+## Demo
+
+[![asciicast](https://asciinema.org/a/82OAZ2P8MLxVvVT568rFEjh0n.svg)](https://asciinema.org/a/82OAZ2P8MLxVvVT568rFEjh0n)
