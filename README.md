@@ -38,7 +38,7 @@ Here you can see the status of automatic tests run by Github CI:
 If you are running docker, you can run tests inside a docker-container by doing:
 ```
 make docker.example         // Expect example tests to succeed
-make docker.01              // Expect fail because we don't have any day-01 tests
+make docker.01              // Expect to fail because we don't have any day-01 solutions yet
 make docker.all             // Expect some tests to succeed, some fail
 ```
 
@@ -48,7 +48,7 @@ If you are not running docker, you have to install languages we support on your 
 You can run the tests directly on your host system by doing:
 ```
 make test.example           // Expect example tests to succeed
-make test.01                // Expect fail because we don't have any day-01 tests
+make test.01                // Expect fail because we don't have any day-01 solutions yet
 make test.all               // Expect some tests to succeed, some fail
 ```
 
