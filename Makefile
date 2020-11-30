@@ -1,9 +1,12 @@
 test-all:
 	for day in $$(ls days); do ./days/$$day/test.sh; done
 
-# Example: "make test DAY=day-03"
 test:
 	./days/$(DAY)/test.sh
+
+test.example:
+	make test DAY=day-00-example
+
 
 dockerbuild: Dockerfile
 	docker build . --tag jonasjso/adventofcode2020
@@ -23,6 +26,9 @@ dockerpush:
 #
 dockertest:
 	docker run -ti --env DAY=$(DAY) -v $(PWD):/test jonasjso/adventofcode2020:latest /bin/bash -c "cd /test && make test && exit"
+
+dockertest.example:
+	make dockertest DAY=day-00-example
 
 #
 # make dockertest-all
