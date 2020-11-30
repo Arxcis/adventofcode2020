@@ -18,7 +18,7 @@ Every solution gets the `input.txt`-file delivered to `stdin` using `cat`, and w
 
 ```sh
 #!/usr/bin/env bash
-cat input.txt | <run-solution> | diff - output.txt
+cat input.txt | <program-in-any-language> | diff - output.txt
 ```
 See [day-00-example/solutions/](https://github.com/Arxcis/adventofcode2020/tree/main/days/day-00-example/solutions), for examples on how to read from `stdin` and how to write to `stdout` in different languages.
 
