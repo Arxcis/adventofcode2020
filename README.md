@@ -43,7 +43,9 @@ make docker.all             // Expect some tests to succeed, some fail
 ```
 
 ## Getting started if you are not running Docker
-If you are not running docker, you have to install languages we support on your host system. See the [Dockerfile](./Dockerfile) for how you can do this on debian-based systems. You can run the tests directly on your host system by doing:
+If you are not running docker, you have to install languages we support on your host system. See the [Dockerfile](./Dockerfile) for how you can do this on debian-based systems. 
+
+You can run the tests directly on your host system by doing:
 ```
 make test.example           // Expect example tests to succeed
 make test.01                // Expect fail because we don't have any day-01 tests
