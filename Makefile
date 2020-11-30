@@ -11,7 +11,10 @@ dockerbuild: Dockerfile
 dockerpush:
 	docker push jonasjso/adventofcode2020:latest
 
+dockertest:
+	docker run -ti -v $(PWD):/test jonasjso/adventofcode2020:latest /bin/bash -c "cd /test && make && exit"
+
 versions:
 	./scripts/print-versions.sh
 
-.PHONY: dockerbuild dockerpush test test-all versions
+.PHONY: dockerbuild dockerpush test test-all versions dockertest
