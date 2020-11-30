@@ -16,8 +16,16 @@ echo "$ go version"
 go version
 echo ""
 
+echo "$ java --version"
+java --version
+echo ""
+
 echo "$ node --version"
 node --version
+echo ""
+
+echo "$ php --version"
+php --version
 echo ""
 
 echo "$ python3 --version"

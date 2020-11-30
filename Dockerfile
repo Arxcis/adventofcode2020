@@ -1,4 +1,4 @@
-FROM ubuntu:21.04
+FROM ubuntu:20.10
 LABEL source=https://github.com/Arxcis/adventofcode2020
 
 # Configure TZ, so we don't get interactive prompt
@@ -12,4 +12,6 @@ RUN apt-get update && apt-get install -yqq\
   python3\
   golang\
   nodejs\
-  rustc;
+  rustc\
+  php-cli\
+  default-jdk;
