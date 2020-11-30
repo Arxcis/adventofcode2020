@@ -15,8 +15,11 @@ class Main {
                 break;
             }
         }
+        scanner.close();
+
         System.out.println(sum_all);
         System.out.println(sum_odd);
-        scanner.close();
+
+        return;
     }
 }
