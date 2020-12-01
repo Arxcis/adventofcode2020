@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ./test-c.sh INPUT              OUTPUT             SOLUTION
-# Example: ./test-c.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.c
+# Usage:   ./languages/c.sh INPUT              OUTPUT             SOLUTION
+# Example: ./languages/c.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.c
 
 INPUT="$1"
 OUTPUT="$2"

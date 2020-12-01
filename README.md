@@ -36,7 +36,7 @@ Here you can see the status of automatic tests run by Github CI:
 ## Testing a single solution
 
 ```
-$ ./scripts/test-rust.sh days/day-01/input.txt days/day-01/output.txt days/day-01/solutions/day01.rs 
+$ ./languages/rust.sh days/day-01/input.txt days/day-01/output.txt days/day-01/solutions/day01.rs
 cat INPUT | rustc days/day-01/solutions/day01.rs ✅
 ```
 

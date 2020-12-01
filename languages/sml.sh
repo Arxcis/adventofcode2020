@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage:   ./test-sml.sh INPUT              OUTPUT             SOLUTION
-# Example: ./test-sml.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.sml
+# Usage:   ./languages/sml.sh INPUT              OUTPUT             SOLUTION
+# Example: ./languages/sml.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.sml
 
 INPUT="$1"
 OUTPUT="$2"
