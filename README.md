@@ -33,14 +33,34 @@ Here you can see the status of automatic tests run by Github CI:
 ![day-25](https://github.com/Arxcis/adventofcode2020/workflows/days/day-25/badge.svg)
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/days/day-00-example/badge.svg)
 
-## Testing a single solution
+
+## Languages supported by our Dockerfile, so far...
 
 ```
-$ ./languages/rust.sh days/day-01/input.txt days/day-01/output.txt days/day-01/solutions/day01.rs
-cat INPUT | rustc days/day-01/solutions/day01.rs ✅
+bash    main.bash
+gcc     main.c -o gcc.out && ./gcc.out
+g++     main.cpp -o g++.out && ./g++.out
+go run  main.go
+javac   Main.java && java Main
+node    main.node.mjs
+php     main.php
+polyc   main.sml -o sml.out && ./sml.out
+python3 main.py
+rustc   main.rs -o rustc.out && ./rustc.out
+ruby    main.rb
 ```
 
-## Testing if you are running Docker
+
+## Getting started
+
+### Testing a single solution
+
+```
+$ ../languages/rust.sh day-01/input.txt day-01/output.txt day-01/solutions/day01.rs
+cat INPUT | rustc day-01/solutions/day01.rs ✅
+```
+
+### Testing and entire day, if you are running Docker
 
 If you are running docker, you can run tests inside a docker-container by doing:
 ```
@@ -49,7 +69,8 @@ make docker.day01           // Expect to succeed testing only day-01 solutions
 make docker.all             // Expect some days to succeed, some to fail
 ```
 
-## Testing if you are not running Docker
+### Testing and entire day, if you are not running Docker
+
 If you are not running docker, you have to install languages we support on your host system. See the [Dockerfile](./Dockerfile) for how you can do this on debian-based systems.
 
 You can run the tests directly on your host system by doing:
