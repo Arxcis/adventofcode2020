@@ -8,7 +8,7 @@
 4. Test your solution.
 
 ```sh
-./languages/py.sh days/day-03/input.txt days/day-03/output.txt days/day-03/solutions/super-optimized.py
+../languages/py.sh day-03/input.txt day-03/output.txt day-03/solutions/super-optimized.py
 ```
 
 5. Make a Pull Request to the `main` branch.
