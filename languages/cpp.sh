@@ -7,7 +7,7 @@ set -e
 INPUT="$1"
 OUTPUT="$2"
 SOLUTION="$3"
-OUT="/tmp/aoc2020.g++.out"
+OUT="$(mktemp)"
 
 g++ $SOLUTION -o $OUT;
 cat $INPUT | $OUT | diff - $OUTPUT

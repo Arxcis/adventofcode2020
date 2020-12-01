@@ -42,7 +42,6 @@ docker.build: Dockerfile
 docker.push:
 	docker push jonasjso/adventofcode2020:2020-12-01
 
-
 docker.versions:
 	docker run -ti -v $(PWD):/test jonasjso/adventofcode2020:2020-12-01 /bin/bash -c "cd /test && make versions"
 
