@@ -33,7 +33,7 @@ Here you can see the status of automatic tests run by Github CI:
 ![day-25](https://github.com/Arxcis/adventofcode2020/workflows/days/day-25/badge.svg)
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/days/day-00-example/badge.svg)
 
-## Example: Testing a single solution
+## Testing a single solution
 
 ```
 $ ./scripts/test-rust.sh days/day-01/input.txt days/day-01/output.txt days/day-01/solutions/day01.rs 
