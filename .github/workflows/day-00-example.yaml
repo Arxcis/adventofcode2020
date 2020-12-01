@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'days/day-00-example/**'
+  workflow_dispatch:
 
 jobs:
   test:
