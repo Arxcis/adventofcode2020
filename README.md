@@ -52,9 +52,8 @@ ruby    main.rb
 
 To see all the versions run:
 ```
-make versions
-// or
-make docker.versions
+make docker.versions      // For the docker container's versions
+make versions             // For the host system's versions
 ```
 
 ## Getting started
