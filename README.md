@@ -1,4 +1,4 @@
-# adventofcode2020 🕯️
+# adventofcode2020 🕯️ 🎄 🎅
 Collaboratively solve the 2020 edition of https://adventofcode.com/, and test the solutions using Github CI.
 
 ## [CONTRIBUTING.md](./CONTRIBUTING.md)
