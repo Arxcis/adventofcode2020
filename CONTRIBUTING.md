@@ -22,7 +22,7 @@
 2. Add a language test-script in `languages/<new-language>.sh`
 3. Add an example solution in `days/day-00-example/solutions/example.<new-language>`
 4. Make a PR to `main`-branch.
-5. @Arxcis will do `make docker.build` and `make docker.push` and merge your PR on his machine ASAP.
+5. @Arxcis will do `make docker.build` and `make docker.push` and merge your PR on his machine ASAP :racing_car:
 
 ## How are solutions tested?
 
