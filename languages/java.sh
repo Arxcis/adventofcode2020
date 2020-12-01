@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ./test-java.sh INPUT              OUTPUT             SOLUTION_DIR      JAVA_CLASSNAME
-# Example: ./test-java.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions Example
+# Usage:   ./languages/java.sh INPUT              OUTPUT             SOLUTION_DIR      JAVA_CLASSNAME
+# Example: ./languages/java.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions Example
 
 INPUT="$1"
 OUTPUT="$2"

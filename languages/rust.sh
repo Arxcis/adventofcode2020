@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ./test-rs.sh INPUT              OUTPUT             SOLUTION
-# Example: ./test-rs.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.rs
+# Usage:   ./languages/rs.sh INPUT              OUTPUT             SOLUTION
+# Example: ./languages/rs.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.rs
 
 INPUT="$1"
 OUTPUT="$2"

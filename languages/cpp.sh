@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ./test-cpp.sh INPUT              OUTPUT             SOLUTION
-# Example: ./test-cpp.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.cpp
+# Usage:   ./languages/cpp.sh INPUT              OUTPUT             SOLUTION
+# Example: ./languages/cpp.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.cpp
 
 INPUT="$1"
 OUTPUT="$2"

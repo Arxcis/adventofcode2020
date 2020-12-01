@@ -3,6 +3,6 @@ set -e
 
 D=$(dirname $(realpath $0))
 
-$D/../../scripts/test-py.sh $D/input.txt $D/output.txt $D/solutions/day01.py
-$D/../../scripts/test-rust.sh $D/input.txt $D/output.txt $D/solutions/day01.rs
-$D/../../scripts/test-sml.sh $D/input.txt $D/output.txt $D/solutions/day01.sml
+$D/../../languages/py.sh $D/input.txt $D/output.txt $D/solutions/day01.py
+$D/../../languages/rust.sh $D/input.txt $D/output.txt $D/solutions/day01.rs
+$D/../../languages/sml.sh $D/input.txt $D/output.txt $D/solutions/day01.sml
