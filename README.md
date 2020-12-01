@@ -50,6 +50,12 @@ rustc   main.rs -o rustc.out && ./rustc.out
 ruby    main.rb
 ```
 
+To see all the versions run:
+```
+make versions
+// or
+make docker.versions
+```
 
 ## Getting started
 
