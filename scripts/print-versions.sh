@@ -35,3 +35,7 @@ echo ""
 echo "$ rustc --version"
 rustc --version
 echo ""
+
+echo '$ polyml -v'
+poly -v
+echo ""

@@ -47,7 +47,7 @@ versions:
 
 .PHONY:
 	dockerbuild\
- 	dockerpush\
+	dockerpush\
 	test\
 	test.all\
 	docker.test\
