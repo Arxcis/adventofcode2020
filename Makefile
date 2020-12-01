@@ -1,3 +1,5 @@
+DOCKER_TAG="jonasjso/adventofcode2020:2020-12-01-with-ruby"
+
 test.all:
 	for day in $$(ls days); do ./days/$$day/test.sh; done
 
@@ -24,7 +26,7 @@ test.day02:
 # Benefit 2: Reproduceability - Makes sure tests run with the same versions on any machine, regardless of what is installed on the host machine.
 #
 docker.test:
-	docker run -ti --env DAY=$(DAY) -v $(PWD):/test jonasjso/adventofcode2020:2020-12-01 /bin/bash -c "cd /test && make test && exit"
+	docker run -ti --env DAY=$(DAY) -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make test && exit"
 
 docker.example:
 	make docker.test DAY=day-00-example
@@ -36,16 +38,16 @@ docker.day02:
 	make docker.test DAY=day-02
 
 docker.all:
-	docker run -ti -v $(PWD):/test jonasjso/adventofcode2020:2020-12-01 /bin/bash -c "cd /test && make && exit"
+	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make && exit"
 
 docker.build: Dockerfile
-	docker build . --tag jonasjso/adventofcode2020:2020-12-01
+	docker build . --tag $(DOCKER_TAG)
 
 docker.push:
-	docker push jonasjso/adventofcode2020:2020-12-01
+	docker push $(DOCKER_TAG)
 
 docker.versions:
-	docker run -ti -v $(PWD):/test jonasjso/adventofcode2020:2020-12-01 /bin/bash -c "cd /test && make versions"
+	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make versions"
 
 versions:
 	./scripts/print-versions.sh

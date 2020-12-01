@@ -1,18 +1,20 @@
 FROM ubuntu:20.10
 LABEL source=https://github.com/Arxcis/adventofcode2020
 
-# Configure TZ, so we don't get interactive prompt
-ENV TZ=Europe/Kiev
+# 1. Configure TZ, so we don't get interactive prompt
+ENV TZ=Europe/Oslo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# apt-get install all the things
+# 2. apt install all the things
 RUN apt-get update && apt-get install -yqq\
-  # build-essential includes `make` and `gcc`
+  # build-essential includes `make`, `gcc` and `g++`
   build-essential\
-  python3\
+  default-jdk\
   golang\
   nodejs\
-  rustc\
   php-cli\
   polyml libpolyml-dev\
-  default-jdk;
+  python3\
+  ruby\
+  rustc\
+  ;
