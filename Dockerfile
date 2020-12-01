@@ -14,4 +14,5 @@ RUN apt-get update && apt-get install -yqq\
   nodejs\
   rustc\
   php-cli\
+  polyml libpolyml-dev\
   default-jdk;

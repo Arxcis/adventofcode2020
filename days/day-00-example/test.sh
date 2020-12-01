@@ -13,3 +13,4 @@ $D/../../scripts/test-node.sh $D/input.txt $D/output.txt $D/solutions/example.no
 $D/../../scripts/test-php.sh  $D/input.txt $D/output.txt $D/solutions/example.php
 $D/../../scripts/test-py.sh   $D/input.txt $D/output.txt $D/solutions/example.py
 $D/../../scripts/test-rust.sh $D/input.txt $D/output.txt $D/solutions/example.rs
+$D/../../scripts/test-sml.sh  $D/input.txt $D/output.txt $D/solutions/example.sml
