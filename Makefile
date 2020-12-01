@@ -9,6 +9,8 @@ test.example:
 
 test.01:
 	make test DAY=day-01
+test.02:
+	make test DAY=day-02
 
 #
 # make docker.test DAY=<day>
@@ -21,7 +23,6 @@ test.01:
 # Benefit 2: Reproduceability - Makes sure tests run with the same versions on any machine, regardless of what is installed on the host machine.
 #
 docker.test:
-	docker pull jonasjso/adventofcode2020:latest;
 	docker run -ti --env DAY=$(DAY) -v $(PWD):/test jonasjso/adventofcode2020:latest /bin/bash -c "cd /test && make test && exit"
 
 docker.example:
@@ -29,6 +30,8 @@ docker.example:
 
 docker.01:
 	make docker.test DAY=day-01
+docker.02:
+	make docker.test DAY=day-02
 
 docker.all:
 	docker run -ti -v $(PWD):/test jonasjso/adventofcode2020:latest /bin/bash -c "cd /test && make && exit"

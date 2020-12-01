@@ -33,7 +33,13 @@ Here you can see the status of automatic tests run by Github CI:
 ![days/day-25](https://github.com/Arxcis/adventofcode2020/workflows/days/day-25/badge.svg)
 ![days/day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/days/day-00-example/badge.svg)
 
-## Getting started if you are running Docker
+## Example: Testing a single solution
+
+```
+./scripts/test-rust.sh days/day-01 solutions/main.rs
+```
+
+## Testing if you are running Docker
 
 If you are running docker, you can run tests inside a docker-container by doing:
 ```
@@ -42,8 +48,8 @@ make docker.01              // Expect to fail because we don't have any day-01 s
 make docker.all             // Expect some tests to succeed, some fail
 ```
 
-## Getting started if you are not running Docker
-If you are not running docker, you have to install languages we support on your host system. See the [Dockerfile](./Dockerfile) for how you can do this on debian-based systems. 
+## Testing if you are not running Docker
+If you are not running docker, you have to install languages we support on your host system. See the [Dockerfile](./Dockerfile) for how you can do this on debian-based systems.
 
 You can run the tests directly on your host system by doing:
 ```

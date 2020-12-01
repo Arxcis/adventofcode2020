@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
-DIR=$(dirname $(realpath $0))
+D=$(dirname $(realpath $0))
 
 # Run tests
-$DIR/../../scripts/test-bash.sh $DIR "solutions/example.bash"
-$DIR/../../scripts/test-c.sh    $DIR "solutions/example.c"
-$DIR/../../scripts/test-cpp.sh  $DIR "solutions/example.cpp"
-$DIR/../../scripts/test-go.sh   $DIR "solutions/example.go"
-$DIR/../../scripts/test-java.sh $DIR solutions Example
-$DIR/../../scripts/test-node.sh $DIR "solutions/example.node.mjs"
-$DIR/../../scripts/test-php.sh  $DIR "solutions/example.php"
-$DIR/../../scripts/test-py.sh   $DIR "solutions/example.py"
-$DIR/../../scripts/test-rust.sh $DIR "solutions/example.rs"
+$D/../../scripts/test-bash.sh $D/input.txt $D/output.txt $D/solutions/example.bash
+$D/../../scripts/test-c.sh    $D/input.txt $D/output.txt $D/solutions/example.c
+$D/../../scripts/test-cpp.sh  $D/input.txt $D/output.txt $D/solutions/example.cpp
+$D/../../scripts/test-go.sh   $D/input.txt $D/output.txt $D/solutions/example.go
+$D/../../scripts/test-java.sh $D/input.txt $D/output.txt $D/solutions Example
+$D/../../scripts/test-node.sh $D/input.txt $D/output.txt $D/solutions/example.node.mjs
+$D/../../scripts/test-php.sh  $D/input.txt $D/output.txt $D/solutions/example.php
+$D/../../scripts/test-py.sh   $D/input.txt $D/output.txt $D/solutions/example.py
+$D/../../scripts/test-rust.sh $D/input.txt $D/output.txt $D/solutions/example.rs

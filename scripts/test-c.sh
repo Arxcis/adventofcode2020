@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ../test-c.sh DIR     SOLUTION
-# Example: ../test-c.sh /day-03 solutions/main.c
+# Usage:   ./test-c.sh INPUT              OUTPUT             SOLUTION
+# Example: ./test-c.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.c
 
-DIR="$1"
-SOLUTION="$2"
-OUT="gcc.out"
+INPUT="$1"
+OUTPUT="$2"
+SOLUTION="$3"
+OUT="/tmp/aoc2020.gcc.out"
 
-gcc "$DIR/$SOLUTION" -o "$DIR/$OUT";
-cat "$DIR/input.txt" | "$DIR/$OUT" | diff - "$DIR/output.txt"
-rm "$DIR/$OUT";
-echo "$DIR / gcc $SOLUTION -o $OUT && ./$OUT ✅"
+gcc $SOLUTION -o $OUT;
+cat $INPUT | $OUT | diff - $OUTPUT
+rm $OUT;
+echo "cat INPUT | gcc $SOLUTION ✅"

@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ../test-go.sh DIR                      SOLUTION
-# Example: ../test-go.sh /adventofcode2020/day-03 solutions/main.go
+# Usage:   ./test-go.sh INPUT              OUTPUT             SOLUTION
+# Example: ./test-go.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.go
 
-DIR="$1"
-SOLUTION="$2"
+INPUT="$1"
+OUTPUT="$2"
+SOLUTION="$3"
 
-cat "$DIR/input.txt" | go run "$DIR/$SOLUTION" | diff - "$DIR/output.txt"
-echo "$DIR / go run $SOLUTION ✅"
+cat $INPUT | go run $SOLUTION | diff - $OUTPUT
+echo "cat INPUT | go run $SOLUTION ✅"

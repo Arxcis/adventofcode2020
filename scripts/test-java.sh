@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ../test-c.sh DIR     SOLUTION_DIR JAVA_CLASSNAME
-# Example: ../test-c.sh /day-03 solutions    Main
+# Usage:   ./test-java.sh INPUT              OUTPUT             SOLUTION_DIR      JAVA_CLASSNAME
+# Example: ./test-java.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions Example
 
-DIR="$1"
-SOLUTION_DIR="$2"
-JAVA_CLASSNAME="$3"
+INPUT="$1"
+OUTPUT="$2"
+SOLUTION_DIR="$3"
+JAVA_CLASSNAME="$4"
+
 JAVA_CLASSFILE="$JAVA_CLASSNAME.class"
 
-cd "$DIR/$SOLUTION_DIR"
+cd $SOLUTION_DIR
 javac "$JAVA_CLASSNAME.java"
-cat "$DIR/input.txt" | java "$JAVA_CLASSNAME" | diff - "$DIR/output.txt"
+cat $INPUT | java $JAVA_CLASSNAME | diff - $OUTPUT
 rm "$DIR/$SOLUTION_DIR/$JAVA_CLASSFILE";
-echo "$DIR / javac $JAVA_CLASSNAME.java && java $JAVA_CLASSNAME ✅"
+echo "cat INPUT | javac $SOLUTION_DIR/$JAVA_CLASSNAME.java ✅"

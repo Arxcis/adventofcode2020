@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ./test-bash.sh DIR     SOLUTION
-# Example: ./test-bash.sh /day-03 solutions/main.bash
+# Usage:   ./test-bash.sh INPUT              OUTPUT             SOLUTION
+# Example: ./test-bash.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.bash
 
-DIR="$1"
-SOLUTION="$2"
+INPUT="$1"
+OUTPUT="$2"
+SOLUTION="$3"
 
-cat "$DIR/input.txt" | bash "$DIR/$SOLUTION" | diff - "$DIR/output.txt"
-echo "$DIR / bash $SOLUTION ✅"
+cat "$INPUT" | bash "$SOLUTION" | diff - "$OUTPUT"
+echo "cat INPUT | bash $SOLUTION ✅"

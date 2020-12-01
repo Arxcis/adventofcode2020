@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ../test-php.sh DIR                      SOLUTION
-# Example: ../test-php.sh /adventofcode2020/day-03 solutions/main.php
+# Usage:   ./test-php.sh INPUT              OUTPUT             SOLUTION
+# Example: ./test-php.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.php
 
-DIR="$1"
-SOLUTION="$2"
+INPUT="$1"
+OUTPUT="$2"
+SOLUTION="$3"
 
-cat "$DIR/input.txt" | php "$DIR/$SOLUTION" | diff - "$DIR/output.txt"
-echo "$DIR / php $SOLUTION ✅"
+cat $INPUT | php $SOLUTION | diff - $OUTPUT
+echo "cat INPUT | php $SOLUTION ✅"

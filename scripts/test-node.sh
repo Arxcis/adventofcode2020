@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-# Usage:   ../test-node.sh DIR                      SOLUTION
-# Example: ../test-node.sh /adventofcode2020/day-03 solutions/main.node.mjs
+# Usage:   ./test-node.sh INPUT              OUTPUT             SOLUTION
+# Example: ./test-node.sh /day-03/input.txt  /day-03/input.txt  /day-03/solutions/main.node.mjs
 
-DIR="$1"
-SOLUTION="$2"
+INPUT="$1"
+OUTPUT="$2"
+SOLUTION="$3"
 
-cat "$DIR/input.txt" | node "$DIR/$SOLUTION" | diff - "$DIR/output.txt"
-echo "$DIR / node $SOLUTION ✅"
+cat $INPUT | node $SOLUTION | diff - $OUTPUT
+echo "cat INPUT | node $SOLUTION ✅"
