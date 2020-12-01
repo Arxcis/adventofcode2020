@@ -80,7 +80,6 @@ make test.day01             // Expect to succeed testing only day-01 solutions
 make test.all               // Expect days to succeed, some to fail
 ```
 
-
 ## Demo
 
-[![asciicast](https://asciinema.org/a/82OAZ2P8MLxVvVT568rFEjh0n.svg)](https://asciinema.org/a/82OAZ2P8MLxVvVT568rFEjh0n)
+[![asciicast](https://asciinema.org/a/VSLcKcmDKnMq2fGd5R9AcZi0X.svg)](https://asciinema.org/a/VSLcKcmDKnMq2fGd5R9AcZi0X)
