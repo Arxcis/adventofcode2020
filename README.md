@@ -58,14 +58,14 @@ make versions             // For the host system's versions
 
 ## Getting started
 
-### Testing a single solution
+### Test a single solution
 
 ```
 $ ../languages/rust.sh day-01/input.txt day-01/output.txt day-01/solutions/day01.rs
 cat INPUT | rustc day-01/solutions/day01.rs ✅
 ```
 
-### Testing one or more days
+### Test one or more days
 ```
 // Run tests inside docker container
 make docker.example         // Expect example tests to succeed
