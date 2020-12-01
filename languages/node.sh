@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ./languages/node.sh INPUT              OUTPUT             SOLUTION
-# Example: ./languages/node.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.node.mjs
+# Example: ./languages/node.sh ./day-03/input.txt ./day-03/output.txt ./day-03/solutions/main.node.mjs
 
 INPUT="$1"
 OUTPUT="$2"

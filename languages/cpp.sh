@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ./languages/cpp.sh INPUT              OUTPUT             SOLUTION
-# Example: ./languages/cpp.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.cpp
+# Example: ./languages/cpp.sh ./day-03/input.txt ./day-03/output.txt ./day-03/solutions/main.cpp
 
 INPUT="$1"
 OUTPUT="$2"

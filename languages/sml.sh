@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Usage:   ./languages/sml.sh INPUT              OUTPUT             SOLUTION
-# Example: ./languages/sml.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.sml
+# Example: ./languages/sml.sh ./day-03/input.txt ./day-03/output.txt ./day-03/solutions/main.sml
 
 INPUT="$1"
 OUTPUT="$2"

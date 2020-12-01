@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ./languages/c.sh INPUT              OUTPUT             SOLUTION
-# Example: ./languages/c.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.c
+# Example: ./languages/c.sh ./day-03/input.txt ./day-03/output.txt ./day-03/solutions/main.c
 
 INPUT="$1"
 OUTPUT="$2"

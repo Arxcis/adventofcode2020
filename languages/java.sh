@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ./languages/java.sh INPUT              OUTPUT             SOLUTION_DIR      JAVA_CLASSNAME
-# Example: ./languages/java.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions Example
+# Example: ./languages/java.sh ./day-03/input.txt ./day-03/output.txt ./day-03/solutions Example
 
 INPUT="$1"
 OUTPUT="$2"

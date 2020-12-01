@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ./languages/py.sh INPUT              OUTPUT             SOLUTION
-# Example: ./languages/py.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.py
+# Example: ./languages/py.sh ./day-03/input.txt ./day-03/output.txt ./day-03/solutions/main.py
 
 INPUT="$1"
 OUTPUT="$2"

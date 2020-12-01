@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ./languages/go.sh INPUT              OUTPUT             SOLUTION
-# Example: ./languages/go.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.go
+# Example: ./languages/go.sh ./day-03/input.txt ./day-03/output.txt ./day-03/solutions/main.go
 
 INPUT="$1"
 OUTPUT="$2"

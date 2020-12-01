@@ -2,7 +2,7 @@
 set -e
 
 # Usage:   ./languages/php.sh INPUT              OUTPUT             SOLUTION
-# Example: ./languages/php.sh ./day-03/input.txt  ./day-03/input.txt ./day-03/solutions/main.php
+# Example: ./languages/php.sh ./day-03/input.txt ./day-03/output.txt ./day-03/solutions/main.php
 
 INPUT="$1"
 OUTPUT="$2"
