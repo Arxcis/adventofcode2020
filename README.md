@@ -46,7 +46,7 @@ If you are running docker, you can run tests inside a docker-container by doing:
 ```
 make docker.example         // Expect example tests to succeed
 make docker.01              // Expect to succeed testing only day-01 solutions
-make docker.all             // Expect some tests to succeed, some fail
+make docker.all             // Expect some days to succeed, some to fail
 ```
 
 ## Testing if you are not running Docker
@@ -56,7 +56,7 @@ You can run the tests directly on your host system by doing:
 ```
 make test.example           // Expect example tests to succeed
 make test.01                // Expect to succeed testing only day-01 solutions
-make test.all               // Expect some tests to succeed, some fail
+make test.all               // Expect days to succeed, some to fail
 ```
 
 
