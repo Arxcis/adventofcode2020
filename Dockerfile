@@ -7,7 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # apt-get install all the things
 RUN apt-get update && apt-get install -yqq\
-  # For 'make'
+  # build-essential includes `make` and `gcc`
   build-essential\
   python3\
   golang\
