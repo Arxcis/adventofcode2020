@@ -1,16 +1,28 @@
 # Contributing
+
+## How do I add a solution for a given day?
+
 1. Pop a can of beer :beer: (or whatever is your favourite :popcorn: :lollipop: :champagne: :milk_glass: :wine_glass: :tropical_drink: :chocolate_bar:
 2. Make a branch. Example: `git checkout -b jonas/day-03`
 3. Write a solution, in the language of your choice. Example: `vim day-03/solutions/super-optimized.py`
 4. Test your solution.
 
 ```sh
-cat day-03/input.txt | python3 day-03/solutions/super-optimized.py | diff - day-03/output.txt
+./languages/py.sh days/day-03/input.txt days/day-03/output.txt days/day-03/solutions/super-optimized.py
 ```
 
 5. Make a Pull Request to the `main` branch.
 6. Merge when the tests pass!
 7. Remember to have fun :tada:
+
+
+## How do I add a language?
+
+1. Add the language you want to the `Dockerfile`
+2. Add a language test-script in `languages/<new-language>.sh`
+3. Add an example solution in `days/day-00-example/solutions/example.<new-language>`
+4. Make a PR to `main`-branch.
+5. @Arxcis will do `make docker.build` and `make docker.push` and merge your PR on his machine ASAP.
 
 ## How are solutions tested?
 
