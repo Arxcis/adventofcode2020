@@ -34,7 +34,7 @@ Here you can see the status of automatic tests run by Github CI:
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/days/day-00-example/badge.svg)
 
 
-## Languages supported by our Dockerfile, so far...
+## Languages supported by our [Dockerfile](./Dockerfile), so far...
 
 ```
 bash    main.bash
@@ -58,28 +58,21 @@ make versions             // For the host system's versions
 
 ## Getting started
 
-### Testing a single solution
+### Test a single solution
 
 ```
 $ ../languages/rust.sh day-01/input.txt day-01/output.txt day-01/solutions/day01.rs
 cat INPUT | rustc day-01/solutions/day01.rs ✅
 ```
 
-### Testing and entire day, if you are running Docker
-
-If you are running docker, you can run tests inside a docker-container by doing:
+### Test one or more days
 ```
+// Run tests inside docker container
 make docker.example         // Expect example tests to succeed
 make docker.day01           // Expect to succeed, testing only day-01 solutions
 make docker.all             // Expect some days to succeed, some to fail
-```
 
-### Testing and entire day, if you are not running Docker
-
-If you are not running docker, you have to install languages we support on your host system. See the [Dockerfile](./Dockerfile) for how you can do this on debian-based systems.
-
-You can run the tests directly on your host system by doing:
-```
+// Run tests on host 
 make test.example           // Expect example tests to succeed
 make test.day01             // Expect to succeed, testing only day-01 solutions
 make test.all               // Expect some days to succeed, some to fail
