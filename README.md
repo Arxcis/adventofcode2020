@@ -45,7 +45,7 @@ cat INPUT | rustc days/day-01/solutions/day01.rs ✅
 If you are running docker, you can run tests inside a docker-container by doing:
 ```
 make docker.example         // Expect example tests to succeed
-make docker.day01           // Expect to succeed testing only day-01 solutions
+make docker.day01           // Expect to succeed, testing only day-01 solutions
 make docker.all             // Expect some days to succeed, some to fail
 ```
 
@@ -55,8 +55,8 @@ If you are not running docker, you have to install languages we support on your 
 You can run the tests directly on your host system by doing:
 ```
 make test.example           // Expect example tests to succeed
-make test.day01             // Expect to succeed testing only day-01 solutions
-make test.all               // Expect days to succeed, some to fail
+make test.day01             // Expect to succeed, testing only day-01 solutions
+make test.all               // Expect some days to succeed, some to fail
 ```
 
 
