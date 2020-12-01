@@ -3,7 +3,8 @@ set -e
 
 D=$(dirname $(realpath $0))
 
-# Run tests
+echo ""
+echo "--- Day 0: Examples ---"
 $D/../../languages/bash.sh $D/input.txt $D/output.txt $D/solutions/example.bash
 $D/../../languages/c.sh    $D/input.txt $D/output.txt $D/solutions/example.c
 $D/../../languages/cpp.sh  $D/input.txt $D/output.txt $D/solutions/example.cpp
