@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DOCKER_TAG=$DOCKER_TAG
+
 #
 # Make Github workflows for all the days in the calendar
 # We make one workflow for every day, instead of one job for every day,
@@ -20,7 +22,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:latest
+      image: $DOCKER_TAG
     steps:
       - uses: actions/checkout@v2
       - name: make versions

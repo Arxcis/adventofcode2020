@@ -1,4 +1,4 @@
-DOCKER_TAG="jonasjso/adventofcode2020:2020-12-01-with-ruby"
+export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-01-with-ruby"
 
 test.all:
 	for day in $$(ls days); do ./days/$$day/test.sh; done
@@ -52,6 +52,9 @@ docker.versions:
 versions:
 	./scripts/print-versions.sh
 
+worflows:
+	./scripts/make-workflows.sh
+
 .PHONY:
 	dockerbuild\
 	dockerpush\
@@ -62,4 +65,6 @@ versions:
 	docker.build\
 	docker.push\
 	docker.versions\
-	versions;\
+	versions\
+	workflows\
+	;\
