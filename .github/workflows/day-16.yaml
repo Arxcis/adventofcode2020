@@ -1,4 +1,4 @@
-name: days/day-16
+name: day-16
 on:
   push:
     paths:
