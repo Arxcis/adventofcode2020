@@ -7,6 +7,7 @@ test:
 test.example:
 	make test DAY=day-00-example
 
+test.day00: test.example
 test.day01:
 	make test DAY=day-01
 test.day02:
@@ -28,6 +29,7 @@ docker.test:
 docker.example:
 	make docker.test DAY=day-00-example
 
+docker.day00: docker.example
 docker.day01:
 	make docker.test DAY=day-01
 docker.day02:
