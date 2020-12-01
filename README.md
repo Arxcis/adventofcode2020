@@ -34,7 +34,7 @@ Here you can see the status of automatic tests run by Github CI:
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/days/day-00-example/badge.svg)
 
 
-## Languages supported by our Dockerfile, so far...
+## Languages supported by our [Dockerfile](./Dockerfile), so far...
 
 ```
 bash    main.bash
