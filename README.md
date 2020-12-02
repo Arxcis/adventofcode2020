@@ -2,10 +2,12 @@
 
 Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/. 
 
-Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
+### [CONTRIBUTING.md](./CONTRIBUTING.md)
 
+Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1: 
 
-#### [CONTRIBUTING.md](./CONTRIBUTING.md)
+Contributors also get access to our private leaderboard over at https://adventofcode.com/, and their name listed in this README.md :sunglasses:
+
 
 A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
 
