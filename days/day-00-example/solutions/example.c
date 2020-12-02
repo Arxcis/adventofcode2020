@@ -9,7 +9,7 @@ int main() {
     int num = 0;
     sscanf(line, "%d", &num);
     sum_all += num;
-    sum_odd += (num % 2 != 0) ? num : 0;
+    sum_odd += (num % 2 == 1) ? num : 0;
   }
 
   printf("%d\n", sum_all);

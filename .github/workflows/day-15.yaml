@@ -1,6 +1,14 @@
-name: days/day-15
+name: day-15
 on:
+  workflow_dispatch:
   push:
+    branches:
+      - main
+    paths:
+      - 'days/day-15/**'
+  pull_request:
+    branches:
+      - main
     paths:
       - 'days/day-15/**'
 
@@ -8,7 +16,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:latest
+      image: "jonasjso/adventofcode2020:2020-12-01-with-ruby"
     steps:
       - uses: actions/checkout@v2
       - name: make versions

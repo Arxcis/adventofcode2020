@@ -2,13 +2,13 @@
 
 ## How do I add a solution for a given day?
 
-1. Pop a can of beer :beer: (or whatever is your favourite :popcorn: :lollipop: :champagne: :milk_glass: :wine_glass: :tropical_drink: :chocolate_bar:
-2. Make a branch. Example: `git checkout -b jonas/day-03`
+1. Pop some popcorn :popcorn: (or whatever you enjoy :lollipop: :champagne: :milk_glass: :wine_glass: :tropical_drink: :chocolate_bar: :beer:)
+2. Fork
 3. Write a solution, in the language of your choice. Example: `vim day-03/solutions/super-optimized.py`
 4. Test your solution.
 
 ```sh
-../languages/py.sh day-03/input.txt day-03/output.txt day-03/solutions/super-optimized.py
+../languages/python.sh day-03/input.txt day-03/output.txt day-03/solutions/super-optimized.py
 ```
 
 5. Make a Pull Request to the `main` branch.
@@ -33,18 +33,3 @@ Every solution gets the `input.txt`-file delivered to `stdin` using `cat`, and w
 cat input.txt | <solution-in-any-language> | diff - output.txt
 ```
 See [day-00-example/solutions/](https://github.com/Arxcis/adventofcode2020/tree/main/days/day-00-example/solutions), for examples on how to read from `stdin` and how to write to `stdout` in different languages.
-
-## Languages supported by CI - so far
-
-```
-bash    main.bash
-gcc     main.c -o gcc.out && ./gcc.out
-g++     main.cpp -o g++.out && ./g++.out
-go run  main.go
-javac   Main.java && java Main
-node    main.node.mjs
-php     main.php
-python3 main.py
-rustc   main.rs -o rustc.out && ./rustc.out
-polyc   main.sml -o sml.out && ./sml.out
-```

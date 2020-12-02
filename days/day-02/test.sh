@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-DIR=$(dirname $(realpath $0))
+D=$(dirname $(realpath $0))
 
-# Run tests
-# Example: $DIR/../../languages/rust.sh $DIR ./solutions/main.rs
-
-echo "$DIR / --- Empty --- ❌";
-exit 1337;
+echo ""
+echo "--- Day 2: Password Philosophy ---"
+$D/../../languages/c.sh $D/input.txt $D/output.txt $D/solutions/day02.c
+echo ""
