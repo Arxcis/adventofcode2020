@@ -10,7 +10,7 @@ int main() {
     int from = 0;
     int to = 0;
     char letter = 0;
-    char password[30];
+    char password[MAX_LINE-7];
     sscanf(line, "%d-%d %c: %s", &from, &to, &letter, password);
 
     int letter_occurances = 0;
