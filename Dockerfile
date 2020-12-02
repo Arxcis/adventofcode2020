@@ -5,23 +5,20 @@ LABEL source=https://github.com/Arxcis/adventofcode2020
 ENV TZ=Europe/Oslo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Configure repository for zig
-# See: https://github.com/dryzig/zig-debian/blob/master/README.md
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
-RUN echo 'deb https://dl.bintray.com/dryzig/zig-ubuntu groovy main' | tee -a /etc/apt/sources.list
-
 # apt-get install all the things
 RUN apt-get update && apt-get install -yqq\
-  # build-essential includes `make`, `gcc` and `g++`
+  # build-essential includes make, gcc and g++
   build-essential\
   default-jdk\
   golang\
   nodejs\
   php-cli\
   polyml libpolyml-dev\
-  zig\
   python3\
   ruby\
   rustc\
+  wget\
 ;
 
+# install zig using wget
+RUN wget https://github.com/dryzig/zig-debian/releases/download/0.6.0-1/zig_0.6.0-1_amd64.deb && dpkg -i zig_0.6.0-1_amd64.deb
