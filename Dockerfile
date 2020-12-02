@@ -1,4 +1,4 @@
-FROM ubuntu:20.10
+FROM ubuntu:20.04
 LABEL source=https://github.com/Arxcis/adventofcode2020
 
 # 1. Configure TZ, so we don't get interactive prompt
@@ -18,6 +18,9 @@ RUN apt-get update && apt-get install -yqq\
   ruby\
   rustc\
   wget\
-  &&\
-  wget https://github.com/dryzig/zig-debian/releases/download/0.6.0-1/zig_0.6.0-1_amd64.deb && dpkg -i zig_0.6.0-1_amd64.deb\
+;
+
+RUN wget https://ziglang.org/download/0.7.0/zig-linux-x86_64-0.7.0.tar.xz\
+  && tar xvf zig-linux-x86_64-0.7.0.tar.xz\
+  && cp zig-linux-x86_64-0.7.0/zig /bin/\
 ;

@@ -8,5 +8,5 @@ INPUT="$1"
 OUTPUT="$2"
 SOLUTION="$3"
 
-cat $INPUT | zig run $SOLUTION | diff - $OUTPUT
+cat $INPUT | zig run $SOLUTION -O ReleaseFast | diff - $OUTPUT
 echo "cat INPUT | zig $SOLUTION ✅"
