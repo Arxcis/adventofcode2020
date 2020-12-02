@@ -16,7 +16,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: "jonasjso/adventofcode2020:2020-12-01-with-ruby"
+      image: "jonasjso/adventofcode2020:2020-12-03"
     steps:
       - uses: actions/checkout@v2
       - name: make versions

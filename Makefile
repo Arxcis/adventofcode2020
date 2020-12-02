@@ -1,4 +1,4 @@
-export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-01-with-ruby"
+export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-03"
 
 .PHONY:
 	test\
