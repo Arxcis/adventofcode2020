@@ -4,7 +4,7 @@ Collaboratively solve the 2020 edition of https://adventofcode.com/, and test th
 ## [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Status
-Here you can see the status of automatic tests run by Github CI:
+Github CI runs `days/<day>/test.sh` for each day. Example: [days/day-00-example/test.sh](./days/day-00-example/test.sh)
 
 ![day-01](https://github.com/Arxcis/adventofcode2020/workflows/day-01/badge.svg)
 ![day-02](https://github.com/Arxcis/adventofcode2020/workflows/day-02/badge.svg)
