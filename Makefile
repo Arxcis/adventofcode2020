@@ -1,4 +1,4 @@
-export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-01-with-ruby"
+export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-02-with-zig"
 
 .PHONY:
 	test\
@@ -72,7 +72,7 @@ docker.versions:
 versions:
 	./scripts/print-versions.sh
 
-worflows:
+workflows:
 	./scripts/make-workflows.sh
 
 # ...continuing where we left off
