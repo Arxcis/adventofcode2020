@@ -1,18 +1,16 @@
-import readline from "readline";
+import fs from "fs";
 
-(async function () {
-  const lines = readline.createInterface({
-    input: process.stdin,
-  });
+const STANDARD_IN = 0
+const lines = fs.readFileSync(STANDARD_IN).toString().split("\n").slice(0, -1)
 
-  let sumAll = 0;
-  let sumOdd = 0;
-  for await (const line of lines) {
-    const num = parseInt(line);
-    sumAll += num;
-    sumOdd += num % 2 !== 0 ? num : 0
-  }
+let sumAll = 0;
+let sumOdd = 0;
 
-  console.log(`${sumAll}`)
-  console.log(`${sumOdd}`)
-})()
+for (const line of lines) {
+  const num = parseInt(line);
+  sumAll += num;
+  sumOdd += num % 2 !== 0 ? num : 0
+}
+
+console.log(`${sumAll}`);
+console.log(`${sumOdd}`);
