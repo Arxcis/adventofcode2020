@@ -7,7 +7,7 @@ Anyone is encouraged to contribute, and as a contributor you may do whatever you
 
 #### [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - for volunteering to support this project :pray:
+A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
 
 Also a big thanks to the rest of our contributors :tada:
 - @Celebrian
