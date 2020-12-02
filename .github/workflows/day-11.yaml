@@ -16,7 +16,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: "jonasjso/adventofcode2020:2020-12-02-with-zig"
+      image: "jonasjso/adventofcode2020:2020-12-02-with-zig07"
     steps:
       - uses: actions/checkout@v2
       - name: make versions
