@@ -15,6 +15,8 @@ Also a big thanks to the rest of our contributors :tada:
 - @Celebrian
 - @Avokadoen 
 
+If you enjoy working on this project, consider sharing it with your friends. The more the merrier 🚀
+
 ## Github CI status
 
 ![day-01](https://github.com/Arxcis/adventofcode2020/workflows/day-01/badge.svg)
