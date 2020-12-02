@@ -32,7 +32,7 @@ Collaboratively solve the 2020 edition of https://adventofcode.com/, and test th
 ![day-25](https://github.com/Arxcis/adventofcode2020/workflows/day-25/badge.svg)
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
 
-*Github CI runs one `days/<day>/test.sh` for each day. Example test: [days/day-00-example/test.sh](./days/day-00-example/test.sh)*
+*Github CI runs one `days/<day>/test.sh` for each day. Example: [days/day-00-example/test.sh](./days/day-00-example/test.sh)*
 
 
 ## Supported languages
@@ -51,10 +51,10 @@ Collaboratively solve the 2020 edition of https://adventofcode.com/, and test th
 | node     | node    main.node.mjs                          |        0 / 25       |
 | php      | php     main.php                               |        0 / 25       |
 
-*List of Languages supported by our [Dockerfile](./Dockerfile)*
+*List programming languages supported by our [Dockerfile](./Dockerfile)*
 
 
-**To see all the language versions run:**
+**To see all the language-versions run:**
 ```
 make docker.versions      // For the docker container's versions
 make versions             // For the host system's versions
