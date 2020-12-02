@@ -51,7 +51,7 @@ Collaboratively solve the 2020 edition of https://adventofcode.com/, and test th
 | node     | node    main.node.mjs                          |        0 / 25       |
 | php      | php     main.php                               |        0 / 25       |
 
-*List programming languages supported by our [Dockerfile](./Dockerfile)*
+*List of programming languages supported by our [Dockerfile](./Dockerfile)*
 
 
 **To see all the language-versions run:**
