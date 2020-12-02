@@ -39,12 +39,12 @@ Collaboratively solve the 2020 edition of https://adventofcode.com/, and test th
 
 | Language | Command                                        | # of days completed |
 |----------|------------------------------------------------|---------------------|
-| c        | gcc     main.c -o gcc.out && ./gcc.out         |        1 / 25       |
-| c++      | g++     main.cpp -o g++.out && ./g++.out       |        1 / 25       |
+| c        | gcc     main.c -o out.gcc && ./out.gcc         |        1 / 25       |
+| c++      | g++     main.cpp -o out.g++ && ./out.g++       |        1 / 25       |
 | python   | python3 main.py                                |        1 / 25       |
 | ruby     | ruby    main.rb                                |        1 / 25       |
-| rust     | rustc   main.rs -o rustc.out && ./rustc.out    |        1 / 25       |
-| sml      | polyc   main.sml -o sml.out && ./sml.out       |        1 / 25       |
+| rust     | rustc   main.rs -o out.rustc && ./out.rustc    |        1 / 25       |
+| sml      | polyc   main.sml -o out.polyc && ./out.polyc   |        1 / 25       |
 | bash     | bash    main.bash                              |        0 / 25       |
 | golang   | go run  main.go                                |        0 / 25       |
 | java     | javac   Main.java && java Main                 |        0 / 25       |
