@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -yqq\
   nodejs\
   php-cli\
   polyml libpolyml-dev\
-  zig;
+  zig\
   python3\
   ruby\
   rustc\
