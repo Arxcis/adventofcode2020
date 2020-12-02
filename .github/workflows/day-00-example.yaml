@@ -4,6 +4,11 @@ on:
     paths:
       - 'days/day-00-example/**'
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'days/${DAY}/**'
 
 jobs:
   test:

@@ -1,6 +1,12 @@
 name: day-07
 on:
+  workflow_dispatch:
   push:
+    paths:
+      - 'days/day-07/**'
+  pull_request:
+    branches:
+      - main
     paths:
       - 'days/day-07/**'
 

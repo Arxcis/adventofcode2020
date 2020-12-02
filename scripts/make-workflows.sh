@@ -14,7 +14,13 @@ do
   cat > "./.github/workflows/${DAY}.yaml" << WORKFLOW
 name: ${DAY}
 on:
+  workflow_dispatch:
   push:
+    paths:
+      - 'days/${DAY}/**'
+  pull_request:
+    branches:
+      - main
     paths:
       - 'days/${DAY}/**'
 
