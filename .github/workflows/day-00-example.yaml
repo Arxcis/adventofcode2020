@@ -1,6 +1,8 @@
 name: day-00-example
 on:
   push:
+    branches:
+      - main
     paths:
       - 'days/day-00-example/**'
   workflow_dispatch:
