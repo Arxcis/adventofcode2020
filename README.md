@@ -1,9 +1,9 @@
 # adventofcode2020 🕯️ 🎄 ⛄
 Collaboratively solve the 2020 edition of https://adventofcode.com/, and test the solutions using Github CI.
 
-## [CONTRIBUTING.md](./CONTRIBUTING.md)
+#### [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-## Status
+## Github CI status
 
 ![day-01](https://github.com/Arxcis/adventofcode2020/workflows/day-01/badge.svg)
 ![day-02](https://github.com/Arxcis/adventofcode2020/workflows/day-02/badge.svg)
@@ -32,26 +32,29 @@ Collaboratively solve the 2020 edition of https://adventofcode.com/, and test th
 ![day-25](https://github.com/Arxcis/adventofcode2020/workflows/day-25/badge.svg)
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
 
-Github CI runs `days/<day>/test.sh` for each day. Example: [days/day-00-example/test.sh](./days/day-00-example/test.sh)
+*Github CI runs one `days/<day>/test.sh` for each day. Example test: [days/day-00-example/test.sh](./days/day-00-example/test.sh)*
 
 
-## Languages supported by our [Dockerfile](./Dockerfile), so far...
+## Supported languages
 
-```
-bash    main.bash
-gcc     main.c -o gcc.out && ./gcc.out
-g++     main.cpp -o g++.out && ./g++.out
-go run  main.go
-javac   Main.java && java Main
-node    main.node.mjs
-php     main.php
-polyc   main.sml -o sml.out && ./sml.out
-python3 main.py
-rustc   main.rs -o rustc.out && ./rustc.out
-ruby    main.rb
-```
+| Language | Command                                        | # of days completed |
+|----------|------------------------------------------------|---------------------|
+| c        | gcc     main.c -o gcc.out && ./gcc.out         |        1 / 25       |
+| c++      | g++     main.cpp -o g++.out && ./g++.out       |        1 / 25       |
+| python   | python3 main.py                                |        1 / 25       |
+| ruby     | ruby    main.rb                                |        1 / 25       |
+| rust     | rustc   main.rs -o rustc.out && ./rustc.out    |        1 / 25       |
+| sml      | polyc   main.sml -o sml.out && ./sml.out       |        1 / 25       |
+| bash     | bash    main.bash                              |        0 / 25       |
+| golang   | go run  main.go                                |        0 / 25       |
+| java     | javac   Main.java && java Main                 |        0 / 25       |
+| node     | node    main.node.mjs                          |        0 / 25       |
+| php      | php     main.php                               |        0 / 25       |
 
-To see all the versions run:
+*List of Languages supported by our [Dockerfile](./Dockerfile)*
+
+
+**To see all the language versions run:**
 ```
 make docker.versions      // For the docker container's versions
 make versions             // For the host system's versions
