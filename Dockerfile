@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -yqq\
   ruby\
   rustc\
   wget\
+  &&\
+  wget https://github.com/dryzig/zig-debian/releases/download/0.6.0-1/zig_0.6.0-1_amd64.deb && dpkg -i zig_0.6.0-1_amd64.deb\
 ;
-
-# install zig using wget
-RUN wget https://github.com/dryzig/zig-debian/releases/download/0.6.0-1/zig_0.6.0-1_amd64.deb && dpkg -i zig_0.6.0-1_amd64.deb
