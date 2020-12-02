@@ -32,7 +32,7 @@ Collaboratively solve the 2020 edition of https://adventofcode.com/, and test th
 ![day-25](https://github.com/Arxcis/adventofcode2020/workflows/day-25/badge.svg)
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
 
-*Github CI runs one `days/<day>/test.sh` for each day. Example: [days/day-00-example/test.sh](./days/day-00-example/test.sh)*
+*Github CI runs one `days/<day>/test.sh` for each day. Example: [days/day-00-example/test.sh](./days/day-01/test.sh)*
 
 
 ## Supported languages
