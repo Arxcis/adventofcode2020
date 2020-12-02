@@ -50,7 +50,7 @@ Collaboratively solve the 2020 edition of https://adventofcode.com/, and test th
 | java     | javac   Main.java && java Main                 |        0 / 25       |
 | node     | node    main.node.mjs                          |        0 / 25       |
 | php      | php     main.php                               |        0 / 25       |
-
+| zig      | zig     run main.zig                           |        1 / 25       |
 *List of programming languages supported by our [Dockerfile](./Dockerfile)*
 
 
