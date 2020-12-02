@@ -1,5 +1,19 @@
 export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-01-with-ruby"
 
+.PHONY:
+	dockerbuild\
+	dockerpush\
+	test\
+	test.all\
+	docker.test\
+	docker.all\
+	docker.build\
+	docker.push\
+	docker.versions\
+	versions\
+	workflows\
+	;\
+
 test.all:
 	for day in $$(ls days); do ./days/$$day/test.sh; done
 
@@ -10,10 +24,12 @@ test.example:
 	make test DAY=day-00-example
 
 test.day00: test.example
+
 test.day01:
 	make test DAY=day-01
 test.day02:
 	make test DAY=day-02
+# ...and so on. The list continues at the bottom of the Makefile.
 
 #
 # make docker.test DAY=<day>
@@ -32,10 +48,12 @@ docker.example:
 	make docker.test DAY=day-00-example
 
 docker.day00: docker.example
+
 docker.day01:
 	make docker.test DAY=day-01
 docker.day02:
 	make docker.test DAY=day-02
+# ...and so on. The list continues at the bottom of the Makefile.
 
 docker.all:
 	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make && exit"
@@ -55,16 +73,34 @@ versions:
 worflows:
 	./scripts/make-workflows.sh
 
-.PHONY:
-	dockerbuild\
-	dockerpush\
-	test\
-	test.all\
-	docker.test\
-	docker.all\
-	docker.build\
-	docker.push\
-	docker.versions\
-	versions\
-	workflows\
-	;\
+# ...continuing where we left off
+test.day03:
+	make test DAY=day-03
+test.day04:
+	make test DAY=day-04
+test.day05:
+	make test DAY=day-05
+test.day06:
+	make test DAY=day-06
+test.day07:
+	make test DAY=day-07
+test.day08:
+	make test DAY=day-08
+test.day09:
+	make test DAY=day-09
+
+# ...continuing where we left off
+docker.day03:
+	make docker.test DAY=day-03
+docker.day04:
+	make docker.test DAY=day-04
+docker.day05:
+	make docker.test DAY=day-05
+docker.day06:
+	make docker.test DAY=day-06
+docker.day07:
+	make docker.test DAY=day-07
+docker.day08:
+	make docker.test DAY=day-08
+docker.day10:
+	make docker.test DAY=day-10
