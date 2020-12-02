@@ -5,13 +5,13 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
 
 
+#### [CONTRIBUTING.md](./CONTRIBUTING.md)
+
 A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - for volunteering to support this project :pray:
 
 Also a big thanks to the rest of our contributors :tada:
 - @Celebrian
 - @Avokadoen 
-
-#### [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Github CI status
 
