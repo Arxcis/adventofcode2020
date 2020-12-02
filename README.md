@@ -1,7 +1,16 @@
 # adventofcode2020 🕯️ 🎄 ⛄
-Collaboratively solve the 2020 edition of https://adventofcode.com/, and test the solutions using Github CI.
+
+Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/. 
+
+Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
 
 #### [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - for volunteering to support this project :pray:
+
+Also a big thanks to the rest of our contributors :tada:
+- @Celebrian
+- @Avokadoen 
 
 ## Github CI status
 
