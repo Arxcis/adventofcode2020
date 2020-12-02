@@ -45,5 +45,5 @@ ruby --version
 echo ""
 
 echo "$ zig version"
-ruby version
+zig version
 echo ""

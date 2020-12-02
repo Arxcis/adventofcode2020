@@ -8,7 +8,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Configure repository for zig
 # See: https://github.com/dryzig/zig-debian/blob/master/README.md
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
-RUN echo 'deb https://dl.bintray.com/dryzig/zig-ubuntu bionic main' | tee -a /etc/apt/sources.list
+RUN echo 'deb https://dl.bintray.com/dryzig/zig-ubuntu groovy main' | tee -a /etc/apt/sources.list
 
 # apt-get install all the things
 RUN apt-get update && apt-get install -yqq\
