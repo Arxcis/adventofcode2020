@@ -8,10 +8,11 @@
 4. Test your solution.
 
 ```sh
-../languages/python.sh day-03/input.txt day-03/output.txt day-03/solutions/super-optimized.py
+cd days/day03
+../../languages/python.sh input.txt output.txt solutions/super-optimized.py
 ```
 
-5. Add the test to `day03/test.sh`, to let the CI know how to test your solution. 
+5. Add the test to `day03/test.sh`, to let the CI know how to test your solution.
 6. Make a Pull Request to the `main` branch.
 7. One of the maintainers will merge when the tests pass!
 8. Remember to have fun :tada:
