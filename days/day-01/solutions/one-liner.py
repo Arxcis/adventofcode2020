@@ -1,0 +1,1 @@
+import sys; import numpy as np; import itertools; [print(v) for v in ((a == input[0]) * b * c if (b + c) == 2020 else (a+b+c == 2020)*(a * b * c) for input in [np.fromfile(sys.argv[1:][0], dtype=np.int64, sep='\n')] for a, b, c in itertools.combinations(input, 3)) if v > 0]
