@@ -27,7 +27,7 @@ int main() {
   fgets(line, MAX_LINE, stdin);
   const int WRAP_WIDTH = strlen(line) - 1;
 
-  // Read line by line starting for line 1
+  // Read line by line starting from line 1
   int y = 1;
   for (char line[MAX_LINE]; fgets(line, MAX_LINE, stdin); ++y) {
 
