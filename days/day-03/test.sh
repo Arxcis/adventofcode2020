@@ -9,4 +9,5 @@ $D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day03.c
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day03.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/python_klyve.py
 $D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day03.sml
+$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.py
 echo ""
