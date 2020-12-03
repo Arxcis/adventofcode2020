@@ -98,4 +98,4 @@ make test.all               // Expect some days to succeed, some to fail
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/VSLcKcmDKnMq2fGd5R9AcZi0X.svg)](https://asciinema.org/a/VSLcKcmDKnMq2fGd5R9AcZi0X)
+[![asciicast](https://asciinema.org/a/qVa7n8LmDnynRuBRvZzY5Kr7N.svg)](https://asciinema.org/a/qVa7n8LmDnynRuBRvZzY5Kr7N)
