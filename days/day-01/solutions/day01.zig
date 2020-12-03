@@ -7,8 +7,9 @@ const Allocator = std.mem.Allocator;
 fn bytesToIntArrayList(allocator: *Allocator, bytes: []u8) !ArrayList(u32) {
     var list = try ArrayList(u32).initCapacity(allocator, 200);
 
-    var it = mem.split(bytes, "\r\n");
-    while (it.next()) |line| {
+    var it = mem.split(bytes, "\n");
+    while (it.next()) |raw_line| {
+        const line = mem.trim(u8, raw_line, &std.ascii.spaces);
         if (line.len == 0) continue; // empty line
         const value = try std.fmt.parseInt(u32, line, 10);
         try list.append(value);
@@ -60,6 +61,6 @@ pub fn main() anyerror!void {
         }
     }
 
-    try stdout.print("{}\r\n", .{part1});
-    try stdout.print("{}\r\n", .{part2});
+    try stdout.print("{}\n", .{part1});
+    try stdout.print("{}\n", .{part2});
 }
