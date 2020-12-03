@@ -13,6 +13,14 @@ JAVA_CLASSFILE="$JAVA_CLASSNAME.class"
 
 cd $SOLUTION_DIR
 javac "$JAVA_CLASSNAME.java"
+
+start=$(($(date +%s%N)/1000000))
 cat $INPUT | java $JAVA_CLASSNAME | diff - $OUTPUT
+end=$(($(date +%s%N)/1000000))
+
+TIME="$(expr $end - $start)"
+
+D=$(dirname $(realpath $0))
+$D/../scripts/print-test.sh "javac" "$TIME" "$SOLUTION_DIR/$JAVA_CLASSNAME.java"
+
 rm "$DIR/$SOLUTION_DIR/$JAVA_CLASSFILE";
-echo "cat INPUT | javac $SOLUTION_DIR/$JAVA_CLASSNAME.java ✅"

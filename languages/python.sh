@@ -8,5 +8,11 @@ INPUT="$1"
 OUTPUT="$2"
 SOLUTION="$3"
 
+start=$(($(date +%s%N)/1000000))
 cat $INPUT | python3 $SOLUTION | diff - $OUTPUT
-echo "cat INPUT | python3 $SOLUTION ✅"
+end=$(($(date +%s%N)/1000000))
+
+TIME="$(expr $end - $start)"
+
+D=$(dirname $(realpath $0))
+$D/../scripts/print-test.sh "python3" "$TIME" "$SOLUTION"

@@ -5,9 +5,9 @@ LABEL source=https://github.com/Arxcis/adventofcode2020
 ENV TZ=Europe/Oslo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# apt-get install all the things
-RUN apt-get update && apt-get install -yqq\
-  # build-essential includes make, gcc and g++
+# 2. apt install all the things
+RUN apt-get update && apt-get install -yqq --no-install-recommends\
+  # build-essential includes `make`, `gcc` and `g++`
   build-essential\
   default-jdk\
   golang\
@@ -18,6 +18,12 @@ RUN apt-get update && apt-get install -yqq\
   ruby\
   rustc\
   wget\
+  &&\
+  # Cleanup what we don't need
+  rm -rf /var/lib/apt/lists/*\ 
+  &&\
+  apt-get autoremove\
+  ;
 ;
 
 RUN wget https://ziglang.org/download/0.7.0/zig-linux-x86_64-0.7.0.tar.xz\
