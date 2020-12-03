@@ -44,13 +44,13 @@ int main() {
     }
   }
 
-  long int product = 1;
+  long int tree_product = 1;
   for (int i = 0; i < TOBOGGANS_SIZE; ++i) {
-      product = product * toboggans[i].trees_hit;
+      tree_product = tree_product * toboggans[i].trees_hit;
   }
 
   printf("%d\n", toboggans[0].trees_hit);
-  printf("%ld\n", product);
+  printf("%ld\n", tree_product);
 
   return 0;
 }
