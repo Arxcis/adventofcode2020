@@ -58,7 +58,7 @@ docker.day02:
 # ...and so on. The list continues at the bottom of the Makefile.
 
 docker.all:
-	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make && exit"
+	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make test.all && exit"
 
 docker.build: Dockerfile
 	docker build . --tag $(DOCKER_TAG)

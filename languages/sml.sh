@@ -10,7 +10,7 @@ SOLUTION="$3"
 OUT="$(mktemp)"
 trap 'rm -f "$OUT"' EXIT
 
-polyc "$SOLUTION" -o "$OUT"
+polyc "$SOLUTION" -o "$OUT" 2> /dev/null
 
 start=$(($(date +%s%N)/1000000))
 cat $INPUT | $OUT | diff - $OUTPUT
