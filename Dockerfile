@@ -22,5 +22,7 @@ RUN apt-get update && apt-get install -yqq\
 
 RUN wget https://ziglang.org/download/0.7.0/zig-linux-x86_64-0.7.0.tar.xz\
   && tar xvf zig-linux-x86_64-0.7.0.tar.xz\
-  && cp zig-linux-x86_64-0.7.0/zig /bin/\
+  && ln -s `pwd`/zig-linux-x86_64-0.7.0/zig /bin/zig\
+  && chmod ugo+x /bin/zig\
+  && zig version\
 ;
