@@ -1,0 +1,1 @@
+import fileinput; import itertools; [print(v) for v in ((a == input[0]) * b * c if (b + c) == 2020 else (a+b+c == 2020)*(a * b * c) for input in [[int(l) for l in fileinput.input()]] for a, b, c in itertools.combinations(input, 3)) if v > 0]
