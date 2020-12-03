@@ -18,6 +18,6 @@ end=$(($(date +%s%N)/1000000))
 TIME="$(expr $end - $start)"
 
 D=$(dirname $(realpath $0))
-$D/../scripts/print.sh "gcc" "$TIME" "$SOLUTION"
+$D/../scripts/print-test.sh "gcc" "$TIME" "$SOLUTION"
 
 rm $OUT;

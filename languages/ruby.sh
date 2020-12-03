@@ -15,4 +15,4 @@ end=$(($(date +%s%N)/1000000))
 TIME="$(expr $end - $start)"
 
 D=$(dirname $(realpath $0))
-$D/../scripts/print.sh "ruby" "$TIME" "$SOLUTION"
+$D/../scripts/print-test.sh "ruby" "$TIME" "$SOLUTION"

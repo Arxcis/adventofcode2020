@@ -21,6 +21,6 @@ end=$(($(date +%s%N)/1000000))
 TIME="$(expr $end - $start)"
 
 D=$(dirname $(realpath $0))
-$D/../scripts/print.sh "javac" "$TIME" "$SOLUTION_DIR/$JAVA_CLASSNAME.java"
+$D/../scripts/print-test.sh "javac" "$TIME" "$SOLUTION_DIR/$JAVA_CLASSNAME.java"
 
 rm "$DIR/$SOLUTION_DIR/$JAVA_CLASSFILE";

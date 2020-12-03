@@ -19,4 +19,4 @@ end=$(($(date +%s%N)/1000000))
 TIME="$(expr $end - $start)"
 
 D=$(dirname $(realpath $0))
-$D/../scripts/print.sh "polyc" "$TIME" "$SOLUTION"
+$D/../scripts/print-test.sh "polyc" "$TIME" "$SOLUTION"

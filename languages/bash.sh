@@ -16,4 +16,4 @@ TIME="$(expr $end - $start)"
 
 
 D=$(dirname $(realpath $0))
-$D/../scripts/print.sh "bash" "$TIME" "$SOLUTION"
+$D/../scripts/print-test.sh "bash" "$TIME" "$SOLUTION"
