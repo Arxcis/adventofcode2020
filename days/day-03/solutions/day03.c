@@ -11,21 +11,21 @@ struct Toboggan {
   const int down;
 };
 
+// Declare a bunch of toboggans (sleighs)
+const int TOBOGGANS_SIZE = 5;
+struct Toboggan toboggans[5] = {
+  { .x = 0, .right = 3, .down = 1, .trees_hit = 0 },
+  { .x = 0, .right = 1, .down = 1, .trees_hit = 0 },
+  { .x = 0, .right = 5, .down = 1, .trees_hit = 0 },
+  { .x = 0, .right = 7, .down = 1, .trees_hit = 0 },
+  { .x = 0, .right = 1, .down = 2, .trees_hit = 0 },
+};
+
 int main() {
   // Ignore start-line
   char line[MAX_LINE];
   fgets(line, MAX_LINE, stdin);
   const int WRAP_WIDTH = strlen(line) - 1;
-
-  // Declare a bunch of toboggans (sleighs)
-  const int TOBOGGANS_SIZE = 5;
-  struct Toboggan toboggans[5] = {
-    { .x = 0, .right = 3, .down = 1, .trees_hit = 0 },
-    { .x = 0, .right = 1, .down = 1, .trees_hit = 0 },
-    { .x = 0, .right = 5, .down = 1, .trees_hit = 0 },
-    { .x = 0, .right = 7, .down = 1, .trees_hit = 0 },
-    { .x = 0, .right = 1, .down = 2, .trees_hit = 0 },
-  };
 
   // Read line by line starting for line 1
   int y = 1;
