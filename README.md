@@ -4,7 +4,7 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 
 ### [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1: Fork today!
+Fork today! Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
 
 **Credits**
 
