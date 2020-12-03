@@ -10,4 +10,5 @@ $D/../../languages/rust.sh   $D/input.txt $D/output.txt $D/solutions/day01.rs
 $D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day01.sml
 $D/../../languages/ruby.sh   $D/input.txt $D/output.txt $D/solutions/day01.rb
 $D/../../languages/cpp.sh    $D/input.txt $D/output.txt $D/solutions/day01.cpp
+$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.py
 echo ""
