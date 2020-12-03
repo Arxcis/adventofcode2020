@@ -1,4 +1,4 @@
-import fs from "fs";
+const fs = require("fs");
 
 const STANDARD_IN = 0
 const lines = fs.readFileSync(STANDARD_IN).toString().split("\n").slice(0, -1)

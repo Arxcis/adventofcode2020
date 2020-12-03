@@ -11,6 +11,12 @@ OUT="$(mktemp)"
 trap 'rm -f "$OUT"' EXIT
 
 polyc "$SOLUTION" -o "$OUT"
-"$OUT" < "$INPUT" | diff - "$OUTPUT"
 
-echo "polyc $SOLUTION -o out.sml && ./out.sml ✅"
+start=$(($(date +%s%N)/1000000))
+cat $INPUT | $OUT | diff - $OUTPUT
+end=$(($(date +%s%N)/1000000))
+
+TIME="$(expr $end - $start)"
+
+D=$(dirname $(realpath $0))
+$D/../scripts/print.sh "polyc" "$TIME" "$SOLUTION"
