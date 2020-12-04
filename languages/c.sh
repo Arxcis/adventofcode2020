@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 # Usage:   ./languages/c.sh INPUT                 OUTPUT                 SOLUTION
 # Example: ./languages/c.sh days/day-03/input.txt days/day-03/output.txt days/day-03/solutions/main.c
