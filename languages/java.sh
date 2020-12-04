@@ -23,4 +23,4 @@ TIME="$(expr $end - $start)"
 D=$(dirname $(realpath $0))
 $D/../scripts/print-test.sh "javac" "$TIME" "$SOLUTION_DIR/$JAVA_CLASSNAME.java"
 
-rm "$DIR/$SOLUTION_DIR/$JAVA_CLASSFILE";
+rm "$SOLUTION_DIR/$JAVA_CLASSFILE";
