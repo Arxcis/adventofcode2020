@@ -18,7 +18,7 @@ int main() {
   for (int i = 0; i < LINE_SIZE; ++i) {
     for (int j = 0; j < LINE_SIZE; ++j) {
 
-      if (((lines[i] + lines[j]) == 2020)) {
+      if ((lines[i] + lines[j]) == 2020) {
         doublet = lines[i] * lines[j];
       }
 
