@@ -4,8 +4,9 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 
 ### [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
+Fork today! Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
 
+**Contributors**
 A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
 
 Also a big thanks to the rest of our contributors :tada:
@@ -13,6 +14,7 @@ Also a big thanks to the rest of our contributors :tada:
 - @Avokadoen
 - @Stekpotet
 
+**Leaderboard**
 Contributors are welcomed to join our private leaderboard :sunglasses: Use the join code **376961-8a514359** at https://adventofcode.com/2020/leaderboard/private
 
 If you enjoy working on this project, consider sharing it with your friends. The more the merrier 🚀
@@ -65,6 +67,7 @@ If you enjoy working on this project, consider sharing it with your friends. The
 | java     | javac   Main.java && java Main                 |        0 / 25       |
 | node     | node    main.node.mjs                          |        0 / 25       |
 | php      | php     main.php                               |        0 / 25       |
+
 *List of programming languages supported by our [Dockerfile](./Dockerfile)*
 
 
