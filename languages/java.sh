@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 # Usage:   ./languages/java.sh INPUT                 OUTPUT                 SOLUTION_DIR          JAVA_CLASSNAME
 # Example: ./languages/java.sh days/day-03/input.txt days/day-03/output.txt days/day-03/solutions Example
