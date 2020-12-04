@@ -1,4 +1,4 @@
-export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-04"
+export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-04-with-polyc-fix"
 
 
 
