@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 # Usage:   ./languages/go.sh INPUT                 OUTPUT                 SOLUTION
 # Example: ./languages/go.sh days/day-03/input.txt days/day-03/output.txt days/day-03/solutions/main.go
