@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DIR=$(dirname $(realpath $0))
+D=$(dirname $(realpath $0))
 
-
-
-echo "$DIR / --- Empty --- ❌";
-exit 1337;
+echo ""
+echo "--- Day 4: Passport processing ---"
+$D/../../languages/c.sh   $D/input.txt $D/output.txt $D/solutions/day04.c
+echo ""
