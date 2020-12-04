@@ -25,7 +25,7 @@ OUTPUT
 
     cat > "./$DAY/test.sh" << 'TEST'
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 DIR=$(dirname $(realpath $0))
 
