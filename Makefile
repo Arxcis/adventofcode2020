@@ -1,4 +1,5 @@
-export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-03"
+export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-04"
+
 
 
 .PHONY:

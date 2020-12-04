@@ -24,7 +24,6 @@ RUN apt-get update && apt-get install -yqq --no-install-recommends\
   &&\
   apt-get autoremove\
   ;
-;
 
 RUN wget https://ziglang.org/download/0.7.0/zig-linux-x86_64-0.7.0.tar.xz\
   && tar xf zig-linux-x86_64-0.7.0.tar.xz\
