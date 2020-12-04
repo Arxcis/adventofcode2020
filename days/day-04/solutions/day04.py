@@ -64,11 +64,9 @@ class Passport:
         val = self.props.get(HEIGHT)
 
         if "in" in val:
-            val = val.replace("in", "")
-            return 59 <= int(val) <= 76
+            return 59 <= int(val[:-2]) <= 76
         if "cm" in val:
-            val = val.replace("cm", "")
-            return 150 <= int(val) <= 193
+            return 150 <= int(val[:-2]) <= 193
 
         return False
 
