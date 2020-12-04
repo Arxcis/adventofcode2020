@@ -58,9 +58,9 @@ If you enjoy working on this project, consider sharing it with your friends. The
 | Language | Command                                        | # of days completed |
 |----------|------------------------------------------------|---------------------|
 | python   | python3 main.py                                |        4 / 25       |
+| c        | gcc     main.c -o out.gcc && ./out.gcc         |        4 / 25       |
 | sml      | polyc   main.sml -o out.polyc && ./out.polyc   |        3 / 25       |
 | golang   | go run  main.go                                |        3 / 25       |
-| c        | gcc     main.c -o out.gcc && ./out.gcc         |        2 / 25       |
 | c++      | g++     main.cpp -o out.g++ && ./out.g++       |        2 / 25       |
 | ruby     | ruby    main.rb                                |        1 / 25       |
 | rust     | rustc   main.rs -o out.rustc && ./out.rustc    |        1 / 25       |
