@@ -1,4 +1,4 @@
-FROM ubuntu:20.10
+FROM ubuntu:20.04
 LABEL source=https://github.com/Arxcis/adventofcode2020
 
 # 1. Configure TZ, so we don't get interactive prompt
@@ -17,10 +17,18 @@ RUN apt-get update && apt-get install -yqq --no-install-recommends\
   python3\
   ruby\
   rustc\
-  && \
+  wget\
+  &&\
   # Cleanup what we don't need
-  rm -rf /var/lib/apt/lists/* \ 
-  && \
-  apt-get autoremove \
+  rm -rf /var/lib/apt/lists/*\ 
+  &&\
+  apt-get autoremove\
   ;
+;
 
+RUN wget https://ziglang.org/download/0.7.0/zig-linux-x86_64-0.7.0.tar.xz\
+  && tar xf zig-linux-x86_64-0.7.0.tar.xz\
+  && rm -rf zig-linux-x86_64-0.7.0.tar.xz\
+  && ln -s `pwd`/zig-linux-x86_64-0.7.0/zig /bin/zig\
+  && chmod ugo+x /bin/zig\
+;

@@ -43,3 +43,7 @@ echo ""
 echo "$ ruby --version"
 ruby --version
 echo ""
+
+echo "$ zig version"
+zig version
+echo ""
