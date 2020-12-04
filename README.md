@@ -9,9 +9,9 @@ Anyone is encouraged to contribute, and as a contributor you may do whatever you
 A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
 
 Also a big thanks to the rest of our contributors :tada:
-- @Celebrian
-- @Avokadoen
-- @Stekpotet
+- [@Celebrian](https://github.com/Celebrian)
+- [@Avokadoen](https://github.com/Avokadoen)
+- [@Stektpotet](https://github.com/Stektpotet)
 
 Contributors are welcomed to join our private leaderboard :sunglasses: Use the join code **376961-8a514359** at https://adventofcode.com/2020/leaderboard/private
 
