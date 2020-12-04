@@ -1,8 +1,6 @@
 import re
 import sys
 
-INPUT_FILE = "input.txt"
-
 BIRTH_YEAR = 'byr'
 ISSUE_YEAR = 'iyr'
 EXPIRATION_YEAR = 'eyr'
