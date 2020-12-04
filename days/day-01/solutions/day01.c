@@ -29,13 +29,11 @@ int main() {
         }
       }
       if (doublet && triplet) {
-        break;
+        goto found;
       }
     }
-    if (doublet && triplet) {
-      break;
-    }
   }
+  found:
 
   printf("%ld\n", doublet);
   printf("%ld\n", triplet);
