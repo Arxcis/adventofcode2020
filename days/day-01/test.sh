@@ -5,8 +5,8 @@ D=$(dirname $(realpath $0))
 
 echo ""
 echo "--- Day 1: Report Repair ---"
-$D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day01.sml
 $D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day01.c
+$D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day01.sml
 $D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day01.go
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.py
 $D/../../languages/cpp.sh    $D/input.txt $D/output.txt $D/solutions/day01.cpp

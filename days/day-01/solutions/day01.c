@@ -25,8 +25,15 @@ int main() {
       for (int k = 0; k < LINE_SIZE; ++k) {
         if ((lines[i] + lines[j] + lines[k]) == 2020) {
           triplet = lines[i] * lines[j] * lines[k];
+          break;
         }
       }
+      if (doublet && triplet) {
+        break;
+      }
+    }
+    if (doublet && triplet) {
+      break;
     }
   }
 
