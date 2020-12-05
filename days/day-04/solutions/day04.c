@@ -14,8 +14,8 @@ const int FLAG_PID = 0b01000000;
 const int ALL_FLAGS = FLAG_BYR|FLAG_IYR|FLAG_EYR|FLAG_HGT|FLAG_HCL|FLAG_ECL|FLAG_PID;
 const int RESET_FLAGS = 0b0;
 
-const int REQUIRED_KEYS_SIZE = 7;
-const char REQUIRED_KEYS[7][4] = {
+#define REQUIRED_KEYS_SIZE 7
+const char* REQUIRED_KEYS[REQUIRED_KEYS_SIZE] = {
   "byr", // Birth year
   "iyr", // issue year
   "eyr", // expiration year
@@ -123,7 +123,7 @@ int main() {
           if (value != end) {
             // If cm, the number must be at least 150 and at most 193.
             if (150 <= number && number <= 193) {
-              valid_value_flags |= (1 << 3);
+              valid_value_flags |= FLAG_HGT;
             }
           }
         } else if (strstr(value, "in")) {

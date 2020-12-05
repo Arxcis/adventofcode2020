@@ -1,7 +1,7 @@
-const fs = require("fs");
+import { readFileSync } from "fs";
 
 const STANDARD_IN = 0
-const lines = fs.readFileSync(STANDARD_IN).toString().split("\n").slice(0, -1)
+const lines = readFileSync(STANDARD_IN).toString().split("\n").slice(0, -1)
 
 let sumAll = 0;
 let sumOdd = 0;
