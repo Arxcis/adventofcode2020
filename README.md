@@ -1,19 +1,25 @@
 # adventofcode2020 🕯️ 🎄 ⛄
 
-Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/. 
+Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/.
 
 ### [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1: 
+Fork today! Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
 
-Contributors also get access to our private leaderboard over at https://adventofcode.com/, and their name listed in this README.md :sunglasses:
-
+**Contributors**
 
 A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
 
 Also a big thanks to the rest of our contributors :tada:
-- @Celebrian
-- @Avokadoen 
+- [@Celebrian](https://github.com/Celebrian)
+- [@Avokadoen](https://github.com/Avokadoen)
+- [@Stektpotet](https://github.com/Stektpotet)
+
+**Leaderboard**
+
+Contributors are welcomed to join our private leaderboard :sunglasses: Use the join code **376961-8a514359** at https://adventofcode.com/2020/leaderboard/private
+
+If you enjoy working on this project, consider sharing it with your friends. The more the merrier 🚀
 
 ## Github CI status
 
@@ -51,14 +57,15 @@ Also a big thanks to the rest of our contributors :tada:
 
 | Language | Command                                        | # of days completed |
 |----------|------------------------------------------------|---------------------|
-| c        | gcc     main.c -o out.gcc && ./out.gcc         |        1 / 25       |
-| c++      | g++     main.cpp -o out.g++ && ./out.g++       |        1 / 25       |
-| python   | python3 main.py                                |        1 / 25       |
+| python   | python3 main.py                                |        4 / 25       |
+| c        | gcc     main.c -o out.gcc && ./out.gcc         |        4 / 25       |
+| sml      | polyc   main.sml -o out.polyc && ./out.polyc   |        3 / 25       |
+| golang   | go run  main.go                                |        3 / 25       |
+| c++      | g++     main.cpp -o out.g++ && ./out.g++       |        2 / 25       |
 | ruby     | ruby    main.rb                                |        1 / 25       |
 | rust     | rustc   main.rs -o out.rustc && ./out.rustc    |        1 / 25       |
-| sml      | polyc   main.sml -o out.polyc && ./out.polyc   |        1 / 25       |
+| zig      | zig     run main.zig                           |        1 / 25       |
 | bash     | bash    main.bash                              |        0 / 25       |
-| golang   | go run  main.go                                |        0 / 25       |
 | java     | javac   Main.java && java Main                 |        0 / 25       |
 | node     | node    main.node.mjs                          |        0 / 25       |
 | php      | php     main.php                               |        0 / 25       |
@@ -96,4 +103,4 @@ make test.all               // Expect some days to succeed, some to fail
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/VSLcKcmDKnMq2fGd5R9AcZi0X.svg)](https://asciinema.org/a/VSLcKcmDKnMq2fGd5R9AcZi0X)
+[![asciicast](https://asciinema.org/a/qVa7n8LmDnynRuBRvZzY5Kr7N.svg)](https://asciinema.org/a/qVa7n8LmDnynRuBRvZzY5Kr7N)

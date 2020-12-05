@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 echo "$ uname -a"
 uname -a
@@ -42,4 +42,8 @@ echo ""
 
 echo "$ ruby --version"
 ruby --version
+echo ""
+
+echo "$ zig version"
+zig version
 echo ""

@@ -1,4 +1,6 @@
-export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-01-with-ruby"
+export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-04-with-polyc-fix"
+
+
 
 .PHONY:
 	test\
@@ -58,7 +60,7 @@ docker.day02:
 # ...and so on. The list continues at the bottom of the Makefile.
 
 docker.all:
-	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make && exit"
+	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make test.all && exit"
 
 docker.build: Dockerfile
 	docker build . --tag $(DOCKER_TAG)
@@ -72,7 +74,7 @@ docker.versions:
 versions:
 	./scripts/print-versions.sh
 
-worflows:
+workflows:
 	./scripts/make-workflows.sh
 
 # ...continuing where we left off
