@@ -75,7 +75,6 @@ Contributors are welcomed to join our private leaderboard :sunglasses: Use the j
 If you enjoy working on this project, consider sharing it with your friends. The more the merrier :santa:
 
 
-
 **To see all the language-versions run:**
 ```
 make docker.versions      // For the docker container's versions
