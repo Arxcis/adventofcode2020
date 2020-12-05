@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 D=$(dirname $(realpath $0))
 
-echo ""
-echo "--- Day 4: Passport processing ---"
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.jorgen.py
+echo
+echo "--- Day 4: Passport Processing ---"
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.preng.py
-echo ""
+$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.jorgen.py
+echo
