@@ -2,26 +2,25 @@
 
 Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/.
 
-### [CONTRIBUTING.md](./CONTRIBUTING.md)
+## Solutions per language per day
 
-Fork today! Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
+| Language | Total | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 |11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|
+|----------|-------|----|----|----|----|----|----|----|----|----|----|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+| python   |    11 |  2 |  1 |  3 |  4 |  1 |    |    |    |    |    ||||||||||||||||
+| c        |     4 |  1 |  1 |  1 |  1 |    |    |    |    |    |    ||||||||||||||||
+| sml      |     4 |  1 |  1 |  1 |  1 |    |    |    |    |    |    ||||||||||||||||
+| golang   |     3 |  1 |  1 |  1 |    |    |    |    |    |    |    ||||||||||||||||
+| c++      |     2 |  1 |  1 |    |    |    |    |    |    |    |    ||||||||||||||||
+| ruby     |     2 |  1 |    |    |  1 |    |    |    |    |    |    ||||||||||||||||
+| rust     |     1 |  1 |    |    |    |    |    |    |    |    |    ||||||||||||||||
+| zig      |     1 |  1 |    |    |    |    |    |    |    |    |    ||||||||||||||||
+| bash     |     0 |    |    |    |    |    |    |    |    |    |    ||||||||||||||||
+| java     |     0 |    |    |    |    |    |    |    |    |    |    ||||||||||||||||
+| node     |     0 |    |    |    |    |    |    |    |    |    |    ||||||||||||||||
+| php      |     0 |    |    |    |    |    |    |    |    |    |    ||||||||||||||||
+| Total    |    28 |  9 |  5 |  6 |  7 |  1 |    |    |    |    |    ||||||||||||||||
 
-**Contributors**
-
-A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
-
-Also a big thanks to the rest of our contributors :tada:
-- [@Celebrian](https://github.com/Celebrian)
-- [@Avokadoen](https://github.com/Avokadoen)
-- [@Stektpotet](https://github.com/Stektpotet)
-
-**Leaderboard**
-
-Contributors are welcomed to join our private leaderboard :sunglasses: Use the join code **376961-8a514359** at https://adventofcode.com/2020/leaderboard/private
-
-**Sharing**
-
-If you enjoy working on this project, consider sharing it with your friends. The more the merrier :santa:
+*List of programming languages supported by our [Dockerfile](./Dockerfile)*
 
 ## Github CI status
 
@@ -54,25 +53,26 @@ If you enjoy working on this project, consider sharing it with your friends. The
 
 *Github CI runs one `days/<day>/test.sh` for each day. Example: [days/day-00-example/test.sh](./days/day-01/test.sh)*
 
+## [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-## Supported languages
+Fork today! Anyone is encouraged to contribute, and as a contributor you may do whatever you want with this code. Treat it as your own :+1:
 
-| Language | Command                                        | # of days completed |
-|----------|------------------------------------------------|---------------------|
-| python   | python3  main.py                               |        5 / 25       |
-| c        | gcc      main.c -o out.gcc && ./out.gcc        |        4 / 25       |
-| sml      | polyc    main.sml -o out.polyc && ./out.polyc  |        3 / 25       |
-| golang   | go build -o out.go  main.go    && ./out.go     |        4 / 25       |
-| c++      | g++      main.cpp -o out.g++ && ./out.g++      |        2 / 25       |
-| ruby     | ruby     main.rb                               |        1 / 25       |
-| rust     | rustc    main.rs -o out.rustc && ./out.rustc   |        1 / 25       |
-| zig      | zig run  main.zig                              |        1 / 25       |
-| bash     | bash     main.bash                             |        0 / 25       |
-| java     | javac    Main.java && java Main                |        0 / 25       |
-| node     | node     --harmony-top-level-await main.mjs    |        0 / 25       |
-| php      | php      main.php                              |        0 / 25       |
+**Contributors**
 
-*List of programming languages supported by our [Dockerfile](./Dockerfile)*
+A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
+
+Also a big thanks to the rest of our contributors :tada:
+- [@Celebrian](https://github.com/Celebrian)
+- [@Avokadoen](https://github.com/Avokadoen)
+- [@Stektpotet](https://github.com/Stektpotet)
+
+**Leaderboard**
+
+Contributors are welcomed to join our private leaderboard :sunglasses: Use the join code **376961-8a514359** at https://adventofcode.com/2020/leaderboard/private
+
+**Sharing**
+
+If you enjoy working on this project, consider sharing it with your friends. The more the merrier :santa:
 
 
 **To see all the language-versions run:**

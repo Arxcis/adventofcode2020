@@ -14,4 +14,5 @@ $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day01.py
 $D/../../languages/rust.sh   $D/input.txt $D/output.txt $D/solutions/day01.rs
 $D/../../languages/ruby.sh   $D/input.txt $D/output.txt $D/solutions/day01.rb
 $D/../../languages/zig.sh    $D/input.txt $D/output.txt $D/solutions/day01.zig
+$D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day01_tholok97.go
 echo ""
