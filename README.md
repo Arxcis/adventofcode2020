@@ -71,6 +71,7 @@ If you enjoy working on this project, consider sharing it with your friends. The
 | java     | javac    Main.java && java Main                |        0 / 25       |
 | node     | node     --harmony-top-level-await main.mjs    |        0 / 25       |
 | php      | php      main.php                              |        0 / 25       |
+| deno     | deno run -q main.ts                            |        0 / 25       |
 
 *List of programming languages supported by our [Dockerfile](./Dockerfile)*
 
