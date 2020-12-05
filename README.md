@@ -19,7 +19,8 @@ Also a big thanks to the rest of our contributors :tada:
 
 Contributors are welcomed to join our private leaderboard :sunglasses: Use the join code **376961-8a514359** at https://adventofcode.com/2020/leaderboard/private
 
-If you enjoy working on this project, consider sharing it with your friends. The more the merrier 🚀
+**Sharing**
+If you enjoy working on this project, consider sharing it with your friends. The more the merrier :santa:
 
 ## Github CI status
 
