@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-DIR=$(dirname $(realpath $0))
+D=$(dirname $(realpath $0))
 
-
-
-echo "$DIR / --- Empty --- ❌";
-exit 1337;
+echo ""
+echo "--- Day 5: Boarding pass ---"
+$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/preng.py
+echo ""
