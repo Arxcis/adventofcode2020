@@ -86,8 +86,8 @@ if __name__ == "__main__":
 
     # Part 1
     passports = list(filter(lambda x: x.valid(apply_rules=False), passports))
-    print(f"Part 1 => {len(passports)}")
+    print(len(passports))
 
     # Part 2
     passports = list(filter(lambda x: x.valid(apply_rules=True), passports))
-    print(f"Part 2 => {len(passports)}")
+    print(len(passports))
