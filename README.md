@@ -62,7 +62,7 @@ If you enjoy working on this project, consider sharing it with your friends. The
 | python   | python3  main.py                               |        5 / 25       |
 | c        | gcc      main.c -o out.gcc && ./out.gcc        |        4 / 25       |
 | sml      | polyc    main.sml -o out.polyc && ./out.polyc  |        3 / 25       |
-| golang   | go build -o out.go  main.go    && ./out.go     |        3 / 25       |
+| golang   | go build -o out.go  main.go    && ./out.go     |        4 / 25       |
 | c++      | g++      main.cpp -o out.g++ && ./out.g++      |        2 / 25       |
 | ruby     | ruby     main.rb                               |        1 / 25       |
 | rust     | rustc    main.rs -o out.rustc && ./out.rustc   |        1 / 25       |
