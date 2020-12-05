@@ -18,7 +18,7 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 | bash     |     0 |    |    |    |    |    |    |    |    |    |    ||||||||||||||||
 | java     |     0 |    |    |    |    |    |    |    |    |    |    ||||||||||||||||
 | php      |     0 |    |    |    |    |    |    |    |    |    |    ||||||||||||||||
-| Total    |    37 | 11 |  6 |  7 |  8 |  5 |    |    |    |    |    ||||||||||||||||
+| **Total** |**37**|**11**|**6**|**7**|**8**|**5**|    |    |    |    |    ||||||||||||||||
 
 *List of programming languages supported by our [Dockerfile](./Dockerfile)*
 
