@@ -12,4 +12,5 @@ $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.preng
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.jorgen.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.stektpotet.py
 $D/../../languages/ruby.sh   $D/input.txt $D/output.txt $D/solutions/day04.klyve.rb
+$D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day04.tholok97.go
 echo
