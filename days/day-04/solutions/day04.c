@@ -123,7 +123,7 @@ int main() {
           if (value != end) {
             // If cm, the number must be at least 150 and at most 193.
             if (150 <= number && number <= 193) {
-              valid_value_flags |= (1 << 3);
+              valid_value_flags |= FLAG_HGT;
             }
           }
         } else if (strstr(value, "in")) {
