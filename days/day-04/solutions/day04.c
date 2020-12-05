@@ -14,8 +14,8 @@ const int FLAG_PID = 0b01000000;
 const int ALL_FLAGS = FLAG_BYR|FLAG_IYR|FLAG_EYR|FLAG_HGT|FLAG_HCL|FLAG_ECL|FLAG_PID;
 const int RESET_FLAGS = 0b0;
 
-const int REQUIRED_KEYS_SIZE = 7;
-const char REQUIRED_KEYS[7][4] = {
+#define REQUIRED_KEYS_SIZE 7
+const char* REQUIRED_KEYS[REQUIRED_KEYS_SIZE] = {
   "byr", // Birth year
   "iyr", // issue year
   "eyr", // expiration year
