@@ -10,7 +10,7 @@ SOLUTION="$3"
 
 
 start=$(($(date +%s%N)/1000000))
-cat $INPUT | zig run $SOLUTION -O ReleaseFast | diff - $OUTPUT
+cat $INPUT | zig run $SOLUTION | diff - $OUTPUT
 end=$(($(date +%s%N)/1000000))
 
 TIME="$(expr $end - $start)"
