@@ -19,7 +19,9 @@ Also a big thanks to the rest of our contributors :tada:
 
 Contributors are welcomed to join our private leaderboard :sunglasses: Use the join code **376961-8a514359** at https://adventofcode.com/2020/leaderboard/private
 
-If you enjoy working on this project, consider sharing it with your friends. The more the merrier 🚀
+**Sharing**
+
+If you enjoy working on this project, consider sharing it with your friends. The more the merrier :santa:
 
 ## Github CI status
 
@@ -57,18 +59,18 @@ If you enjoy working on this project, consider sharing it with your friends. The
 
 | Language | Command                                        | # of days completed |
 |----------|------------------------------------------------|---------------------|
-| python   | python3 main.py                                |        4 / 25       |
-| sml      | polyc   main.sml -o out.polyc && ./out.polyc   |        3 / 25       |
-| golang   | go run  main.go                                |        3 / 25       |
-| c        | gcc     main.c -o out.gcc && ./out.gcc         |        2 / 25       |
-| c++      | g++     main.cpp -o out.g++ && ./out.g++       |        2 / 25       |
-| ruby     | ruby    main.rb                                |        1 / 25       |
-| rust     | rustc   main.rs -o out.rustc && ./out.rustc    |        1 / 25       |
-| zig      | zig     run main.zig                           |        1 / 25       |
-| bash     | bash    main.bash                              |        0 / 25       |
-| java     | javac   Main.java && java Main                 |        0 / 25       |
-| node     | node    main.node.mjs                          |        0 / 25       |
-| php      | php     main.php                               |        0 / 25       |
+| python   | python3  main.py                               |        5 / 25       |
+| c        | gcc      main.c -o out.gcc && ./out.gcc        |        4 / 25       |
+| sml      | polyc    main.sml -o out.polyc && ./out.polyc  |        3 / 25       |
+| golang   | go build -o out.go  main.go    && ./out.go     |        3 / 25       |
+| c++      | g++      main.cpp -o out.g++ && ./out.g++      |        2 / 25       |
+| ruby     | ruby     main.rb                               |        1 / 25       |
+| rust     | rustc    main.rs -o out.rustc && ./out.rustc   |        1 / 25       |
+| zig      | zig run  main.zig                              |        1 / 25       |
+| bash     | bash     main.bash                             |        0 / 25       |
+| java     | javac    Main.java && java Main                |        0 / 25       |
+| node     | node     --harmony-top-level-await main.mjs    |        0 / 25       |
+| php      | php      main.php                              |        0 / 25       |
 
 *List of programming languages supported by our [Dockerfile](./Dockerfile)*
 
@@ -84,7 +86,8 @@ make versions             // For the host system's versions
 ### Test a single solution
 
 ```
-$ ../languages/rust.sh day-01/input.txt day-01/output.txt day-01/solutions/day01.rs
+$ cd days/day01
+$ ../../languages/rust.sh input.txt output.txt solutions/day01.rs
 cat INPUT | rustc day-01/solutions/day01.rs ✅
 ```
 
