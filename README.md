@@ -86,7 +86,8 @@ make versions             // For the host system's versions
 ### Test a single solution
 
 ```
-$ ../languages/rust.sh day-01/input.txt day-01/output.txt day-01/solutions/day01.rs
+$ cd days/day01
+$ ../../languages/rust.sh input.txt output.txt solutions/day01.rs
 cat INPUT | rustc day-01/solutions/day01.rs ✅
 ```
 
