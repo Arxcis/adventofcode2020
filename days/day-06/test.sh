@@ -7,6 +7,7 @@ echo ""
 echo "--- Day 6: Custom customs ---"
 $D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day06.c
 $D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/tholok97.go
+$D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day06.sml
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day06.stektpotet.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day06.preng.py
 $D/../../languages/node.sh   $D/input.txt $D/output.txt $D/solutions/day06.mjs
