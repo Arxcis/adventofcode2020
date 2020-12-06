@@ -12,10 +12,8 @@ SOLUTION_NAME="zig_solution"
 TEMP_SOURCE="/tmp/$SOLUTION_NAME.zig"
 TEMP_BIN="/tmp/$SOLUTION_NAME"
 
-
-
 # Output directory can be controlled with zig build scripts, but seemingly has no compiler flag for it
-# Should probably refactor this later as it is somewhat cumbersome ... 
+# Should probably refactor this later as it is somewhat cumbersome ...
 cp $SOLUTION $TEMP_SOURCE
 cd "/tmp/"
 zig build-exe $TEMP_SOURCE --name $SOLUTION_NAME
@@ -28,4 +26,4 @@ end=$(($(date +%s%N)/1000000))
 TIME="$(expr $end - $start)"
 
 D=$(dirname $(realpath $0))
-$D/../scripts/print-test.sh "zig run" "$TIME" "$SOLUTION"
+$D/../scripts/print-test.sh "zig" "$TIME" "$SOLUTION"

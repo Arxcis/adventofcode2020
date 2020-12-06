@@ -95,14 +95,14 @@ cat INPUT | rustc day-01/solutions/day01.rs ✅
 ### Test one or more days
 ```
 // Run tests inside docker container
-make docker.example         // Expect example tests to succeed
-make docker.day01           // Expect to succeed, testing only day-01 solutions
-make docker.all             // Expect some days to succeed, some to fail
+make docker.example
+make docker.day01
+make docker.all
 
-// Run tests on host
-make test.example           // Expect example tests to succeed
-make test.day01             // Expect to succeed, testing only day-01 solutions
-make test.all               // Expect some days to succeed, some to fail
+// Run tests directly on your system
+make test.example
+make test.day01
+make test.all
 ```
 
 ## Demo
