@@ -2,30 +2,6 @@
 
 Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/.
 
-## Solutions per language per day
-
-| Language  | Total  | 01   |  02 |  03 |  04 |  05 | 06 | 07 | 08 | 09 | 10 |11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|
-|-----------|--------|------|-----|-----|-----|-----|----|----|----|----|----|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-| python    | **14** |  2   |  1  |  3  |  4  |  4  |    |    |    |    |    ||||||||||||||||
-| golang    |  **8** |  2   |  2  |  2  |  1  |  1  |    |    |    |    |    ||||||||||||||||
-| c         |  **5** |  1   |  1  |  1  |  1  |  1  |    |    |    |    |    ||||||||||||||||
-| sml       |  **5** |  1   |  1  |  1  |  1  |  1  |    |    |    |    |    ||||||||||||||||
-| c++       |  **2** |  1   |  1  |     |     |     |    |    |    |    |    ||||||||||||||||
-| ruby      |  **2** |  1   |     |     |  1  |     |    |    |    |    |    ||||||||||||||||
-| node      |  **2** |  1   |     |     |  1  |     |    |    |    |    |    ||||||||||||||||
-| rust      |  **1** |  1   |     |     |     |     |    |    |    |    |    ||||||||||||||||
-| zig       |  **1** |  1   |     |     |     |     |    |    |    |    |    ||||||||||||||||
-| bash      |  **0** |      |     |     |     |     |    |    |    |    |    ||||||||||||||||
-| java      |  **0** |      |     |     |     |     |    |    |    |    |    ||||||||||||||||
-| php       |  **0** |      |     |     |     |     |    |    |    |    |    ||||||||||||||||
-| **Total** | **40** |**11**|**6**|**7**|**9**|**7**|    |    |    |    |    ||||||||||||||||
-
-*Last updated: 2020-12-05T22:00:00Z*
-
-See all languages we support in our [Dockerfile](./Dockerfile).
-
-Run `make versions` or `make docker.versions` to see language versions.
-
 ## Github CI status
 
 ![day-01](https://github.com/Arxcis/adventofcode2020/workflows/day-01/badge.svg)
@@ -55,7 +31,32 @@ Run `make versions` or `make docker.versions` to see language versions.
 ![day-25](https://github.com/Arxcis/adventofcode2020/workflows/day-25/badge.svg)
 ![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
 
-*Github CI runs one `days/<day>/test.sh` for each day. Example: [days/day-00-example/test.sh](./days/day-01/test.sh)*
+*Github CI runs the `days/<day>/test.sh` for each day. Example: [days/day-00-example/test.sh](./days/day-01/test.sh)*
+
+
+## Solutions per language per day
+
+| Language  | Total  | 01   |  02 |  03 |  04 |  05 | 06 | 07 | 08 | 09 | 10 |11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|
+|-----------|--------|------|-----|-----|-----|-----|----|----|----|----|----|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+| python    | **14** |  2   |  1  |  3  |  4  |  4  |    |    |    |    |    ||||||||||||||||
+| golang    |  **8** |  2   |  2  |  2  |  1  |  1  |    |    |    |    |    ||||||||||||||||
+| c         |  **5** |  1   |  1  |  1  |  1  |  1  |    |    |    |    |    ||||||||||||||||
+| sml       |  **5** |  1   |  1  |  1  |  1  |  1  |    |    |    |    |    ||||||||||||||||
+| c++       |  **2** |  1   |  1  |     |     |     |    |    |    |    |    ||||||||||||||||
+| ruby      |  **2** |  1   |     |     |  1  |     |    |    |    |    |    ||||||||||||||||
+| node      |  **2** |  1   |     |     |  1  |     |    |    |    |    |    ||||||||||||||||
+| rust      |  **1** |  1   |     |     |     |     |    |    |    |    |    ||||||||||||||||
+| zig       |  **1** |  1   |     |     |     |     |    |    |    |    |    ||||||||||||||||
+| bash      |  **0** |      |     |     |     |     |    |    |    |    |    ||||||||||||||||
+| java      |  **0** |      |     |     |     |     |    |    |    |    |    ||||||||||||||||
+| php       |  **0** |      |     |     |     |     |    |    |    |    |    ||||||||||||||||
+| **Total** | **40** |**11**|**6**|**7**|**9**|**7**|    |    |    |    |    ||||||||||||||||
+
+*Last updated: 2020-12-05T22:00:00Z*
+
+See all languages we support in our [Dockerfile](./Dockerfile).
+
+Run `make versions` or `make docker.versions` to see language versions.
 
 ## [CONTRIBUTING.md](./CONTRIBUTING.md)
 
