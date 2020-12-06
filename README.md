@@ -59,7 +59,8 @@ Fork today! Anyone is encouraged to contribute, and as a contributor you may do 
 
 **Contributors**
 
-A shout-out to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
+A special thanks to the developers over at Maritime Optima - https://github.com/orgs/MaritimeOptima/people - volunteering to support this project :pray:
+- [@Arxcis](https://github.com/Arxcis), [@jorgenhanssen](https://github.com/jorgenhanssen), [@preng69](https://github.com/preng69), [@hypirion](https://github.com/hypirion), [@tholok97](https://github.com/tholok97), [@klyve](https://github.com/klyve),
 
 Also a big thanks to the rest of our contributors :tada:
 - [@Celebrian](https://github.com/Celebrian)
