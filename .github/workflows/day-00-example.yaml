@@ -5,18 +5,22 @@ on:
       - main
     paths:
       - 'days/day-00-example/**'
-  workflow_dispatch:
+      - 'languages/**'
+      - 'Makefile'
   pull_request:
     branches:
       - main
     paths:
-      - 'days/${DAY}/**'
+      - 'days/day-00-example/**'
+      - 'languages/**'
+      - 'Makefile'
+  workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: "jonasjso/adventofcode2020:2020-12-04-with-polyc-fix"
+      image: "jonasjso/adventofcode2020:2020-12-05-with-node15"
     steps:
       - uses: actions/checkout@v2
       - name: make versions
