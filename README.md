@@ -2,6 +2,32 @@
 
 Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/.
 
+
+## Solutions per language per day
+
+| Language  | Total  | 01   |  02 |  03 |  04 |  05 | 06  | 07 | 08 | 09 | 10 |11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|
+|-----------|--------|------|-----|-----|-----|-----|---- |----|----|----|----|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+| python    | **17** |  2   |  1  |  3  |  4  |  4  |  3  |    |    |    |    ||||||||||||||||
+| golang    | **11** |  2   |  2  |  2  |  1  |  2  |  2  |    |    |    |    ||||||||||||||||
+| c         |  **6** |  1   |  1  |  1  |  1  |  1  |  1  |    |    |    |    ||||||||||||||||
+| sml       |  **6** |  1   |  1  |  1  |  1  |  1  |  1  |    |    |    |    ||||||||||||||||
+| c++       |  **2** |  1   |  1  |     |     |     |     |    |    |    |    ||||||||||||||||
+| ruby      |  **2** |  1   |     |     |  1  |     |     |    |    |    |    ||||||||||||||||
+| node      |  **3** |  1   |     |     |  1  |     |  1  |    |    |    |    ||||||||||||||||
+| zig       |  **2** |  1   |  1  |     |     |     |     |    |    |    |    ||||||||||||||||
+| rust      |  **1** |  1   |     |     |     |     |     |    |    |    |    ||||||||||||||||
+| bash      |  **0** |      |     |     |     |     |     |    |    |    |    ||||||||||||||||
+| java      |  **0** |      |     |     |     |     |     |    |    |    |    ||||||||||||||||
+| php       |  **0** |      |     |     |     |     |     |    |    |    |    ||||||||||||||||
+| **Total** | **50** |**11**|**7**|**7**|**9**|**8**|**8**|    |    |    |    ||||||||||||||||
+
+*Last updated: 2020-12-05T22:00:00Z*
+
+See all languages we support in our [Dockerfile](./Dockerfile).
+
+Run `make versions` or `make docker.versions` to see language versions.
+
+
 ## Github CI status
 
 ![day-01](https://github.com/Arxcis/adventofcode2020/workflows/day-01/badge.svg)
@@ -33,30 +59,6 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 
 *Github CI runs the `days/<day>/test.sh` for each day. Example: [days/day-01/test.sh](./days/day-01/test.sh)*
 
-
-## Solutions per language per day
-
-| Language  | Total  | 01   |  02 |  03 |  04 |  05 | 06  | 07 | 08 | 09 | 10 |11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|
-|-----------|--------|------|-----|-----|-----|-----|---- |----|----|----|----|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-| python    | **17** |  2   |  1  |  3  |  4  |  4  |  3  |    |    |    |    ||||||||||||||||
-| golang    | **11** |  2   |  2  |  2  |  1  |  2  |  2  |    |    |    |    ||||||||||||||||
-| c         |  **6** |  1   |  1  |  1  |  1  |  1  |  1  |    |    |    |    ||||||||||||||||
-| sml       |  **6** |  1   |  1  |  1  |  1  |  1  |  1  |    |    |    |    ||||||||||||||||
-| c++       |  **2** |  1   |  1  |     |     |     |     |    |    |    |    ||||||||||||||||
-| ruby      |  **2** |  1   |     |     |  1  |     |     |    |    |    |    ||||||||||||||||
-| node      |  **3** |  1   |     |     |  1  |     |  1  |    |    |    |    ||||||||||||||||
-| zig       |  **2** |  1   |  1  |     |     |     |     |    |    |    |    ||||||||||||||||
-| rust      |  **1** |  1   |     |     |     |     |     |    |    |    |    ||||||||||||||||
-| bash      |  **0** |      |     |     |     |     |     |    |    |    |    ||||||||||||||||
-| java      |  **0** |      |     |     |     |     |     |    |    |    |    ||||||||||||||||
-| php       |  **0** |      |     |     |     |     |     |    |    |    |    ||||||||||||||||
-| **Total** | **50** |**11**|**7**|**7**|**9**|**8**|**8**|    |    |    |    ||||||||||||||||
-
-*Last updated: 2020-12-05T22:00:00Z*
-
-See all languages we support in our [Dockerfile](./Dockerfile).
-
-Run `make versions` or `make docker.versions` to see language versions.
 
 ## [CONTRIBUTING.md](./CONTRIBUTING.md)
 
