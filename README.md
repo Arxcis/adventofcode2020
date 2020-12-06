@@ -20,7 +20,11 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 | php       |  **0** |      |     |     |     |     |    |    |    |    |    ||||||||||||||||
 | **Total** | **40** |**11**|**6**|**7**|**9**|**7**|    |    |    |    |    ||||||||||||||||
 
-*List of programming languages supported by our [Dockerfile](./Dockerfile)*
+*Last updated: 2020-12-05T22:00:00Z*
+
+See all languages we support in our [Dockerfile](./Dockerfile).
+
+Run `make versions` or `make docker.versions` to see language versions.
 
 ## Github CI status
 
