@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DIR=$(dirname $(realpath $0))
+D=$(dirname $(realpath $0))
 
-
-
-echo "$DIR / --- Empty --- ❌";
-exit 1337;
+echo ""
+echo "$D / --- Day 6: Custom Customs ---";
+$D/../../languages/go.sh $D/input.txt $D/output.txt $D/solutions/tholok97.go
+echo ""
