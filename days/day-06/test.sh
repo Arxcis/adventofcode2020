@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DIR=$(dirname $(realpath $0))
+D=$(dirname $(realpath $0))
 
 echo ""
 echo "--- Day 6: Custom customs ---"
-$DIR/../../languages/python.sh $DIR/input.txt $DIR/output.txt $DIR/solutions/day06.stektpotet.py
-$DIR/../../languages/python.sh $DIR/input.txt $DIR/output.txt $DIR/solutions/day06.preng.py
+$D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day06.c
+$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day06.preng.py
+$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day06.stektpotet.py
+$D/../../languages/node.sh   $D/input.txt $D/output.txt $D/solutions/day06.mjs
 echo ""
