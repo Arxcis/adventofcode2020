@@ -113,18 +113,17 @@ pub fn main() anyerror!void {
     var parsed_input = try bytesToRPPArrayList(allocator, buf[0..length]);
 
     var old_valid: u32 = 0;
+    var new_valid: u32 = 0;
     for (parsed_input.items) |password_req_pair| {
         if (password_req_pair.oldValid()) {
             old_valid += 1;
         }
-    }
-    try stdout.print("{}\n", .{old_valid});
-
-    var new_valid: u32 = 0;
-    for (parsed_input.items) |password_req_pair| {
+        
         if (password_req_pair.newValid()) {
             new_valid += 1;
         }
     }
+
+    try stdout.print("{}\n", .{old_valid});
     try stdout.print("{}\n", .{new_valid});
 }
