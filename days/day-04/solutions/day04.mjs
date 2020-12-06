@@ -54,10 +54,12 @@ const REQUIRED_VALIDATORS = {
 
 const REQUIRED_KEYS = Object.keys(REQUIRED_VALIDATORS);
 
-const [part1, part2] = passportKeyValues
-  .reduce(([part1, part2], keyValues) => {
-    const requiredKeyValues = keyValues
-      .filter(([key]) => REQUIRED_KEYS.includes(key))
+const passportRequiredKeyValues = passportKeyValues
+  .map(keyValues => keyValues
+    .filter(([key]) => REQUIRED_KEYS.includes(key)))
+
+const [part1, part2] = passportRequiredKeyValues
+  .reduce(([part1, part2], requiredKeyValues) => {
 
     const keys = requiredKeyValues
       .map(([key]) => key)
@@ -69,7 +71,7 @@ const [part1, part2] = passportKeyValues
 
     const passportValuesAreValid = passportKeysAreValid &&
       requiredKeyValues
-        .every(([key, value]) => (REQUIRED_VALIDATORS[key])?.(value));
+        .every(([key, value]) => REQUIRED_VALIDATORS[key](value));
 
     return [
       part1 + passportKeysAreValid,
