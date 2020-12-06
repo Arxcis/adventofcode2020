@@ -14,8 +14,8 @@ func onNewBatch(data []byte, atEOF bool) (advance int, token []byte, err error) 
   }
   // iteratively find instances of double new line, and advance to the next batch
   // (skip 4 bytes ahead past double newline)
-  if i := bytes.Index(data, []byte{13, 10, 13, 10}); i >= 0 {
-    return i + 4, data[0:i], nil
+  if i := bytes.Index(data, []byte{10, 10}); i >= 0 {
+    return i + 2, data[0:i], nil
   }
   // If we're at EOF, we have a final, non-terminated line. Return it.
   if atEOF {
