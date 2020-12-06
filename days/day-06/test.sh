@@ -3,7 +3,7 @@ set -euo pipefail
 
 DIR=$(dirname $(realpath $0))
 
-
-
-echo "$DIR / --- Empty --- ❌";
-exit 1337;
+echo ""
+echo "--- Day 6: Custom customs ---"
+$DIR/../../languages/python.sh $DIR/input.txt $DIR/output.txt $DIR/solutions/day06.preng.py
+echo ""
