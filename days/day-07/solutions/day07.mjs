@@ -1,5 +1,4 @@
 import { readFileSync } from "fs";
-import { resolve } from "path";
 
 const STANDARD_IN = 0
 const input = readFileSync(STANDARD_IN)
