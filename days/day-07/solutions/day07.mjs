@@ -23,6 +23,8 @@ const bags = [
 const COLOR_SHINY_GOLD = "shiny gold";
 
 
+
+// --- Part 1 ----
 // Recursively find shiny golden bags
 function findShinyGoldenBag(bag_refs) {
   if (bag_refs.length === 0) {
@@ -51,21 +53,18 @@ const bagContainingShinyGoldeBagCount = bags
 
 
 // --- Part 2 ---
+// Recursively count bags inside
 function countBagsInside(bag_refs) {
   if (bag_refs.length === 0) {
     return 1;
   }
 
-  console.log({ bag_refs })
   const resolved_bags = bag_refs
     .map(bag => [bag.count, bags.find(({color}) => color === bag.color)])
 
 
   const count = resolved_bags
     .reduce((acc, [bag_count, bag]) => acc + bag_count * countBagsInside(bag.bags_inside), 1)
-
-
-  console.log({ count, resolved_bags: JSON.stringify(resolved_bags)})
 
   return count;
 }
@@ -74,7 +73,6 @@ const shinyGoldenBag = bags.find(({color}) => color === COLOR_SHINY_GOLD);
 
 
 const shinyGoldBagInsideCount = countBagsInside(shinyGoldenBag.bags_inside) - 1;
-
 
 
 console.log(bagContainingShinyGoldeBagCount)
