@@ -13,4 +13,5 @@ $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day05.stekt
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day05.preng.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.stektpotet.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day05.klyve.py
+$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day05.ts
 echo ""
