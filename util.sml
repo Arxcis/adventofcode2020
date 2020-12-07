@@ -6,14 +6,14 @@ fun println x = print $ x ^ "\n"
 fun splitWith pred list =
     let
         fun acc done [] [] = done
-          | acc done last [] = last :: done
+          | acc done last [] = List.rev last :: done
           | acc done last (x :: xs) =
             if pred x then
-                acc (last :: done) [] xs
+                acc (List.rev last :: done) [] xs
             else
                 acc done (x :: last) xs
     in
-        acc [] [] list
+        List.rev $ acc [] [] list
     end
 
 fun foldl' f (x :: xs) = List.foldl f x xs
@@ -21,6 +21,7 @@ fun foldl' f (x :: xs) = List.foldl f x xs
 
 val listSum = List.foldl (op +) 0
 val listProduct = List.foldl (op *) 1
+
 
 signature ORD =
 sig
@@ -37,6 +38,8 @@ sig
     val empty : 'a Coll
     val lookup : K -> 'a Coll -> 'a option
     val insert : K -> 'a -> 'a Coll -> 'a Coll
+    val update : ('a option -> 'a) -> K -> 'a Coll -> 'a Coll
+    val updateWithDefault : 'a -> ('a -> 'a) -> K -> 'a Coll -> 'a Coll
     val foldl : (K * 'a * 'b -> 'b) -> 'b -> 'a Coll -> 'b
     val size : 'a Coll -> int
     val fromList : (K * 'a) list -> 'a Coll
@@ -83,6 +86,13 @@ fun insert k v s =
         T (B, a, y, b)
     end
 
+fun update f k coll =
+    insert k (f $ lookup k coll) coll
+
+fun updateWithDefault default f k coll =
+    update (fn v => f $ getOpt (v, default)) k coll
+
+
 fun foldl f acc E = acc
   | foldl f acc (T(_, a, (k, v), b)) =
     let
@@ -96,7 +106,6 @@ fun size coll = foldl (fn (_, _, n) => n + 1) 0 coll
 
 fun fromList list = List.foldl (fn ((k, v), s) => insert k v s) empty list
 end
-
 
 signature SET =
 sig
@@ -136,3 +145,11 @@ structure CharMap = Map(
     end)
 
 structure CharSet = Set(CharMap)
+
+structure StringMap = Map(
+    struct
+    type t = string
+    val cmp = String.compare
+    end)
+
+structure StringSet = Set(StringMap)
