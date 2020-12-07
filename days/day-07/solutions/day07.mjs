@@ -1,4 +1,5 @@
 import { readFileSync } from "fs";
+import { resolve } from "path";
 
 const STANDARD_IN = 0
 const input = readFileSync(STANDARD_IN)
@@ -19,24 +20,66 @@ const bags = [
     return ({color, bags_inside})
   })
 
+const COLOR_SHINY_GOLD = "shiny gold";
 
-// Recursively scan bags
+
+// Recursively find shiny golden bags
 function findShinyGoldenBag(bag_refs) {
+  if (bag_refs.length === 0) {
+    return 0;
+  }
+
   const resolved_bags = bag_refs.map(bag => bags.find(({color}) => color === bag.color))
 
   for (const { color, bags_inside } of resolved_bags) {
-    if (color === "shiny gold") {
+    if (color === COLOR_SHINY_GOLD) {
       return 1;
-    } else if (bags_inside.length == 0) {
-      return 0;
     } else {
-      return findShinyGoldenBag(bags_inside);
+      const found = findShinyGoldenBag(bags_inside);
+      if (found) {
+        return 1;
+      } else {
+        continue;
+      }
     }
   }
   return 0;
 }
 
-const shinyGoldenBagCount = bags
+const bagContainingShinyGoldeBagCount = bags
   .reduce((count, bag) => count + findShinyGoldenBag(bag.bags_inside), 0);
 
-console.log(shinyGoldenBagCount)
+
+// --- Part 2 ---
+function countBagsInside(bag_refs) {
+  if (bag_refs.length === 0) {
+    return 1;
+  }
+
+  console.log({ bag_refs })
+  const resolved_bags = bag_refs
+    .map(bag => [bag.count, bags.find(({color}) => color === bag.color)])
+
+
+  const count = resolved_bags
+    .reduce((acc, [bag_count, bag]) => acc + bag_count * countBagsInside(bag.bags_inside), 1)
+
+
+  console.log({ count, resolved_bags: JSON.stringify(resolved_bags)})
+
+  return count;
+}
+
+const shinyGoldenBag = bags.find(({color}) => color === COLOR_SHINY_GOLD);
+
+
+const shinyGoldBagInsideCount = countBagsInside(shinyGoldenBag.bags_inside) - 1;
+
+
+
+console.log(bagContainingShinyGoldeBagCount)
+console.log(shinyGoldBagInsideCount)
+
+
+
+
