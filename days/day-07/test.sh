@@ -4,6 +4,6 @@ set -euo pipefail
 D=$(dirname $(realpath $0))
 
 
-
-echo "$D / --- Empty --- ❌";
-exit 1337;
+echo ""
+echo "--- Day 7: Handy Haversacks ---"
+echo ""
