@@ -12,6 +12,7 @@ $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.klyve
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.preng.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.jorgen.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.stektpotet.py
+$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day04.ts
 $D/../../languages/node.sh   $D/input.txt $D/output.txt $D/solutions/day04.mjs
 $D/../../languages/ruby.sh   $D/input.txt $D/output.txt $D/solutions/day04.klyve.rb
 echo
