@@ -20,10 +20,12 @@ int main() {
       }
     }
 
+    // --- Part1 ---
     if (letter_occurances >= from && letter_occurances <= to) {
       valid_passwords += 1;
     }
 
+    // --- Part2 ---
     int letter_occurances_part2 = 0;
     if (password[from-1] == letter) {
       letter_occurances_part2 += 1;

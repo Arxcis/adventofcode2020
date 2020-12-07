@@ -1,8 +1,4 @@
-import { readFileSync } from "fs";
-
-const STANDARD_IN = 0
-const lines = readFileSync(STANDARD_IN)
-  .toString();
+const lines = (await Deno.readTextFile('/dev/stdin'))
 
 const groups = [...lines.matchAll(/[a-z]+([\s][a-z]+)*/g)]
   .map(([match]) => match);
@@ -23,8 +19,10 @@ const alphabet = [..."abcdefghijklmnopqrstuvwxyz"];
 
 const everyoneAnsweredYes = groupsSplitByWhitespace
   .reduce((count, group) => count + alphabet
-    .reduce((count, char) => count + group
-      .every(answer => answer.includes(char)), 0), 0)
+    .reduce((count, char) => count
+      + (group.every(answer => answer.includes(char)) ? 1:0),
+    0),
+  0)
 
-console.log(anyoneAnsweredYes)
-console.log(everyoneAnsweredYes)
+console.log(`${anyoneAnsweredYes}`)
+console.log(`${everyoneAnsweredYes}`)
