@@ -2,7 +2,6 @@ const std = @import("std");
 const mem = std.mem;
 const io = std.io;
 const ArrayList = std.ArrayList;
-const Allocator = std.mem.Allocator;
 
 const MAX_FILE_SIZE = 20_000;
 
@@ -52,11 +51,6 @@ const Map = struct {
 
 
 pub fn main() anyerror!void {
-    var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
-    defer arena.deinit();
-
-    const allocator = &arena.allocator;
-
     const in = std.io.getStdIn().reader();
     const stdout = std.io.getStdOut().writer();
 
