@@ -8,8 +8,10 @@ INPUT="$1"
 OUTPUT="$2"
 SOLUTION="$3"
 
+deno install -f --quiet "$SOLUTION" >/dev/null
+
 start=$(($(date +%s%N)/1000000))
-cat $INPUT | deno run -q $SOLUTION | diff - $OUTPUT
+cat $INPUT | deno run --allow-read $SOLUTION | diff - $OUTPUT
 end=$(($(date +%s%N)/1000000))
 
 TIME="$(expr $end - $start)"
