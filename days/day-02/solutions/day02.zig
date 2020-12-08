@@ -65,14 +65,14 @@ const RequirementPassword = struct {
         return occurence >= self.min;
     }
 
-     pub inline fn newValid(self: RequirementPassword) bool {
+    pub inline fn newValid(self: RequirementPassword) bool {
         var min_occurence: usize = @boolToInt(self.password[self.min - 1] == self.char);
         var max_occurence: usize = @boolToInt(self.password[self.max - 1] == self.char);
         return @as(usize, min_occurence) + @as(usize, max_occurence) == 1;
     }
 };
 
-fn bytesToRPPArrayList(allocator: *Allocator, bytes: []u8) !ArrayList(RequirementPassword) {
+fn bytesToParsedArrayList(allocator: *Allocator, bytes: []u8) !ArrayList(RequirementPassword) {
     var list = try ArrayList(RequirementPassword).initCapacity(allocator, 2000);
 
     var it = mem.split(bytes, "\n");
@@ -110,7 +110,7 @@ pub fn main() anyerror!void {
 
     const length = try in.readAll(&buf);
 
-    var parsed_input = try bytesToRPPArrayList(allocator, buf[0..length]);
+    var parsed_input = try bytesToParsedArrayList(allocator, buf[0..length]);
 
     var old_valid: u32 = 0;
     var new_valid: u32 = 0;
