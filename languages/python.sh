@@ -11,16 +11,11 @@ SOLUTION="$1"
 start=$(($(date +%s%N)/1000000))
 
 shift
-while (( "$#" >= 2 ))
-do
-	INPUT="$1"
-	OUTPUT="$2"
 
-	cat $INPUT | python3 $SOLUTION | diff - $OUTPUT
-
-	shift;
-	shift;
-done
+# Pair-wise iteration
+while read INPUT OUTPUT; do
+  cat $INPUT | python3 $SOLUTION | diff - $OUTPUT
+done < <(echo $@ | xargs -n2)
 
 end=$(($(date +%s%N)/1000000))
 
