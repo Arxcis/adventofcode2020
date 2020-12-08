@@ -6,5 +6,6 @@ D=$(dirname $(realpath $0))
 
 echo ""
 echo "--- Day 8: Handheld Halting ---"
+$D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day08.sml
 $D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day08.ts
 echo ""
