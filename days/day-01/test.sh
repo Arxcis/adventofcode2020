@@ -10,6 +10,7 @@ $D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day01.tholo
 $D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day01.c
 $D/../../languages/zig.sh    $D/input.txt $D/output.txt $D/solutions/day01.zig
 $D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day01.sml
+$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day01.ts
 $D/../../languages/node.sh   $D/input.txt $D/output.txt $D/solutions/day01.mjs
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.py
 $D/../../languages/cpp.sh    $D/input.txt $D/output.txt $D/solutions/day01.cpp

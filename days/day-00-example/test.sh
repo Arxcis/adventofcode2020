@@ -13,7 +13,8 @@ $D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/example.sml
 $D/../../languages/bash.sh   $D/input.txt $D/output.txt $D/solutions/example.bash
 $D/../../languages/php.sh    $D/input.txt $D/output.txt $D/solutions/example.php
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/example.py
-$D/../../languages/ruby.sh   $D/input.txt $D/output.txt $D/solutions/example.rb
+$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/example.ts
 $D/../../languages/node.sh   $D/input.txt $D/output.txt $D/solutions/example.mjs
+$D/../../languages/ruby.sh   $D/input.txt $D/output.txt $D/solutions/example.rb
 $D/../../languages/java.sh   $D/input.txt $D/output.txt $D/solutions Example
 echo ""

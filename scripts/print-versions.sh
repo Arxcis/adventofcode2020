@@ -9,6 +9,10 @@ echo "$ bash --version"
 bash --version
 echo ""
 
+echo "$ deno --version"
+deno --version
+echo ""
+
 echo "$ gcc version"
 gcc --version
 

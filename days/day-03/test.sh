@@ -12,4 +12,5 @@ $D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day03.sml
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day03.preng.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day03.klyve.py
+$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day03.ts
 echo ""

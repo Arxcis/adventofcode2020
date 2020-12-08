@@ -12,5 +12,6 @@ $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.s
 $D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day06.sml
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day06.stektpotet.py
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day06.preng.py
+$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day06.ts
 $D/../../languages/node.sh   $D/input.txt $D/output.txt $D/solutions/day06.mjs
 echo ""
