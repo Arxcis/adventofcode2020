@@ -5,12 +5,9 @@ D=$(dirname $(realpath $0))
 
 echo ""
 echo "--- Day 3: Counting trees ---"
-$D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day03.c
-$D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day03.stektpotet.go
-$D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day03.tholok97.go
-$D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day03.sml
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day03.preng.py
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.py
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day03.klyve.py
-$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day03.ts
+$D/../../languages/go.sh     "$D/solutions/*.go"   "$D/io/*"
+$D/../../languages/c.sh      "$D/solutions/*.c"    "$D/io/*"
+$D/../../languages/sml.sh    "$D/solutions/*.sml"  "$D/io/*"
+$D/../../languages/python.sh "$D/solutions/*.py"   "$D/io/*"
+$D/../../languages/deno.sh   "$D/solutions/*.ts"   "$D/io/*"
 echo ""
