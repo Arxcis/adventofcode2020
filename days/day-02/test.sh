@@ -5,12 +5,11 @@ D=$(dirname $(realpath $0))
 
 echo ""
 echo "--- Day 2: Password Philosophy ---"
-$D/../../languages/c.sh       $D/input.txt $D/output.txt $D/solutions/day02.c
-$D/../../languages/zig.sh     $D/input.txt $D/output.txt $D/solutions/day02.zig
-$D/../../languages/go.sh      $D/input.txt $D/output.txt $D/solutions/day02.stektpotet.go
-$D/../../languages/cpp.sh     $D/input.txt $D/output.txt $D/solutions/day02.cpp
-$D/../../languages/sml.sh     $D/input.txt $D/output.txt $D/solutions/day02.sml
-$D/../../languages/go.sh      $D/input.txt $D/output.txt $D/solutions/day02.tholok97.go
-$D/../../languages/python.sh  $D/input.txt $D/output.txt $D/solutions/day02.py
-$D/../../languages/deno.sh    $D/input.txt $D/output.txt $D/solutions/day02.ts
+$D/../../languages/go.sh     "$D/solutions/*.go"   "$D/io/*"
+$D/../../languages/c.sh      "$D/solutions/*.c"    "$D/io/*"
+$D/../../languages/zig.sh    "$D/solutions/*.zig"  "$D/io/*"
+$D/../../languages/cpp.sh    "$D/solutions/*.cpp"  "$D/io/*"
+$D/../../languages/sml.sh    "$D/solutions/*.sml"  "$D/io/*"
+$D/../../languages/python.sh "$D/solutions/*.py"   "$D/io/*"
+$D/../../languages/deno.sh   "$D/solutions/*.ts"   "$D/io/*"
 echo ""
