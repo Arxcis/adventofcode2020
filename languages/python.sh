@@ -1,25 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage:    ../../languages/python.sh  "SOLUTIONS"        "INPUT/OUTPUT-pairs"
+# Usage:    ../../languages/python.sh  SOLUTION           INPUT/OUTPUT-pairs
 #
-# Example:  ../../languages/python.sh "solutions/*.py"   "io/*"
+# Example:  ../../languages/python.sh  solutions/main.py  io/*
 # Expanded: ../../languages/python.sh  solutions/main.py  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTIONS=${1} # deliberitely expand arg
-IO=${2}        # deliberitely expand arg
+SOLUTION="$1"
 
+start=$(($(date +%s%N)/1000000))
 
-for SOLUTION in $SOLUTIONS ; do
-  start=$(($(date +%s%N)/1000000))
+shift
+while (( "$#" >= 2 ))
+do
+	INPUT="$1"
+	OUTPUT="$2"
 
-  # Pairwise iteration
-  while read INPUT OUTPUT; do
-	  cat $INPUT | python3 $SOLUTION | diff - $OUTPUT
-  done < <(echo $IO | xargs -n2)
+	cat $INPUT | python3 $SOLUTION | diff - $OUTPUT
 
-  end=$(($(date +%s%N)/1000000))
-  TIME="$(expr $end - $start)"
-  D=$(dirname $(realpath $0))
-  $D/../scripts/print-test.sh "python3" "$TIME" "$SOLUTION"
+	shift;
+	shift;
 done
+
+end=$(($(date +%s%N)/1000000))
+
+TIME="$(expr $end - $start)"
+
+D=$(dirname $(realpath $0))
+$D/../scripts/print-test.sh "python3" "$TIME" "$SOLUTION"
