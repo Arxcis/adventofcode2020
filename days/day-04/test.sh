@@ -6,6 +6,7 @@ D=$(dirname $(realpath $0))
 echo
 echo "--- Day 4: Passport Processing ---"
 $D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day04.c
+$D/../../languages/zig.sh    $D/input.txt $D/output.txt $D/solutions/day04.zig
 $D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day04.sml
 $D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day04.tholok97.go
 $D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.klyve.py
