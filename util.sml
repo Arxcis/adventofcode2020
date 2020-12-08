@@ -227,3 +227,11 @@ structure StringMap = Map(
     end)
 
 structure StringSet = Set(StringMap)
+
+structure IntMap = Map(
+    struct
+    type t = int
+    val cmp = Int.compare
+    end)
+
+structure IntSet = Set(IntMap)
