@@ -20,7 +20,7 @@ do
 
   polyc "$SOLUTION" -o "$OUT"
 
-  cd -
+  cd - >/dev/null
 
   start=$(($(date +%s%N)/1000000))
 

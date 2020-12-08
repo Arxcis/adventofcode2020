@@ -5,16 +5,16 @@ D=$(dirname $(realpath $0))
 
 echo ""
 echo "--- Day 1: Report Repair ---"
-$D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day01.stektpotet.go
-$D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day01.tholok97.go
-$D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day01.c
-$D/../../languages/zig.sh    $D/input.txt $D/output.txt $D/solutions/day01.zig
-$D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day01.sml
-$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day01.ts
-$D/../../languages/node.sh   $D/input.txt $D/output.txt $D/solutions/day01.mjs
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/one-liner.py
-$D/../../languages/cpp.sh    $D/input.txt $D/output.txt $D/solutions/day01.cpp
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day01.py
-$D/../../languages/rust.sh   $D/input.txt $D/output.txt $D/solutions/day01.rs
-$D/../../languages/ruby.sh   $D/input.txt $D/output.txt $D/solutions/day01.rb
+
+$D/../../languages/go.sh     "$D/solutions/*.go"   "$D/io/*"
+$D/../../languages/c.sh      "$D/solutions/*.c"    "$D/io/*"
+$D/../../languages/zig.sh    "$D/solutions/*.zig"  "$D/io/*"
+$D/../../languages/sml.sh    "$D/solutions/*.sml"  "$D/io/*"
+$D/../../languages/node.sh   "$D/solutions/*.mjs"  "$D/io/*"
+$D/../../languages/deno.sh   "$D/solutions/*.ts"   "$D/io/*"
+$D/../../languages/cpp.sh    "$D/solutions/*.cpp"  "$D/io/*"
+$D/../../languages/rust.sh   "$D/solutions/*.rs"   "$D/io/*"
+$D/../../languages/python.sh "$D/solutions/*.py"   "$D/io/*"
+$D/../../languages/ruby.sh   "$D/solutions/*.rb"   "$D/io/*"
+
 echo ""
