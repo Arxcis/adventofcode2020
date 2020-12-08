@@ -5,16 +5,15 @@ D=$(dirname $(realpath $0))
 
 echo ""
 echo "--- Day 0: Examples ---"
-$D/../../languages/rust.sh   $D/io/alice.* $D/solutions/example.rs
-$D/../../languages/go.sh     $D/io/alice.* $D/solutions/example.go
-$D/../../languages/c.sh      $D/io/alice.* $D/solutions/example.c
-$D/../../languages/cpp.sh    $D/io/alice.* $D/solutions/example.cpp
-$D/../../languages/sml.sh    $D/io/alice.* $D/solutions/example.sml
-$D/../../languages/bash.sh   $D/io/alice.* $D/solutions/example.bash
-$D/../../languages/php.sh    $D/io/alice.* $D/solutions/example.php
-$D/../../languages/python.sh $D/solutions/example.py $D/io/*
-$D/../../languages/deno.sh   $D/io/alice.* $D/solutions/example.ts
-$D/../../languages/node.sh   $D/io/alice.* $D/solutions/example.mjs
-$D/../../languages/ruby.sh   $D/io/alice.* $D/solutions/example.rb
-$D/../../languages/java.sh   $D/io/alice.* $D/solutions Example
+
+$D/../../languages/python.sh "$D/solutions/*.py"   "io/*"
+$D/../../languages/rust.sh   "$D/solutions/*.rs"   "io/*"
+$D/../../languages/go.sh     "$D/solutions/*.go"   "io/*"
+$D/../../languages/c.sh      "$D/solutions/*.c"    "io/*"
+$D/../../languages/cpp.sh    "$D/solutions/*.cpp"  "io/*"
+$D/../../languages/sml.sh    "$D/solutions/*.sml"  "io/*"
+$D/../../languages/deno.sh   "$D/solutions/*.ts"   "io/*"
+$D/../../languages/node.sh   "$D/solutions/*.mjs"  "io/*"
+$D/../../languages/ruby.sh   "$D/solutions/*.rb"   "io/*"
+
 echo ""

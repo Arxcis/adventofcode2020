@@ -1,23 +1,34 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage:   ./languages/c.sh INPUT                 OUTPUT                 SOLUTION
-# Example: ./languages/c.sh days/day-03/input.txt days/day-03/output.txt days/day-03/solutions/main.c
+#
+# Usage:      ../../languages/c.sh  "SOLUTION_FILES"   "IO_FILES"
+#
+# Example:    ../../languages/c.sh  "solutions/*.c"   "io/*"
+# Expands to: ../../languages/c.sh   solutions/main.c  io/alice.input io/alice.output io/bob.input io/bob.output
+#
+SOLUTION_FILES=$1  # Expand FILES
+IO_FILES=$2        # Expand FILES
 
-INPUT="$1"
-OUTPUT="$2"
-SOLUTION="$3"
 OUT="$(mktemp)"
 
-gcc $SOLUTION -o $OUT;
+for SOLUTION in $SOLUTION_FILES
+do
+  gcc $SOLUTION -o $OUT;
 
-start=$(($(date +%s%N)/1000000))
-cat $INPUT | $OUT | diff - $OUTPUT
-end=$(($(date +%s%N)/1000000))
+  start=$(($(date +%s%N)/1000000))
 
-TIME="$(expr $end - $start)"
+  # Pair-wise iteration
+  while read INPUT OUTPUT; do
+    cat $INPUT | $OUT | diff - $OUTPUT
+  done < <(echo $IO_FILES | xargs -n2)
 
-D=$(dirname $(realpath $0))
-$D/../scripts/print-test.sh "gcc" "$TIME" "$SOLUTION"
+  end=$(($(date +%s%N)/1000000))
+
+  TIME="$(expr $end - $start)"
+
+  D=$(dirname $(realpath $0))
+  $D/../scripts/print-test.sh "gcc" "$TIME" "$SOLUTION"
+done
 
 rm $OUT;

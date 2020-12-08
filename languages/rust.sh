@@ -1,23 +1,35 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage:   ./languages/rs.sh INPUT                 OUTPUT                 SOLUTION
-# Example: ./languages/rs.sh days/day-03/input.txt days/day-03/output.txt days/day-03/solutions/main.rs
+#
+# Usage:      ../../languages/rust.sh  "SOLUTION_FILES"   "IO_FILES"
+#
+# Example:    ../../languages/rust.sh  "solutions/*.rs"   "io/*"
+# Expands to: ../../languages/rust.sh   solutions/main.rs  io/alice.input io/alice.output io/bob.input io/bob.output
+#
+SOLUTION_FILES=$1  # Expand FILES
+IO_FILES=$2        # Expand FILES
 
-INPUT="$1"
-OUTPUT="$2"
-SOLUTION="$3"
 OUT="$(mktemp)"
 
-rustc $SOLUTION -o $OUT;
+for SOLUTION in $SOLUTION_FILES
+do
+  rustc $SOLUTION -o $OUT;
 
-start=$(($(date +%s%N)/1000000))
-cat $INPUT | $OUT | diff - $OUTPUT
-end=$(($(date +%s%N)/1000000))
+  start=$(($(date +%s%N)/1000000))
 
-TIME="$(expr $end - $start)"
+  # Pair-wise iteration
+  while read INPUT OUTPUT; do
+    cat $INPUT | $OUT | diff - $OUTPUT
+  done < <(echo $IO_FILES | xargs -n2)
 
-D=$(dirname $(realpath $0))
-$D/../scripts/print-test.sh "rustc" "$TIME" "$SOLUTION"
+  end=$(($(date +%s%N)/1000000))
+
+  TIME="$(expr $end - $start)"
+
+  D=$(dirname $(realpath $0))
+  $D/../scripts/print-test.sh "rustc" "$TIME" "$SOLUTION"
+
+done
 
 rm $OUT;
