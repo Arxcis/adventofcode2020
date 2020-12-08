@@ -138,6 +138,80 @@ val size = Map.size
 fun fromList list = List.foldl (fn (v, s) => insert v s) empty list
 end
 
+structure UncountedRList =
+struct
+datatype 'a Tree = Leaf of 'a | Node of 'a * 'a Tree * 'a Tree
+type 'a Coll = (int * 'a Tree) list
+
+val empty = []
+fun isEmpty ts = null ts
+
+fun cons (x, ts as (w1, t1) :: (w2, t2) :: ts') =
+    if w1 = w2 then
+        (1 + w1 + w2, Node (x, t1, t2)) :: ts'
+    else
+        (1, Leaf x) :: ts
+  | cons (x, ts) = (1, Leaf x) :: ts
+
+fun head ((1, Leaf x) :: _) = x
+  | head ((_, Node (x, _, _)) :: _) = x
+  | head _ = raise Empty
+
+fun tail ((1, Leaf _) :: ts) = ts
+  | tail ((w, Node (x, t1, t2)) :: ts) = (w div 2, t1) :: (w div 2, t2) :: ts
+  | tail _ = raise Empty
+
+fun getTree (1, 0, Leaf x) = x
+  | getTree (w, i, Leaf x) = raise Subscript
+  | getTree (w, 0, Node (x, t1, t2)) = x
+  | getTree (w, i, Node (x, t1, t2)) =
+
+    if i <= w div 2 then
+        getTree (w div 2, i - 1, t1)
+    else
+        getTree (w div 2, i - 1 - w div 2, t2)
+
+fun setTree (1, 0, y, Leaf x) = Leaf y
+  | setTree (w, i, y, Leaf x) = raise Subscript
+  | setTree (w, 0, y, Node (x, t1, t2)) = Node (y, t1, t2)
+  | setTree (w, i, y, Node (x, t1, t2)) =
+    if i <= w div 2 then
+        Node (x, setTree (w div 2, i - 1, y, t1), t2)
+    else
+        Node (x, t1, setTree (w div 2, i - 1 - w div 2, y, t2))
+
+fun get (i, []) = raise Subscript
+  | get (i, (w, t) :: ts) =
+    if i < w then
+        getTree (w, i, t)
+    else
+        get (i - w, ts)
+
+fun set (i, y, []) = raise Subscript
+  | set (i, y, (w, t) :: ts) =
+    if i < w then
+        (w, setTree (w, i, y, t)) :: ts
+    else
+        (w, t) :: set (i - w, y, ts)
+end
+
+structure RList =
+struct
+type 'a Coll = (int * 'a UncountedRList.Coll)
+
+val empty = (0, UncountedRList.empty)
+fun isEmpty (0, _) = true
+  | isEmpty _ = false
+fun size (n, _) = n
+
+fun cons (x, (n, s)) = (n+1, UncountedRList.cons (x, s))
+fun head (_, s) = UncountedRList.head s
+fun tail (n, s) = (n - 1, UncountedRList.tail s)
+fun get (i, (n, s)) = UncountedRList.get (i, s)
+fun set (i, y, (n, s)) = (n, UncountedRList.set (i, y, s))
+fun fromList list = List.foldr cons empty list
+end
+
 structure CharMap = Map(
     struct
     type t = char
