@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
+D=$(dirname $(realpath $0))
 
 #
-# Usage:      ../../languages/zig.sh  "SOLUTION_FILES"   "IO_FILES"
+# Usage:      ../../lang/zig.sh  "SOLUTION_FILES"   "IO_FILES"
 #
-# Example:    ../../languages/zig.sh  "solutions/*.zig"   "io/*"
-# Expands to: ../../languages/zig.sh   solutions/main.zig  io/alice.input io/alice.output io/bob.input io/bob.output
+# Example:    ../../lang/zig.sh  "solutions/*.zig"   "io/*"
+# Expands to: ../../lang/zig.sh   solutions/main.zig  io/alice.input io/alice.output io/bob.input io/bob.output
 #
 SOLUTION_FILES=$1  # Expand string to list
 IO_FILES=$2        # Expand string to list
@@ -25,17 +26,14 @@ do
   zig build-exe $TEMP_SOURCE --name $SOLUTION_NAME
   cd - >/dev/null
 
-  start=$(($(date +%s%N)/1000000))
+  START=$($D/time/start.sh)
 
   # Pair-wise iteration
   while read INPUT OUTPUT; do
     cat $INPUT | $TEMP_BIN | diff - $OUTPUT
   done < <(echo $IO_FILES | xargs -n2)
 
-  end=$(($(date +%s%N)/1000000))
+  TIME=$($D/time/stop.sh $START)
 
-  TIME="$(expr $end - $start)"
-
-  D=$(dirname $(realpath $0))
-  $D/../scripts/print-test.sh "zig" "$TIME" "$SOLUTION"
+  $D/print/success.sh "zig" "$TIME" "$SOLUTION"
 done

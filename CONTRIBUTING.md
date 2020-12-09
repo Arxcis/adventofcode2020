@@ -9,7 +9,7 @@
 
 ```sh
 cd days/day03
-../../languages/python.sh input.txt output.txt solutions/super-optimized.py
+../../lang/python.sh input.txt output.txt solutions/super-optimized.py
 ```
 
 5. Add the test to `day03/test.sh`, to let the CI know how to test your solution.
@@ -21,7 +21,7 @@ cd days/day03
 ## How do I add a language?
 
 1. Add the language you want to the `Dockerfile`
-2. Add a language test-script in `languages/<new-language>.sh`
+2. Add a language test-script in `lang/<new-language>.sh`
 3. Add an example solution in `days/day-00-example/solutions/example.<new-language>`
 4. Make a PR to `main`-branch.
 5. One of the maintainers will do `make docker.build` and `make docker.push` and merge your PR on his machine ASAP :racing_car:

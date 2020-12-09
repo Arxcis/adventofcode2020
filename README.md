@@ -89,7 +89,7 @@ If you enjoy working on this project, consider sharing it with your friends. The
 
 ```
 $ cd days/day01
-$ ../../languages/rust.sh input.txt output.txt solutions/day01.rs
+$ ../../lang/rust.sh input.txt output.txt solutions/day01.rs
 cat INPUT | rustc day-01/solutions/day01.rs ✅
 ```
 
