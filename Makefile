@@ -131,6 +131,8 @@ docker.day07:
 	make docker.test DAY=day-07
 docker.day08:
 	make docker.test DAY=day-08
+docker.day09:
+	make docker.test DAY=day-09
 docker.day10:
 	make docker.test DAY=day-10
 docker.day11:
