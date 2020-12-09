@@ -3,7 +3,7 @@ set -euo pipefail
 
 D=$(dirname $(realpath $0))
 
-
-
-echo "$D / --- Empty --- ❌";
-exit 1337;
+echo ""
+echo "--- Day 9: Encoding Error ---"
+$D/../../lang/deno.sh "$D/solutions/*.ts" "$D/io/*"
+echo ""

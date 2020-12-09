@@ -5,15 +5,14 @@ D=$(dirname $(realpath $0))
 
 echo
 echo "--- Day 4: Passport Processing ---"
-$D/../../languages/c.sh      $D/input.txt $D/output.txt $D/solutions/day04.c
-$D/../../languages/zig.sh    $D/input.txt $D/output.txt $D/solutions/day04.zig
-$D/../../languages/sml.sh    $D/input.txt $D/output.txt $D/solutions/day04.sml
-$D/../../languages/go.sh     $D/input.txt $D/output.txt $D/solutions/day04.tholok97.go
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.klyve.py
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.preng.py
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.jorgen.py
-$D/../../languages/python.sh $D/input.txt $D/output.txt $D/solutions/day04.stektpotet.py
-$D/../../languages/deno.sh   $D/input.txt $D/output.txt $D/solutions/day04.ts
-$D/../../languages/node.sh   $D/input.txt $D/output.txt $D/solutions/day04.mjs
-$D/../../languages/ruby.sh   $D/input.txt $D/output.txt $D/solutions/day04.klyve.rb
+
+$D/../../lang/go.sh     "$D/solutions/*.go"   "$D/io/*"
+$D/../../lang/c.sh      "$D/solutions/*.c"    "$D/io/*"
+$D/../../lang/zig.sh    "$D/solutions/*.zig"  "$D/io/*"
+$D/../../lang/sml.sh    "$D/solutions/*.sml"  "$D/io/*"
+$D/../../lang/python.sh "$D/solutions/*.py"   "$D/io/*"
+$D/../../lang/deno.sh   "$D/solutions/*.ts"   "$D/io/*"
+$D/../../lang/node.sh   "$D/solutions/*.mjs"  "$D/io/*"
+$D/../../lang/ruby.sh   "$D/solutions/*.rb"   "$D/io/*"
+
 echo
