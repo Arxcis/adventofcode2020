@@ -13,7 +13,7 @@ const groupsNoWhitespace = groups
 
 const anyoneAnsweredYes = groupsNoWhitespace
   .reduce((count, group) => count
-    + (new Set( group.split("") )).size, 0)
+    + (new Set( [...group] )).size, 0)
 
 // -- part 2 --
 const groupsSplitByWhitespace = groups
