@@ -1,4 +1,4 @@
-use "../../../util.sml";
+use "../../../lib/util.sml";
 
 local
     structure IS = IntSet

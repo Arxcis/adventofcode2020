@@ -1,4 +1,4 @@
-use "../../../util.sml";
+use "../../../lib/util.sml";
 
 fun solve operand =
     listSum o List.map (CharSet.size o foldl' operand)
