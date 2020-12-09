@@ -7,8 +7,8 @@ set -euo pipefail
 # Example:    ../../languages/rust.sh  "solutions/*.rs"   "io/*"
 # Expands to: ../../languages/rust.sh   solutions/main.rs  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTION_FILES=$1  # Expand FILES
-IO_FILES=$2        # Expand FILES
+SOLUTION_FILES=$1  # Expand string to list
+IO_FILES=$2        # Expand string to list
 
 OUT="$(mktemp)"
 

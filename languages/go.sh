@@ -7,8 +7,8 @@ set -euo pipefail
 # Example:    ../../languages/go.sh  "solutions/*.go"   "io/*"
 # Expands to: ../../languages/go.sh   solutions/main.go  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTION_FILES=$1  # Expand FILES
-IO_FILES=$2        # Expand FILES
+SOLUTION_FILES=$1  # Expand string to list
+IO_FILES=$2        # Expand string to list
 
 OUT="$(mktemp)"
 

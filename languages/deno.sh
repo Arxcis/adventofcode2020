@@ -6,8 +6,8 @@ set -euo pipefail
 # Example:    ../../languages/deno.sh  "solutions/*.ts"   "io/*"
 # Expands to: ../../languages/deno.sh   solutions/main.ts  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTION_FILES=$1   # Expand FILES
-IO_FILES=$2         # Expand FILES
+SOLUTION_FILES=$1   # Expand string to list
+IO_FILES=$2         # Expand string to list
 
 for SOLUTION in $SOLUTION_FILES
 do

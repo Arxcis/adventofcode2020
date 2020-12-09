@@ -6,8 +6,8 @@ set -euo pipefail
 # Example:    ../../languages/php.sh  "solutions/*.php"   "io/*"
 # Expands to: ../../languages/php.sh   solutions/main.php  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTION_FILES=$1   # Expand FILES
-IO_FILES=$2         # Expand FILES
+SOLUTION_FILES=$1   # Expand string to list
+IO_FILES=$2         # Expand string to list
 
 for SOLUTION in $SOLUTION_FILES
 do
