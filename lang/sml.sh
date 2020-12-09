@@ -8,8 +8,8 @@ D=$(dirname $(realpath $0))
 # Example:    ../../lang/sml.sh  "solutions/*.sml"   "io/*"
 # Expands to: ../../lang/sml.sh   solutions/main.sml  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTION_FILES=$1  # Expand string to list
-IO_FILES=$2        # Expand string to list
+SOLUTION_FILES=$1
+IO_FILES=$2
 
 OUT="$(mktemp)"
 trap 'rm -f "$OUT"' EXIT

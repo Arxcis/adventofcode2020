@@ -8,8 +8,8 @@ D=$(dirname $(realpath $0))
 # Example:    ../../lang/c.sh  "solutions/*.c"   "io/*"
 # Expands to: ../../lang/c.sh   solutions/main.c  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTION_FILES=$1  # Expand string to list
-IO_FILES=$2        # Expand string to list
+SOLUTION_FILES=$1
+IO_FILES=$2
 
 OUT="$(mktemp)"
 

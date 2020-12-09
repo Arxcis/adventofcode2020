@@ -8,8 +8,8 @@ D=$(dirname $(realpath $0))
 # Example:    ../../lang/rust.sh  "solutions/*.rs"   "io/*"
 # Expands to: ../../lang/rust.sh   solutions/main.rs  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTION_FILES=$1  # Expand string to list
-IO_FILES=$2        # Expand string to list
+SOLUTION_FILES=$1
+IO_FILES=$2
 
 OUT="$(mktemp)"
 

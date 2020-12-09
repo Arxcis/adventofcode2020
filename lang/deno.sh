@@ -7,8 +7,8 @@ D=$(dirname $(realpath $0))
 # Example:    ../../lang/deno.sh  "solutions/*.ts"   "io/*"
 # Expands to: ../../lang/deno.sh   solutions/main.ts  io/alice.input io/alice.output io/bob.input io/bob.output
 #
-SOLUTION_FILES=$1   # Expand string to list
-IO_FILES=$2         # Expand string to list
+SOLUTION_FILES=$1
+IO_FILES=$2
 
 for SOLUTION in $SOLUTION_FILES
 do
