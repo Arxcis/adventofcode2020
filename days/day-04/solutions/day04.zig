@@ -1,10 +1,8 @@
 const std = @import("std");
 const mem = std.mem;
 const io = std.io;
-const ArrayList = std.ArrayList;
-const Allocator = std.mem.Allocator;
 
-const MAX_FILE_SIZE = 30_000; 
+const MAX_FILE_SIZE = 25_000; 
 
 const PassportField = enum(u8) {
     invalid = 0b00000000, 
