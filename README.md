@@ -85,12 +85,11 @@ If you enjoy working on this project, consider sharing it with your friends. The
 
 ## Getting started
 
-### Test a single solution
+### Test individual solutions
 
 ```
-$ cd days/day01
-$ ../../lang/rust.sh input.txt output.txt solutions/day01.rs
-cat INPUT | rustc day-01/solutions/day01.rs ✅
+$ ./lang/rust.sh "days/day-01/solutions/day01.rs" "days/day-01/io/*"
+cat INPUT | rustc    day01.rs                662ms      ✅
 ```
 
 ### Test one or more days
