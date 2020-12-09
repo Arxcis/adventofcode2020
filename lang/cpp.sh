@@ -27,6 +27,5 @@ do
   TIME=$($D/time/stop.sh $START)
 
   $D/print/success.sh "g++" "$TIME" "$SOLUTION"
-
 done
 rm $OUT;

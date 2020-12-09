@@ -14,7 +14,7 @@ export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-07-with-deno"
 	;\
 
 test.all:
-	for day in $$(ls days); do ./days/$$day/test.sh; done
+	./test.sh
 
 test.versions:
 	./scripts/print-versions.sh
