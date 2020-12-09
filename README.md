@@ -12,8 +12,8 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 | sml       |  **8** |  1   |  1  |  1  |  1   |  1  |  1  | 1   | 1   |    |    ||||||||||||||||
 | deno.ts   |  **8** |  1   |  1  |  1  |  1   |  1  |  1  | 1   | 1   |    |    ||||||||||||||||
 | c         |  **6** |  1   |  1  |  1  |  1   |  1  |  1  |     |     |    |    ||||||||||||||||
+| zig       |  **5** |  1   |  1  |  1  |  1   |  1  |     |     |     |    |    ||||||||||||||||
 | node.js   |  **4** |  1   |     |     |  1   |     |  1  | 1   |     |    |    ||||||||||||||||
-| zig       |  **3** |  1   |  1  |  1  |      |     |     |     |     |    |    ||||||||||||||||
 | c++       |  **2** |  1   |  1  |     |      |     |     |     |     |    |    ||||||||||||||||
 | ruby      |  **2** |  1   |     |     |  1   |     |     |     |     |    |    ||||||||||||||||
 | rust      |  **1** |  1   |     |     |      |     |     |     |     |    |    ||||||||||||||||
@@ -22,7 +22,7 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 | php       |  **0** |      |     |     |      |     |     |     |     |    |    ||||||||||||||||
 | **Total** | **65** |**12**|**8**|**9**|**10**|**9**|**9**|**5**|**3**|    |    ||||||||||||||||
 
-*Last updated: 2020-12-08 22:40:00Z*
+*Last updated: 2020-12-09 18:56:00Z*
 
 See all languages we support in our [Dockerfile](./Dockerfile).
 
