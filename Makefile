@@ -14,7 +14,7 @@ export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-07-with-deno"
 	;\
 
 test.all:
-	for day in $$(ls days); do ./days/$$day/test.sh; done
+	./test.sh
 
 test.versions:
 	./scripts/print-versions.sh
@@ -131,6 +131,8 @@ docker.day07:
 	make docker.test DAY=day-07
 docker.day08:
 	make docker.test DAY=day-08
+docker.day09:
+	make docker.test DAY=day-09
 docker.day10:
 	make docker.test DAY=day-10
 docker.day11:

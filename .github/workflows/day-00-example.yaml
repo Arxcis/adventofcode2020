@@ -5,14 +5,14 @@ on:
       - main
     paths:
       - 'days/day-00-example/**'
-      - 'languages/**'
+      - 'lang/**'
       - 'Makefile'
   pull_request:
     branches:
       - main
     paths:
       - 'days/day-00-example/**'
-      - 'languages/**'
+      - 'lang/**'
       - 'Makefile'
   workflow_dispatch:
 
