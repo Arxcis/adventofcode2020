@@ -6,17 +6,17 @@ on:
     branches:
       - main
     paths:
-      - 'days/day-21/**'
-    paths-ignore:
-      - 'days/day-21/README.md'
+      - 'days/day-21/test.sh'
+      - 'days/day-21/io/**'
+      - 'days/day-21/solutions/**'
 
   pull_request:
     branches:
       - main
     paths:
-      - 'days/day-21/**'
-    paths-ignore:
-      - 'days/day-21/README.md'
+      - 'days/day-21/test.sh'
+      - 'days/day-21/io/**'
+      - 'days/day-21/solutions/**'
 
 jobs:
   test:

@@ -20,17 +20,17 @@ on:
     branches:
       - main
     paths:
-      - 'days/${DAY}/**'
-    paths-ignore:
-      - 'days/${DAY}/README.md'
+      - 'days/${DAY}/test.sh'
+      - 'days/${DAY}/io/**'
+      - 'days/${DAY}/solutions/**'
 
   pull_request:
     branches:
       - main
     paths:
-      - 'days/${DAY}/**'
-    paths-ignore:
-      - 'days/${DAY}/README.md'
+      - 'days/${DAY}/test.sh'
+      - 'days/${DAY}/io/**'
+      - 'days/${DAY}/solutions/**'
 
 jobs:
   test:
