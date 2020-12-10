@@ -64,7 +64,6 @@ pub fn main() anyerror!void {
     var uniform_yes_count: u32 = 0;
 
     var it = mem.split(bytes[0..length], "\n\n");
-    var mytest: u8 = 0;
     while (it.next()) |raw_lines| {
         const group = mem.trim(u8, raw_lines, &std.ascii.spaces);
 
