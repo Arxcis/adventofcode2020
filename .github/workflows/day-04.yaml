@@ -1,16 +1,22 @@
 name: day-04
 on:
   workflow_dispatch:
+
   push:
     branches:
       - main
     paths:
       - 'days/day-04/**'
+    paths-ignore:
+      - 'days/day-04/README.md'
+
   pull_request:
     branches:
       - main
     paths:
       - 'days/day-04/**'
+    paths-ignore:
+      - 'days/day-04/README.md'
 
 jobs:
   test:
