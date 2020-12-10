@@ -25,7 +25,7 @@ RUN git clone https://github.com/polyml/polyml.git /tmp/polyml && cd /tmp/polyml
 # 5. Tell apt to install node.js from nodesource.com, to get v15.x instead of v12.x
 RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 
-# 6. Install deno.js run-time from deno.land
+# 6. Install deno.ts run-time from deno.land
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh && cp ~/.deno/bin/deno /bin/
 
 # 7. Install all other compilers, from apt-get
