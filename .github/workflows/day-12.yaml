@@ -22,7 +22,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: 
+      image: "jonasjso/adventofcode2020:2020-12-07-with-deno"
     steps:
       - uses: actions/checkout@v2
       - name: make versions
