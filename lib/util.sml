@@ -19,8 +19,39 @@ fun splitWith pred list =
 fun foldl' f (x :: xs) = List.foldl f x xs
   | foldl' f [] = raise Fail "empty list to foldl'"
 
+(** from https://github.com/kfl/mosml/blob/f529b33bb891ff1df4aab198edad376f9ff64d28/src/mosmllib/Listsort.sml **)
+fun sort ordr []          = []
+  | sort ordr (xs as [_]) = xs
+  | sort ordr (xs as [x1, x2]) =
+    (case ordr(x1, x2) of
+         GREATER => [x2, x1]
+       | _       => xs)
+  | sort ordr xs =
+    let fun merge []       ys = ys
+          | merge (x1::xr) ys =
+            let fun take x1 xr []       = x1 :: xr
+                  | take x1 xr (y1::yr) =
+                    (case ordr(x1, y1) of
+                         LESS    => x1 :: take y1 yr xr
+                       | _       => y1 :: take x1 xr yr)
+            in take x1 xr ys end
+        fun mergepairs l1  []              k = [l1]
+          | mergepairs l1 (ls as (l2::lr)) k =
+            if k mod 2 = 1 then l1::ls
+            else mergepairs (merge l1 l2) lr (k div 2)
+        fun nextrun run []      = (run, [])
+          | nextrun run (xs as (x::xr)) =
+            if ordr(x, List.hd run) = LESS then (run, xs)
+            else nextrun (x::run) xr
+        fun sorting []      ls r = List.hd(mergepairs [] ls 0)
+          | sorting (x::xs) ls r =
+            let val (revrun, tail) = nextrun [x] xs
+            in sorting tail (mergepairs (List.rev revrun) ls (r+1)) (r+1) end
+    in sorting xs [] 0 end
+
 val listSum = List.foldl (op +) 0
 val listProduct = List.foldl (op *) 1
+val listMax = foldl' Int.max
 
 
 signature ORD =
@@ -43,6 +74,8 @@ sig
     val foldl : (K * 'a * 'b -> 'b) -> 'b -> 'a Coll -> 'b
     val size : 'a Coll -> int
     val fromList : (K * 'a) list -> 'a Coll
+    val max : 'a Coll -> (K * 'a) option
+    val min : 'a Coll -> (K * 'a) option
     (* TODO: Implement remove etc *)
 end
 
@@ -105,6 +138,14 @@ fun foldl f acc E = acc
 fun size coll = foldl (fn (_, _, n) => n + 1) 0 coll
 
 fun fromList list = List.foldl (fn ((k, v), s) => insert k v s) empty list
+
+fun max E = NONE
+  | max (T (_, _, x, E)) = SOME x
+  | max (T (_, _, _, t)) = max t
+
+fun min E = NONE
+  | min (T (_, E, x, _)) = SOME x
+  | min (T (_, t, _, _)) = min t
 end
 
 signature SET =
@@ -121,6 +162,8 @@ sig
     val union : (Coll * Coll) -> Coll
     val size : Coll -> int
     val fromList : V list -> Coll
+    val max : Coll -> V option
+    val min : Coll -> V option
 end
 
 functor Set(Map: MAP) : SET =
@@ -136,6 +179,8 @@ fun intersection (a, b) = foldl (fn (x, s) => if contains x b then insert x s el
 fun union (a, b) = foldl (fn (x, s) => insert x s) a b
 val size = Map.size
 fun fromList list = List.foldl (fn (v, s) => insert v s) empty list
+fun max coll = Option.map #1 $ Map.max coll
+fun min coll = Option.map #1 $ Map.min coll
 end
 
 structure UncountedRList =

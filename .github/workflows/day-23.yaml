@@ -1,16 +1,22 @@
 name: day-23
 on:
   workflow_dispatch:
+
   push:
     branches:
       - main
     paths:
-      - 'days/day-23/**'
+      - 'days/day-23/test.sh'
+      - 'days/day-23/io/**'
+      - 'days/day-23/solutions/**'
+
   pull_request:
     branches:
       - main
     paths:
-      - 'days/day-23/**'
+      - 'days/day-23/test.sh'
+      - 'days/day-23/io/**'
+      - 'days/day-23/solutions/**'
 
 jobs:
   test:
