@@ -1,4 +1,4 @@
-import { raymarchEightDirections } from "./raymarch.ts"
+import { raycastEightDirections } from "../../../lib/raycast.ts"
 //
 // Example input:
 //
@@ -20,11 +20,10 @@ const matches = (await Deno.readTextFile("/dev/stdin"))
 const grid = [...matches]
   .map(([match]) => [...match]) as Seat[][]
 
-
-const isOccupied = (seat: Seat) => seat === "#" ? 1 : 0
 const FLOOR = ".";
 const OCCUPIED = "#"
 const EMPTY = "L"
+const isOccupied = (seat: Seat) => seat === OCCUPIED ? 1 : 0
 
 //
 // --- part 1 ---
@@ -47,18 +46,22 @@ const EMPTY = "L"
         const seat = previousGrid[row][col];
         if (seat === FLOOR) continue;
 
-        const {NW, N, NE, W, E, SW, S, SE} =
-          raymarchEightDirections(previousGrid, row, col, OCCUPIED, 1)
+        const directions =
+          raycastEightDirections(previousGrid, row, col, 1, FLOOR)
+
+        const fourOrMoreDirectionsOccupied = directions
+          .reduce((acc:number, direction: Seat) => acc + isOccupied(direction), 0) >= 4
 
         // # Rule: If four or more directions are OCCUPIED, the seat becomes EMPTY
-        const fourOrMoreDirectionsOccupied = (NW + N + NE + W + E + SW + S + SE) >= 4
         if (fourOrMoreDirectionsOccupied) {
           currentGrid[row][col] = EMPTY
           continue
         }
 
+        const everyDirectionNotOccupied = directions
+          .every((direction: Seat) => !isOccupied(direction))
+
         // # Rule: If every direction is NOT OCCUPIED, the seat becomes OCCUPIED
-        const everyDirectionNotOccupied = !NW && !N && !NE && !W && !E && !SW && !S && !SE
         if (everyDirectionNotOccupied) {
           currentGrid[row][col] = OCCUPIED
           continue
@@ -77,7 +80,7 @@ const EMPTY = "L"
     currentGrid = currentGrid.map(row => row.map(seat => seat))
   }
 
-  console.log(currentOccupiedCount)
+  console.log(`${currentOccupiedCount}`)
 }
 
 //
@@ -103,18 +106,22 @@ const EMPTY = "L"
 
         const rayLimit = Math.max(row+1, col+1, grid.length - row, grid[row].length - col)
 
-        const {NW, N, NE, W, E, SW, S, SE} =
-          raymarchEightDirections(previousGrid, row, col, OCCUPIED, rayLimit)
+        const directions =
+          raycastEightDirections(previousGrid, row, col, rayLimit, FLOOR)
 
-        // #Rule: If five or more directions are OCCUPIED, the seat becomes EMPTY
-        const fiveOrMoreSeatsOccupied = (NW + N + NE + W + E + SW + S + SE) >= 5
-        if (fiveOrMoreSeatsOccupied) {
+        const fiveOrMoreDirectionsOccupied = directions
+          .reduce((acc, dir) => acc + isOccupied(dir), 0) >= 5
+
+        // # Rule: If five or more directions are OCCUPIED, the seat becomes EMPTY
+        if (fiveOrMoreDirectionsOccupied) {
           currentGrid[row][col] = EMPTY
           continue
         }
 
-        // #Rule: If every direction is NOT OCCUPIED, the seat becomes OCCUPIED
-        const everyDirectionNotOccupied = !NW && !N && !NE && !W && !E && !SW && !S && !SE
+        const everyDirectionNotOccupied = directions
+          .every((direction) => !isOccupied(direction))
+
+        // # Rule: If every direction is NOT OCCUPIED, the seat becomes OCCUPIED
         if (everyDirectionNotOccupied) {
           currentGrid[row][col] = OCCUPIED
           continue
@@ -133,5 +140,5 @@ const EMPTY = "L"
     currentGrid = currentGrid.map(row => row.map(seat => seat))
   }
 
-  console.log(currentOccupiedCount)
+  console.log(`${currentOccupiedCount}`)
 }
