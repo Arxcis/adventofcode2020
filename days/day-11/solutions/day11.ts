@@ -29,9 +29,10 @@ const isOccupied = (seat: Seat) => seat === OCCUPIED ? 1 : 0
 // --- part 1 ---
 //
 {
+
   // Copy grid
-  let previousGrid = grid.map(row => row.map(seat => seat))
-  let currentGrid = grid.map(row => row.map(seat => seat))
+  let previousGrid = JSON.parse(JSON.stringify(grid)) as Seat[][]
+  let currentGrid = JSON.parse(JSON.stringify(grid)) as Seat[][]
 
   // Init counters
   let previousOccupiedCount = -1
@@ -39,6 +40,9 @@ const isOccupied = (seat: Seat) => seat === OCCUPIED ? 1 : 0
 
   // Simulate
   while (previousOccupiedCount !== currentOccupiedCount) {
+    // Reset count
+    previousOccupiedCount = currentOccupiedCount
+    currentOccupiedCount = 0
 
     for (let row = 0; row < previousGrid.length; ++row) {
       for (let col = 0; col < previousGrid[row].length; ++col) {
@@ -63,33 +67,31 @@ const isOccupied = (seat: Seat) => seat === OCCUPIED ? 1 : 0
 
         // # Rule: If every direction is NOT OCCUPIED, the seat becomes OCCUPIED
         if (everyDirectionNotOccupied) {
+          currentOccupiedCount++;
           currentGrid[row][col] = OCCUPIED
           continue
+        }
+
+        if (currentGrid[row][col] === OCCUPIED) {
+          currentOccupiedCount++;
         }
       }
     }
 
-    // Count occupied seats
-    previousOccupiedCount = currentOccupiedCount
-    currentOccupiedCount = currentGrid
-      .reduce((accRow, row) => accRow + row
-        .reduce((accSeat, seat) => accSeat + isOccupied(seat), 0), 0)
-
     // Copy grid
     previousGrid = currentGrid
-    currentGrid = currentGrid.map(row => row.map(seat => seat))
+    currentGrid = JSON.parse(JSON.stringify(currentGrid))
   }
 
   console.log(`${currentOccupiedCount}`)
 }
-
 //
 // --- part 2 ---
 //
 {
   // Copy grid
-  let previousGrid = grid.map(row => row.map(seat => seat))
-  let currentGrid = grid.map(row => row.map(seat => seat))
+  let previousGrid = JSON.parse(JSON.stringify(grid)) as Seat[][]
+  let currentGrid = JSON.parse(JSON.stringify(grid)) as Seat[][]
 
   // Init counters
   let previousOccupiedCount = -1
@@ -97,6 +99,10 @@ const isOccupied = (seat: Seat) => seat === OCCUPIED ? 1 : 0
 
   // Simulate
   while (previousOccupiedCount !== currentOccupiedCount) {
+
+    // Reset count
+    previousOccupiedCount = currentOccupiedCount
+    currentOccupiedCount = 0
 
     for (let row = 0; row < previousGrid.length; ++row) {
       for (let col = 0; col < previousGrid[row].length; ++col) {
@@ -123,21 +129,20 @@ const isOccupied = (seat: Seat) => seat === OCCUPIED ? 1 : 0
 
         // # Rule: If every direction is NOT OCCUPIED, the seat becomes OCCUPIED
         if (everyDirectionNotOccupied) {
+          currentOccupiedCount++;
           currentGrid[row][col] = OCCUPIED
           continue
+        }
+
+        if (currentGrid[row][col] === OCCUPIED) {
+          currentOccupiedCount++;
         }
       }
     }
 
-    // Count occupied seats
-    previousOccupiedCount = currentOccupiedCount
-    currentOccupiedCount = currentGrid
-      .reduce((accRow, row) => accRow + row
-        .reduce((accSeat, seat) => accSeat + isOccupied(seat), 0), 0)
-
     // Copy grid
     previousGrid = currentGrid
-    currentGrid = currentGrid.map(row => row.map(seat => seat))
+    currentGrid = JSON.parse(JSON.stringify(currentGrid))
   }
 
   console.log(`${currentOccupiedCount}`)
