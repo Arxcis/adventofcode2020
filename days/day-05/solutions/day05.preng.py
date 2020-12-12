@@ -9,12 +9,17 @@ seats = [0 for i in range(8*128)]
 
 for line in get_stdin():
     pos = 0
-    delta = 8 * 64
+    dy = 64 * 8
     row = 0
-    for char in line:
-        if char in ("B", "R"):
-            pos += delta
-        delta = delta // 2
+    for ychar in line[:7]:
+        if ychar == "B":
+            pos += dy
+        dy = dy // 2
+    dx = 4
+    for xchar in line[7:]:
+        if xchar == "R":
+            pos += dx
+        dx = dx // 2
     seats[pos] = 1
     if pos > max:
         max = pos
