@@ -11,17 +11,17 @@ export function raymarchEightDirections<Cell>(
   //
   let NW = 0, N = 0, NE = 0, W = 0, E = 0, SW = 0, S = 0, SE = 0
 
-
   // Do ray-marching in all 8 directions
   for (let ray = 1; ray <= rayLimit; ++ray) {
-    NW |= +(hitCondition === grid[row - ray]?.[col - ray])
-    N  |= +(hitCondition === grid[row - ray]?.[col])
-    NE |= +(hitCondition === grid[row - ray]?.[col + ray])
-    W  |= +(hitCondition === grid[row][col - ray])
-    E  |= +(hitCondition === grid[row][col + ray])
-    SW |= +(hitCondition === grid[row + ray]?.[col - ray])
-    S  |= +(hitCondition === grid[row + ray]?.[col])
-    SE |= +(hitCondition === grid[row + ray]?.[col + ray])
+
+    NW |= (grid[row - ray]?.[col - ray] === hitCondition) ? 1:0
+    N  |= (grid[row - ray]?.[col      ] === hitCondition) ? 1:0
+    NE |= (grid[row - ray]?.[col + ray] === hitCondition) ? 1:0
+    W  |= (grid[row      ]  [col - ray] === hitCondition) ? 1:0
+    E  |= (grid[row      ]  [col + ray] === hitCondition) ? 1:0
+    SW |= (grid[row + ray]?.[col - ray] === hitCondition) ? 1:0
+    S  |= (grid[row + ray]?.[col      ] === hitCondition) ? 1:0
+    SE |= (grid[row + ray]?.[col + ray] === hitCondition) ? 1:0
   }
 
   return {NW, N, NE, W, E, SW, S, SE}
