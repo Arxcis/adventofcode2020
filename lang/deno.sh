@@ -9,7 +9,6 @@ D=$(dirname $(realpath $0))
 #
 SOLUTION_FILES=$1
 IO_FILES=$2
-
 for SOLUTION in $SOLUTION_FILES
 do
   deno install -f --quiet "$SOLUTION" >/dev/null
