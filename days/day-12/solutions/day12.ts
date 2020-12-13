@@ -1,17 +1,14 @@
 const matches = (await Deno.readTextFile("/dev/stdin"))
   .matchAll(/(N|S|E|W|L|R|F)(\d+)/g)
 
-
-type NavigationCode = {
-  code: "N"|"S"|"E"|"W"|"L"|"R"|"F"
-  value: number
-}
-
 const navigationCodes = [...matches]
   .map(([,code,value]) => ({
     code,
     value: parseInt(value)
-  })) as NavigationCode[]
+  })) as {
+    code: "N"|"S"|"E"|"W"|"L"|"R"|"F"
+    value: number
+  }[]
 
 //
 // Part 1
