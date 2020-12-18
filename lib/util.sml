@@ -39,6 +39,9 @@ end
 fun foldl' f (x :: xs) = List.foldl f x xs
   | foldl' f [] = raise Fail "empty list to foldl'"
 
+fun foldli f init l =
+    #2 $ List.foldl (fn (v, (i, acc)) => (i+1, f (i, v, acc))) (0, init) l
+
 (** from https://github.com/kfl/mosml/blob/f529b33bb891ff1df4aab198edad376f9ff64d28/src/mosmllib/Listsort.sml **)
 fun sort ordr []          = []
   | sort ordr (xs as [_]) = xs
@@ -100,6 +103,7 @@ sig
 
     val empty : 'a Coll
     val lookup : K -> 'a Coll -> 'a option
+    val contains : 'a Coll -> K -> bool
     val insert : K -> 'a -> 'a Coll -> 'a Coll
     val remove : K -> 'a Coll -> 'a Coll
     val update : ('a option -> 'a) -> K -> 'a Coll -> 'a Coll
@@ -129,6 +133,8 @@ fun lookup k E = NONE
         LESS => lookup k a
       | EQUAL => SOME v
       | GREATER => lookup k b
+
+fun contains s k = isSome $ lookup k s
 
 fun balance (B,T (R,T (R,a,x,b),y,c),z,d) = T(R,T (B,a,x,b),y,T (B,c,z,d))
   | balance (B,T (R,a,x,T (R,b,y,c)),z,d) = T(R,T (B,a,x,b),y,T (B,c,z,d))

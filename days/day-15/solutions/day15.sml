@@ -4,9 +4,6 @@ local
     structure IM = IntMap
 in
 
-fun foldli f init l =
-    #2 $ List.foldl (fn (v, (i, acc)) => (i+1, f (i, v, acc))) (0, init) l
-
 fun butlast lst = List.take (lst, List.length lst - 1)
 
 fun run init n =
