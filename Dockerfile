@@ -11,10 +11,10 @@ RUN apt-get update && apt-get install -yqq --no-install-recommends\
   build-essential git wget ca-certificates curl unzip
 
 # 3. Install zig compiler, from ziglang.org
-RUN cd /opt && wget https://ziglang.org/download/0.7.0/zig-linux-x86_64-0.7.0.tar.xz\
-  && tar xf zig-linux-x86_64-0.7.0.tar.xz\
-  && rm -rf zig-linux-x86_64-0.7.0.tar.xz\
-  && ln -s `pwd`/zig-linux-x86_64-0.7.0/zig /bin/zig\
+RUN cd /opt && wget https://ziglang.org/download/0.7.1/zig-linux-x86_64-0.7.1.tar.xz\
+  && tar xf zig-linux-x86_64-0.7.1.tar.xz\
+  && rm -rf zig-linux-x86_64-0.7.1.tar.xz\
+  && ln -s `pwd`/zig-linux-x86_64-0.7.1/zig /bin/zig\
   && chmod ugo+x /bin/zig
 
 # 4. Install polyml compiler, from github.com
