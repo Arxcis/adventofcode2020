@@ -1,5 +1,5 @@
 infix 1 >> fun x >> f = f x
-infixr 1 $ fun f $ x = f x
+infixr 0 $ fun f $ x = f x
 
 fun println x = print $ x ^ "\n"
 
