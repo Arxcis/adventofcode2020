@@ -106,4 +106,4 @@ make test.all
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/qVa7n8LmDnynRuBRvZzY5Kr7N.svg)](https://asciinema.org/a/qVa7n8LmDnynRuBRvZzY5Kr7N)
+[![asciicast](https://asciinema.org/a/fXkAUF4kqipQP2K4ICCbhoBbk.svg)](https://asciinema.org/a/fXkAUF4kqipQP2K4ICCbhoBbk)
