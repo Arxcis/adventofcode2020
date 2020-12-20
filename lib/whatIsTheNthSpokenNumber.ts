@@ -4,7 +4,7 @@ type SpokenNumberType = {
   spokenTurnBeforeThat?: number;
 }
 
-export function whatIsTheNthNumberSpoken(initialNumbers: number[], N: number): number{
+export function whatIsTheNthSpokenNumber(initialNumbers: number[], N: number): number{
 
   //
   // Inital round where everyone speaks the initial numbers in sequential order

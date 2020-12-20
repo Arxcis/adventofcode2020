@@ -1,4 +1,4 @@
-import { whatIsTheNthNumberSpoken } from "../../../lib/whatIsTheNthNumberSpoken.ts"
+import { whatIsTheNthSpokenNumber } from "../../../lib/whatIsTheNthSpokenNumber.ts"
 const input = (await Deno.readTextFile("/dev/stdin"))
 const lines = [...input.matchAll(/\d+/g)]
 
@@ -7,10 +7,10 @@ const numbers = lines
 
 // Part 1
 {
-  console.log(`${whatIsTheNthNumberSpoken(numbers, 2020)}`)
+  console.log(`${whatIsTheNthSpokenNumber(numbers, 2020)}`)
 }
 
 // Part 2
 {
-  console.log(`${whatIsTheNthNumberSpoken(numbers, 30000000)}`)
+  console.log(`${whatIsTheNthSpokenNumber(numbers, 30000000)}`)
 }
