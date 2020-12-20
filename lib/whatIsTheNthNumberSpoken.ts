@@ -27,7 +27,7 @@ export function whatIsTheNthNumberSpoken(initialNumbers: number[], N: number): n
   while (turn < N) {
     ++turn;
 
-    // If the last number is a NEW number which has not been spoken before
+    // If the last number is a NEW number which has not been spoken before, speak zero!
     if (!lastSpokenNumber.spokenTurnBeforeThat) {
       let zeroNumber = spokenMap.get(0)
       if (!zeroNumber) {
@@ -42,22 +42,25 @@ export function whatIsTheNthNumberSpoken(initialNumbers: number[], N: number): n
       }
       lastSpokenNumber = zeroNumber
     } else {
-      // The diff is the next spoken number
+      // ...else the diff is the next spoken number
       const diff = lastSpokenNumber.lastSpokenTurn - lastSpokenNumber.spokenTurnBeforeThat
 
-      // Has the next spoken number been spoken before?
-      const nextSpokenNumber = spokenMap.get(diff)
+      let nextSpokenNumber = spokenMap.get(diff)
+
+      // if the next spoken number been spoken before...
       if (nextSpokenNumber) {
         nextSpokenNumber.spokenTurnBeforeThat = nextSpokenNumber.lastSpokenTurn;
         nextSpokenNumber.lastSpokenTurn = turn;
         lastSpokenNumber = nextSpokenNumber
       } else {
-        const newSpokenNumber = {
+        // ...else add the next spoken number to the map of spoken numbers
+        const nextSpokenNumber = {
           value: diff,
           lastSpokenTurn: turn,
         } as SpokenNumberType
-        spokenMap.set(diff, newSpokenNumber)
-        lastSpokenNumber = newSpokenNumber
+
+        spokenMap.set(diff, nextSpokenNumber)
+        lastSpokenNumber = nextSpokenNumber
       }
     }
   }
