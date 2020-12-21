@@ -5,7 +5,7 @@ const io = std.io;
 const Allocator = std.mem.Allocator;
 const ArrayList = std.ArrayList;
 
-const MAX_LINE_SIZE = 250; 
+const MAX_FILE_SIZE = 50_000; 
 const MAX_RECURSION_DEPTH = 10;
 const NEEDLE: []const u8 = "shiny gold";
 
@@ -28,29 +28,24 @@ const BagEntry = struct {
 const BagHashMap = std.StringHashMap(ArrayList(BagEntry));
 const TakenMap = std.StringHashMap(bool);
 
-inline fn readBagId(comptime firstId: bool, allocator: *Allocator, line_slice: []const u8, pos: *usize) ![]const u8 {
-    while (pos.* < line_slice.len and line_slice[pos.*] == ' ') : (pos.* += 1) {
-        continue;
-    }
-    
+inline fn readBagId(comptime firstId: bool, line: []const u8, pos: *usize) ![]const u8 {
     const start_pos = pos.*;
-    while (pos.* < line_slice.len) : (pos.* += 1) {
-        if (mem.eql(u8, line_slice[pos.*..pos.* + 4], " bag")) {
-            const dest_ptr: []u8 = try allocator.alloc(u8, pos.* - start_pos);
-            mem.copy(u8, dest_ptr, line_slice[start_pos..pos.*]);
+    while (pos.* < line.len) : (pos.* += 1) {
+        if (mem.eql(u8, line[pos.*..pos.* + 4], " bag")) {
+            const id = line[start_pos..pos.*];
 
             if (firstId) {
                 pos.* += 14; // skip " bags contain "
             } else {
                 // if not at line ending, move cursor
-                if (pos.* + 5 < line_slice.len) { 
+                if (pos.* + 5 < line.len) { 
                     // skip " bags, " or " bags."
-                    pos.* += 6 + @as(usize, @boolToInt(line_slice[pos.* + 5] == ','));
+                    pos.* += 6 + @as(usize, @boolToInt(line[pos.* + 5] == ','));
                 }
             }
 
             
-            return dest_ptr;
+            return id;
         }
     }
 
@@ -106,18 +101,18 @@ pub fn main() anyerror!void {
     const stdout = std.io.getStdOut().writer();
     const stderr = std.io.getStdErr().writer();
 
-    var line_buffer: [MAX_LINE_SIZE]u8 = undefined;
+    var bytes: [MAX_FILE_SIZE]u8 = undefined;
+    const length = try in.readAll(&bytes);
 
     var part1_map = BagHashMap.init(allocator);
     var part2_map = BagHashMap.init(allocator);
-    
-    while (in.readUntilDelimiterOrEof(line_buffer[0..], '\n')) |maybe_line| {
-        const raw_line = maybe_line orelse break;
-        const line = mem.trim(u8, raw_line, &std.ascii.spaces);
+
+    var it = mem.split(bytes[0..length], "\n");
+    while (it.next()) |line| {
         if (line.len == 0) continue; // empty line
 
         var cursor_pos: usize = 0;
-        if (readBagId(true, allocator, line, &cursor_pos)) |bagId| {
+        if (readBagId(true, line, &cursor_pos)) |bagId| {
             if (!part1_map.contains(bagId)) {
                 var bag_parents = try ArrayList(BagEntry).initCapacity(allocator, 8);
                 try part1_map.put(bagId, bag_parents);
@@ -136,7 +131,9 @@ pub fn main() anyerror!void {
                 if (cursor_pos == line.len) continue;
 
                 const quantity = std.fmt.parseInt(usize, line[quantity_start..cursor_pos], 10) catch break :line;
-                const bagContentId = try readBagId(false, allocator, line, &cursor_pos);
+                // skip space after quantity
+                cursor_pos += 1; 
+                const bagContentId = try readBagId(false, line, &cursor_pos);
                 
                 { // part 1 map 
                     const entry = BagEntry.init(bagId, quantity);
@@ -150,16 +147,11 @@ pub fn main() anyerror!void {
             }
         } else |err| {
             switch(err) {
+                // keep this switch incase i add new errors which will make this a compile error 
                 error.LineEnding => continue,
-                error.OutOfMemory => @panic("out of memory!"),
             }
         }
-    } else |err| {
-        switch(err) {
-            error.StreamTooLong => try stderr.print("buffer smaller than line length", .{}),
-            else => try stderr.print("fs error", .{}),
-        }
-    }
+    } 
 
     var takenBagIds = TakenMap.init(allocator);
     const part1_answer = part1(part1_map, NEEDLE, 0, &takenBagIds);
