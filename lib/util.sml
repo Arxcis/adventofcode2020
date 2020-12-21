@@ -49,9 +49,14 @@ fun sort ordr []          = []
             in sorting tail (mergepairs (List.rev revrun) ls (r+1)) (r+1) end
     in sorting xs [] 0 end
 
+
+
 val listSum = List.foldl (op +) 0
 val listProduct = List.foldl (op *) 1
-val listMax = foldl' Int.max
+fun listMinBy f = foldl' (fn (a, b) => if f a > f b then b else a)
+fun listMaxBy f = foldl' (fn (a, b) => if f a < f b then b else a)
+val listMax = listMaxBy (fn x => x)
+
 
 
 signature ORD =
