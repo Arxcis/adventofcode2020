@@ -1,8 +1,6 @@
 const std = @import("std");
 const mem = std.mem;
 const io = std.io;
-const Allocator = std.mem.Allocator;
-const ArrayList = std.ArrayList;
 
 const MAX_FILE_SIZE = 20_000;
 
