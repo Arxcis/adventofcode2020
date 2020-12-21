@@ -14,8 +14,10 @@ export function whatIsTheNthSpokenNumber(initialNumbers: number[], N: number): n
     lastSpokenTurn: i+1,
   })) as SpokenNumberType[];
 
-  const spokenMap = new Map(spokenNumbers.map(it => [it.value, it]));
-
+  const spokenMap = new Array(N)
+  for (const num of spokenNumbers) {
+    spokenMap[num.value] = num;
+  }
   //
   // Actual game starts here, where the next number is calculated based on what was previously spoken.
   //
@@ -24,30 +26,22 @@ export function whatIsTheNthSpokenNumber(initialNumbers: number[], N: number): n
   let turn = spokenNumbers.length;
   let lastSpokenNumber = spokenNumbers[spokenNumbers.length-1]
 
+  let zeroNumber = spokenMap[0] ?? { value: 0, lastSpokenTurn: 0 }
+
   while (turn < N) {
     ++turn;
 
     // If the last number is a NEW number which has not been spoken before, speak zero!
     if (!lastSpokenNumber.spokenTurnBeforeThat) {
-      let zeroNumber = spokenMap.get(0)
-      if (!zeroNumber) {
-        zeroNumber = {
-          value: 0,
-          lastSpokenTurn: turn,
-        }
-        spokenMap.set(0, zeroNumber)
-      } else {
-        zeroNumber.spokenTurnBeforeThat = zeroNumber.lastSpokenTurn
-        zeroNumber.lastSpokenTurn = turn
-      }
+      zeroNumber.spokenTurnBeforeThat = zeroNumber.lastSpokenTurn
+      zeroNumber.lastSpokenTurn = turn
       lastSpokenNumber = zeroNumber
     } else {
       // ...else the diff is the next spoken number
       const diff = lastSpokenNumber.lastSpokenTurn - lastSpokenNumber.spokenTurnBeforeThat
 
-      let nextSpokenNumber = spokenMap.get(diff)
-
       // if the next spoken number been spoken before...
+      const nextSpokenNumber = spokenMap[diff]
       if (nextSpokenNumber) {
         nextSpokenNumber.spokenTurnBeforeThat = nextSpokenNumber.lastSpokenTurn;
         nextSpokenNumber.lastSpokenTurn = turn;
@@ -59,7 +53,7 @@ export function whatIsTheNthSpokenNumber(initialNumbers: number[], N: number): n
           lastSpokenTurn: turn,
         } as SpokenNumberType
 
-        spokenMap.set(diff, nextSpokenNumber)
+        spokenMap[diff] = nextSpokenNumber
         lastSpokenNumber = nextSpokenNumber
       }
     }
