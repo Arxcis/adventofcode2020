@@ -1,4 +1,4 @@
-import { whatIsTheNthSpokenNumber } from "../../../lib/whatIsTheNthSpokenNumber.ts"
+import { whatIsTheNthSpokenNumber } from "../lib/whatIsTheNthSpokenNumber.ts"
 const input = (await Deno.readTextFile("/dev/stdin"))
 const lines = [...input.matchAll(/\d+/g)]
 
