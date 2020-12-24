@@ -1,5 +1,5 @@
 infix 1 >> fun x >> f = f x
-infixr 1 $ fun f $ x = f x
+infixr 0 $ fun f $ x = f x
 
 fun println x = print $ x ^ "\n"
 
@@ -16,8 +16,31 @@ fun splitWith pred list =
         List.rev $ acc [] [] list
     end
 
+local
+    structure S = Substring
+in
+fun sensibleStringFields subs s =
+    let fun go acc rest =
+            if S.isEmpty rest then
+                List.rev $ List.map S.string acc
+            else
+                let val (front, back) = S.position subs rest
+                    val rest = if S.isEmpty back
+                               then back
+                               else S.slice (back, String.size subs, NONE)
+                in
+                    go (front :: acc) rest
+                end
+    in
+        go [] $ S.full s
+    end
+end
+
 fun foldl' f (x :: xs) = List.foldl f x xs
   | foldl' f [] = raise Fail "empty list to foldl'"
+
+fun foldli f init l =
+    #2 $ List.foldl (fn (v, (i, acc)) => (i+1, f (i, v, acc))) (0, init) l
 
 (** from https://github.com/kfl/mosml/blob/f529b33bb891ff1df4aab198edad376f9ff64d28/src/mosmllib/Listsort.sml **)
 fun sort ordr []          = []
@@ -57,11 +80,18 @@ fun listMinBy f = foldl' (fn (a, b) => if f a > f b then b else a)
 fun listMaxBy f = foldl' (fn (a, b) => if f a < f b then b else a)
 val listMax = listMaxBy (fn x => x)
 
+fun indexedMap f xs =
+    let fun recur acc i [] = acc
+          | recur acc i (x :: xs) = recur (f (i, x) :: acc) (i + 1) xs
+    in
+        List.rev $ recur [] 0 xs
+    end
+
 
 
 signature ORD =
 sig
-    type t
+    eqtype t
 
     val cmp : t * t -> order
 end
@@ -73,7 +103,9 @@ sig
 
     val empty : 'a Coll
     val lookup : K -> 'a Coll -> 'a option
+    val contains : 'a Coll -> K -> bool
     val insert : K -> 'a -> 'a Coll -> 'a Coll
+    val remove : K -> 'a Coll -> 'a Coll
     val update : ('a option -> 'a) -> K -> 'a Coll -> 'a Coll
     val updateWithDefault : 'a -> ('a -> 'a) -> K -> 'a Coll -> 'a Coll
     val foldl : (K * 'a * 'b -> 'b) -> 'b -> 'a Coll -> 'b
@@ -101,6 +133,8 @@ fun lookup k E = NONE
         LESS => lookup k a
       | EQUAL => SOME v
       | GREATER => lookup k b
+
+fun contains s k = isSome $ lookup k s
 
 fun balance (B,T (R,T (R,a,x,b),y,c),z,d) = T(R,T (B,a,x,b),y,T (B,c,z,d))
   | balance (B,T (R,a,x,T (R,b,y,c)),z,d) = T(R,T (B,a,x,b),y,T (B,c,z,d))
@@ -140,6 +174,10 @@ fun foldl f acc E = acc
         foldl f ma b
     end
 
+(* Linear, but I can't be bothered to implement removal for RB-trees right now *)
+fun remove k s =
+    foldl (fn (k2, v, s2) => if k <> k2 then insert k2 v s2 else s2) empty s
+
 fun size coll = foldl (fn (_, _, n) => n + 1) 0 coll
 
 fun fromList list = List.foldl (fn ((k, v), s) => insert k v s) empty list
@@ -161,6 +199,7 @@ sig
     val empty : Coll
     val contains : V -> Coll -> bool
     val insert : V -> Coll -> Coll
+    val remove : V -> Coll -> Coll
     val foldl : (V * 'b -> 'b) -> 'b -> Coll -> 'b
 
     val intersection : (Coll * Coll) -> Coll
@@ -179,6 +218,7 @@ type Coll = unit Map.Coll
 val empty = Map.empty
 fun contains v coll = Option.isSome $ Map.lookup v coll
 fun insert v coll = Map.insert v () coll
+fun remove v coll = Map.remove v coll
 fun foldl f acc coll = Map.foldl (fn (a, _, b) => f (a, b)) acc coll
 fun intersection (a, b) = foldl (fn (x, s) => if contains x b then insert x s else s) empty a
 fun union (a, b) = foldl (fn (x, s) => insert x s) a b
