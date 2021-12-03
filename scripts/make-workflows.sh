@@ -4,15 +4,17 @@ DOCKER_TAG=$DOCKER_TAG
 
 #
 # Make Github workflows for all the days in the calendar
-# We make one workflow for every day, instead of one job for every day,
+# We make one workflow for every day,instead of one job for every day,
 # to enable selectively trigger when the workflow runs using the paths:
 # to make sure the workflow only runs when needed.
 #
-for i in {01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25}
-do
-  DAY="day-${i}"
-  cat > "./.github/workflows/${DAY}.yaml" << WORKFLOW
-name: ${DAY}
+#for YEAR in {2020}
+YEAR=2020
+#do
+  for DAY in {day-01,day-02,day-03,day-04,day-05,day-06,day-07,day-08,day-09,day-10,day-11,day-12,day-13,day-14,day-15,day-16,day-17,day-18,day-19,day-20,day-21,day-22,day-23,day-24,day-25}
+  do
+    cat > "./.github/workflows/$YEAR-${DAY}.yaml" << WORKFLOW
+name: $YEAR-${DAY}
 on:
   workflow_dispatch:
 
@@ -20,17 +22,17 @@ on:
     branches:
       - main
     paths:
-      - 'days/${DAY}/test.sh'
-      - 'days/${DAY}/io/**'
-      - 'days/${DAY}/solutions/**'
+      - '${YEAR}/${DAY}/test.sh'
+      - '${YEAR}/${DAY}/io/**'
+      - '${YEAR}/${DAY}/solutions/**'
 
   pull_request:
     branches:
       - main
     paths:
-      - 'days/${DAY}/test.sh'
-      - 'days/${DAY}/io/**'
-      - 'days/${DAY}/solutions/**'
+      - '${YEAR}/${DAY}/test.sh'
+      - '${YEAR}/${DAY}/io/**'
+      - '${YEAR}/${DAY}/solutions/**'
 
 jobs:
   test:
@@ -42,6 +44,8 @@ jobs:
       - name: make versions
         run: make versions
       - name: make test
-        run: make test DAY=${DAY}
+        run: make ${YEAR}.${DAY}
 WORKFLOW
-done
+
+  done
+#done

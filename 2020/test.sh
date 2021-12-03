@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 D=$(dirname $(realpath $0))
 
-./2020/test.sh
+for day in $(ls $D); do $D/$day/test.sh; done

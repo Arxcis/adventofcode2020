@@ -1,4 +1,4 @@
-name: day-02
+name: 2020-day-01
 on:
   workflow_dispatch:
 
@@ -6,26 +6,26 @@ on:
     branches:
       - main
     paths:
-      - 'days/day-02/test.sh'
-      - 'days/day-02/io/**'
-      - 'days/day-02/solutions/**'
+      - '2020/day-01/test.sh'
+      - '2020/day-01/io/**'
+      - '2020/day-01/solutions/**'
 
   pull_request:
     branches:
       - main
     paths:
-      - 'days/day-02/test.sh'
-      - 'days/day-02/io/**'
-      - 'days/day-02/solutions/**'
+      - '2020/day-01/test.sh'
+      - '2020/day-01/io/**'
+      - '2020/day-01/solutions/**'
 
 jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: "jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1"
+      image: 
     steps:
       - uses: actions/checkout@v2
       - name: make versions
         run: make versions
       - name: make test
-        run: make test DAY=day-02
+        run: make 2020.day-01
