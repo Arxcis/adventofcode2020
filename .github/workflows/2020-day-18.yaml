@@ -27,5 +27,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: make versions
         run: make versions
-      - name: make test
+      - name: make 2020.day-18
         run: make 2020.day-18

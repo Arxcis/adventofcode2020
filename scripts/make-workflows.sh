@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: make versions
         run: make versions
-      - name: make test
+      - name: make ${YEAR}.${DAY}
         run: make ${YEAR}.${DAY}
 WORKFLOW
 

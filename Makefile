@@ -6,7 +6,11 @@ all:
 	docker run -ti -v $(PWD):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./test.sh && exit"
 
 versions:
+	./scripts/print-versions.sh
+
+docker.versions:
 	docker run -ti -v $(PWD):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./scripts/print-versions.sh && exit"
+
 
 build: Dockerfile
 	docker build . --tag $(DOCKER_TAG)
