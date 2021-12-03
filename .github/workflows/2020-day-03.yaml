@@ -25,7 +25,7 @@ jobs:
       image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
     steps:
       - uses: actions/checkout@v2
-      - name: make versions
-        run: make versions
-      - name: make 2020.day-03
-        run: make 2020.day-03
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2020/day-03/test.sh
+        run: ./2020/day-03/test.sh

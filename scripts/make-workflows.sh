@@ -41,10 +41,10 @@ jobs:
       image: $DOCKER_TAG
     steps:
       - uses: actions/checkout@v2
-      - name: make versions
-        run: make versions
-      - name: make ${YEAR}.${DAY}
-        run: make ${YEAR}.${DAY}
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./${YEAR}/${DAY}/test.sh
+        run: ./${YEAR}/${DAY}/test.sh
 WORKFLOW
 
   done
