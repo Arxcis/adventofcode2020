@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOCKER_TAG=$DOCKER_TAG
+. .env
 
 #
 # Make Github workflows for all the days in the calendar
