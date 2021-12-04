@@ -1,4 +1,4 @@
-# day-00-example
+# day-example
 
 This example-folder sets the precedence for how the rest of the folders should be laid out.
 

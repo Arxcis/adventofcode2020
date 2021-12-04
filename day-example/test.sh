@@ -4,7 +4,7 @@ set -euo pipefail
 D=$(dirname $(realpath $0))
 
 echo ""
-echo "--- Day 0: Examples ---"
+echo "--- Day: Examples ---"
 
 $D/../lang/rust.sh   "$D/solutions/*.rs"   "$D/io/*"
 $D/../lang/go.sh     "$D/solutions/*.go"   "$D/io/*"

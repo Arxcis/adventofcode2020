@@ -1,7 +1,5 @@
 include .env
 
-.PHONY: day-00-example
-
 all:
 	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./test.sh && exit"
 
@@ -18,8 +16,8 @@ push:
 #
 # 2020
 #
-day-00-example:
-	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc &&  ./day-00-example/test.sh && exit"
+example:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc &&  ./day-example/test.sh && exit"
 2020.day-01:
 	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-01/test.sh && exit"
 2020.day-02:
