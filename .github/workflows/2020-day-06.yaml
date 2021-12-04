@@ -1,0 +1,31 @@
+name: 2020-day-06
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - '2020/day-06/test.sh'
+      - '2020/day-06/io/**'
+      - '2020/day-06/solutions/**'
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '2020/day-06/test.sh'
+      - '2020/day-06/io/**'
+      - '2020/day-06/solutions/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2020/day-06/test.sh
+        run: ./2020/day-06/test.sh

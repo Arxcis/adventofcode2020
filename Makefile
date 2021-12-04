@@ -1,167 +1,75 @@
-export DOCKER_TAG="jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1"
+include .env
 
-.PHONY:
-	test\
-	test.all\
-	test.versions\
-	docker.test\
-	docker.all\
-	docker.build\
-	docker.push\
-	docker.versions\
-	versions\
-	workflows\
-	;\
+.PHONY: 2020
 
-test.all:
-	./test.sh
-
-test.versions:
-	./scripts/print-versions.sh
-
-test:
-	./days/$(DAY)/test.sh
-
-#
-# make docker.test DAY=<day>
-#
-# Run all the tests for a day inside a docker container. Should work out of the box, if you already have docker installed.
-#
-#   Example: make docker.test DAY=day-03
-#
-# Benefit 1: Avoids having to install all languages on the host machine.
-# Benefit 2: Reproduceability - Makes sure tests run with the same versions on any machine, regardless of what is installed on the host machine.
-#
-docker.test:
-	docker run -ti --env DAY=$(DAY) -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make test && exit"
-
-docker.all:
-	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make test.all && exit"
-
-docker.build: Dockerfile
-	docker build . --tag $(DOCKER_TAG)
-
-docker.push:
-	docker push $(DOCKER_TAG)
-
-docker.versions:
-	docker run -ti -v $(PWD):/test $(DOCKER_TAG) /bin/bash -c "cd /test && make versions"
+all:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./test.sh && exit"
 
 versions:
-	./scripts/print-versions.sh
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./scripts/print-versions.sh && exit"
 
-workflows:
-	./scripts/make-workflows.sh
+build: Dockerfile
+	docker build . --tag $(DOCKER_TAG)
+
+push:
+	docker push $(DOCKER_TAG)
 
 
-# Aliases for all days running on host machine
-test.example:
-	make test DAY=day-00-example
-test.day00:
-	make test DAY=day-00-example
-test.day01:
-	make test DAY=day-01
-test.day02:
-	make test DAY=day-02
-test.day03:
-	make test DAY=day-03
-test.day04:
-	make test DAY=day-04
-test.day05:
-	make test DAY=day-05
-test.day06:
-	make test DAY=day-06
-test.day07:
-	make test DAY=day-07
-test.day08:
-	make test DAY=day-08
-test.day09:
-	make test DAY=day-09
-test.day10:
-	make test DAY=day-10
-test.day11:
-	make test DAY=day-11
-test.day12:
-	make test DAY=day-12
-test.day13:
-	make test DAY=day-13
-test.day14:
-	make test DAY=day-14
-test.day15:
-	make test DAY=day-15
-test.day16:
-	make test DAY=day-16
-test.day17:
-	make test DAY=day-17
-test.day18:
-	make test DAY=day-18
-test.day19:
-	make test DAY=day-19
-test.day20:
-	make test DAY=day-20
-test.day21:
-	make test DAY=day-21
-test.day22:
-	make test DAY=day-22
-test.day23:
-	make test DAY=day-23
-test.day24:
-	make test DAY=day-24
-test.day25:
-	make test DAY=day-25
+#
+# 2020
+#
+example:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc &&  ./day-example/test.sh && exit"
+2020:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/test.sh && exit"
+2020.day-01:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-01/test.sh && exit"
+2020.day-02:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-02/test.sh && exit"
+2020.day-03:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-03/test.sh && exit"
+2020.day-04:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-04/test.sh && exit"
+2020.day-05:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-05/test.sh && exit"
+2020.day-06:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-06/test.sh && exit"
+2020.day-07:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-07/test.sh && exit"
+2020.day-08:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-08/test.sh && exit"
+2020.day-09:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-09/test.sh && exit"
+2020.day-10:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-10/test.sh && exit"
+2020.day-11:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-11/test.sh && exit"
+2020.day-12:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-12/test.sh && exit"
+2020.day-13:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-13/test.sh && exit"
+2020.day-14:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-14/test.sh && exit"
+2020.day-15:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-15/test.sh && exit"
+2020.day-16:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-16/test.sh && exit"
+2020.day-17:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-17/test.sh && exit"
+2020.day-18:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-18/test.sh && exit"
+2020.day-19:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-19/test.sh && exit"
+2020.day-20:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-20/test.sh && exit"
+2020.day-21:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-21/test.sh && exit"
+2020.day-22:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-22/test.sh && exit"
+2020.day-23:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-23/test.sh && exit"
+2020.day-24:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-24/test.sh && exit"
+2020.day-25:
+	docker run -ti -v $(shell pwd):/aoc $(DOCKER_TAG) /bin/bash -c "cd /aoc && ./2020/day-25/test.sh && exit"
 
-# Aliases for all days running in docker container
-docker.example:
-	make docker.test DAY=day-00-example
-docker.day00:
-	make docker.test DAY=day-00-example
-docker.day01:
-	make docker.test DAY=day-01
-docker.day02:
-	make docker.test DAY=day-02
-docker.day03:
-	make docker.test DAY=day-03
-docker.day04:
-	make docker.test DAY=day-04
-docker.day05:
-	make docker.test DAY=day-05
-docker.day06:
-	make docker.test DAY=day-06
-docker.day07:
-	make docker.test DAY=day-07
-docker.day08:
-	make docker.test DAY=day-08
-docker.day09:
-	make docker.test DAY=day-09
-docker.day10:
-	make docker.test DAY=day-10
-docker.day11:
-	make docker.test DAY=day-11
-docker.day12:
-	make docker.test DAY=day-12
-docker.day13:
-	make docker.test DAY=day-13
-docker.day14:
-	make docker.test DAY=day-14
-docker.day15:
-	make docker.test DAY=day-15
-docker.day16:
-	make docker.test DAY=day-16
-docker.day17:
-	make docker.test DAY=day-17
-docker.day18:
-	make docker.test DAY=day-18
-docker.day19:
-	make docker.test DAY=day-19
-docker.day20:
-	make docker.test DAY=day-20
-docker.day21:
-	make docker.test DAY=day-21
-docker.day22:
-	make docker.test DAY=day-22
-docker.day23:
-	make docker.test DAY=day-23
-docker.day24:
-	make docker.test DAY=day-24
-docker.day25:
-	make docker.test DAY=day-25

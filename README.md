@@ -3,6 +3,42 @@
 Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/.
 
 
+## 2020 status
+
+![2020-day-01](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-01/badge.svg)
+![2020-day-02](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-02/badge.svg)
+![2020-day-03](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-03/badge.svg)
+![2020-day-04](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-04/badge.svg)
+![2020-day-05](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-05/badge.svg)
+![2020-day-06](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-06/badge.svg)
+![2020-day-07](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-07/badge.svg)
+![2020-day-08](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-08/badge.svg)
+![2020-day-09](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-09/badge.svg)
+![2020-day-10](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-10/badge.svg)
+![2020-day-11](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-11/badge.svg)
+![2020-day-12](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-12/badge.svg)
+![2020-day-13](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-13/badge.svg)
+![2020-day-14](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-14/badge.svg)
+![2020-day-15](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-15/badge.svg)
+![2020-day-16](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-16/badge.svg)
+![2020-day-17](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-17/badge.svg)
+![2020-day-18](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-18/badge.svg)
+![2020-day-19](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-19/badge.svg)
+![2020-day-20](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-20/badge.svg)
+![2020-day-21](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-21/badge.svg)
+![2020-day-22](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-22/badge.svg)
+![2020-day-23](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-23/badge.svg)
+![2020-day-24](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-24/badge.svg)
+![2020-day-25](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-25/badge.svg)
+
+*Github CI runs the `days/<day>/test.sh` for each day. Example: [days/day-01/test.sh](./days/day-01/test.sh)*
+
+
+![day-example](https://github.com/Arxcis/adventofcode2020/workflows/day-example/badge.svg)
+
+
+
+
 ## Solutions per language per day
 
 | Language  | Total  | 01   |  02 |  03 |  04  |  05  | 06   | 07  | 08  | 09  | 10  | 11  | 12  | 13  | 14  | 15  | 16  | 17  | 18  | 19  | 20  | 21  | 22  | 23  | 24  | 25  |
@@ -26,39 +62,7 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 
 See all languages we support in our [Dockerfile](./Dockerfile).
 
-Run `make versions` or `make docker.versions` to see language versions.
-
-
-## Github CI status
-
-![day-01](https://github.com/Arxcis/adventofcode2020/workflows/day-01/badge.svg)
-![day-02](https://github.com/Arxcis/adventofcode2020/workflows/day-02/badge.svg)
-![day-03](https://github.com/Arxcis/adventofcode2020/workflows/day-03/badge.svg)
-![day-04](https://github.com/Arxcis/adventofcode2020/workflows/day-04/badge.svg)
-![day-05](https://github.com/Arxcis/adventofcode2020/workflows/day-05/badge.svg)
-![day-06](https://github.com/Arxcis/adventofcode2020/workflows/day-06/badge.svg)
-![day-07](https://github.com/Arxcis/adventofcode2020/workflows/day-07/badge.svg)
-![day-08](https://github.com/Arxcis/adventofcode2020/workflows/day-08/badge.svg)
-![day-09](https://github.com/Arxcis/adventofcode2020/workflows/day-09/badge.svg)
-![day-10](https://github.com/Arxcis/adventofcode2020/workflows/day-10/badge.svg)
-![day-11](https://github.com/Arxcis/adventofcode2020/workflows/day-11/badge.svg)
-![day-12](https://github.com/Arxcis/adventofcode2020/workflows/day-12/badge.svg)
-![day-13](https://github.com/Arxcis/adventofcode2020/workflows/day-13/badge.svg)
-![day-14](https://github.com/Arxcis/adventofcode2020/workflows/day-14/badge.svg)
-![day-15](https://github.com/Arxcis/adventofcode2020/workflows/day-15/badge.svg)
-![day-16](https://github.com/Arxcis/adventofcode2020/workflows/day-16/badge.svg)
-![day-17](https://github.com/Arxcis/adventofcode2020/workflows/day-17/badge.svg)
-![day-18](https://github.com/Arxcis/adventofcode2020/workflows/day-18/badge.svg)
-![day-19](https://github.com/Arxcis/adventofcode2020/workflows/day-19/badge.svg)
-![day-20](https://github.com/Arxcis/adventofcode2020/workflows/day-20/badge.svg)
-![day-21](https://github.com/Arxcis/adventofcode2020/workflows/day-21/badge.svg)
-![day-22](https://github.com/Arxcis/adventofcode2020/workflows/day-22/badge.svg)
-![day-23](https://github.com/Arxcis/adventofcode2020/workflows/day-23/badge.svg)
-![day-24](https://github.com/Arxcis/adventofcode2020/workflows/day-24/badge.svg)
-![day-25](https://github.com/Arxcis/adventofcode2020/workflows/day-25/badge.svg)
-![day-00-example](https://github.com/Arxcis/adventofcode2020/workflows/day-00-example/badge.svg)
-
-*Github CI runs the `days/<day>/test.sh` for each day. Example: [days/day-01/test.sh](./days/day-01/test.sh)*
+Run `make versions` to see installed language versions in the docker-container.
 
 
 ## [CONTRIBUTING.md](./CONTRIBUTING.md)
@@ -85,26 +89,18 @@ If you enjoy working on this project, consider sharing it with your friends. The
 
 ## Getting started
 
-### Test individual solutions
-
-```
-$ ./lang/rust.sh "days/day-01/solutions/day01.rs" "days/day-01/io/*"
+### Test solutions on your system 
+```sh
+$ ./lang/rust.sh "2020/day-01/solutions/day01.rs" "2020/day-01/io/*"
 cat INPUT | rustc    day01.rs                662ms      ✅
 ```
 
-### Test one or more days
-```
-// Run tests inside docker container
-make docker.example
-make docker.day01
-make docker.all
-
-// Run tests directly on your system
-make test.example
-make test.day01
-make test.all
+### Test inside docker container
+```sh
+make example
+make
+make all
+make 2020
+make 2020.day01
 ```
 
-## Demo
-
-[![asciicast](https://asciinema.org/a/fXkAUF4kqipQP2K4ICCbhoBbk.svg)](https://asciinema.org/a/fXkAUF4kqipQP2K4ICCbhoBbk)
