@@ -1,17 +1,17 @@
-name: day-00-example
+name: day-example
 on:
   push:
     branches:
       - main
     paths:
-      - 'days/day-00-example/**'
+      - 'day-example/**'
       - 'lang/**'
       - 'Makefile'
   pull_request:
     branches:
       - main
     paths:
-      - 'days/day-00-example/**'
+      - 'day-example/**'
       - 'lang/**'
       - 'Makefile'
   workflow_dispatch:
@@ -23,7 +23,8 @@ jobs:
       image: "jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1"
     steps:
       - uses: actions/checkout@v2
-      - name: make versions
-        run: make versions
-      - name: make test
-        run: make test DAY=day-00-example
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./day-example/test.sh
+        run: ./day-example/test.sh
+
