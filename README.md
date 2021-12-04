@@ -5,8 +5,8 @@ Welcome to this community project, where we collaboratively solve the 2020 editi
 
 ## Test status
 
-![2021](https://github.com/Arxcis/adventofcode2020/workflows/2021/badge.svg)
 ![2020](https://github.com/Arxcis/adventofcode2020/workflows/2020/badge.svg)
+![2021](https://github.com/Arxcis/adventofcode2020/workflows/2021/badge.svg)
 
 *Github CI runs the `days/<day>/test.sh` for each day. Example: [days/day-01/test.sh](./days/day-01/test.sh)*
 
