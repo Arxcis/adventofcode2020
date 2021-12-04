@@ -1,0 +1,272 @@
+name: 2021
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+    paths:
+      - '2021/**/test.sh'
+      - '2021/**/io/**'
+      - '2021/**/solutions/**'
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '2021/**/test.sh'
+      - '2021/**/io/**'
+      - '2021/**/solutions/**'
+
+jobs:
+ 2021-day-01:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-01/test.sh
+        run: ./2021/day-01/test.sh
+ 2021-day-02:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-02/test.sh
+        run: ./2021/day-02/test.sh
+ 2021-day-03:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-03/test.sh
+        run: ./2021/day-03/test.sh
+ 2021-day-04:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-04/test.sh
+        run: ./2021/day-04/test.sh
+ 2021-day-05:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-05/test.sh
+        run: ./2021/day-05/test.sh
+ 2021-day-06:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-06/test.sh
+        run: ./2021/day-06/test.sh
+ 2021-day-07:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-07/test.sh
+        run: ./2021/day-07/test.sh
+ 2021-day-08:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-08/test.sh
+        run: ./2021/day-08/test.sh
+ 2021-day-09:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-09/test.sh
+        run: ./2021/day-09/test.sh
+ 2021-day-10:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-10/test.sh
+        run: ./2021/day-10/test.sh
+ 2021-day-11:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-11/test.sh
+        run: ./2021/day-11/test.sh
+ 2021-day-12:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-12/test.sh
+        run: ./2021/day-12/test.sh
+ 2021-day-13:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-13/test.sh
+        run: ./2021/day-13/test.sh
+ 2021-day-14:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-14/test.sh
+        run: ./2021/day-14/test.sh
+ 2021-day-15:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-15/test.sh
+        run: ./2021/day-15/test.sh
+ 2021-day-16:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-16/test.sh
+        run: ./2021/day-16/test.sh
+ 2021-day-17:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-17/test.sh
+        run: ./2021/day-17/test.sh
+ 2021-day-18:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-18/test.sh
+        run: ./2021/day-18/test.sh
+ 2021-day-19:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-19/test.sh
+        run: ./2021/day-19/test.sh
+ 2021-day-20:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-20/test.sh
+        run: ./2021/day-20/test.sh
+ 2021-day-21:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-21/test.sh
+        run: ./2021/day-21/test.sh
+ 2021-day-22:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-22/test.sh
+        run: ./2021/day-22/test.sh
+ 2021-day-23:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-23/test.sh
+        run: ./2021/day-23/test.sh
+ 2021-day-24:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-24/test.sh
+        run: ./2021/day-24/test.sh
+ 2021-day-25:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2020-12-18-with-zig-v0.7.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./2021/day-25/test.sh
+        run: ./2021/day-25/test.sh
+

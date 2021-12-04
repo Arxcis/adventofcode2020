@@ -8,11 +8,9 @@
 # to enable selectively trigger when the workflow runs using the paths:
 # to make sure the workflow only runs when needed.
 #
-#for YEAR in {2020}
-YEAR=2020
-#do
-
-cat > "./.github/workflows/$YEAR.yaml" << WORKFLOW
+for YEAR in {2020,2021}
+do
+  cat > "./.github/workflows/$YEAR.yaml" << WORKFLOW
 name: $YEAR
 on:
   workflow_dispatch:
@@ -52,9 +50,10 @@ WORKFLOW
 WORKFLOW
 
   done
-  
-cat >> "./.github/workflows/$YEAR.yaml" << WORKFLOW
+
+  cat >> "./.github/workflows/$YEAR.yaml" << WORKFLOW
 
 WORKFLOW
 
-#done
+done
+
