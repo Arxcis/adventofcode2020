@@ -3,36 +3,12 @@
 Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/.
 
 
-## 2020 status
+## Test status
 
-![2020-day-01](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-01/badge.svg)
-![2020-day-02](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-02/badge.svg)
-![2020-day-03](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-03/badge.svg)
-![2020-day-04](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-04/badge.svg)
-![2020-day-05](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-05/badge.svg)
-![2020-day-06](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-06/badge.svg)
-![2020-day-07](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-07/badge.svg)
-![2020-day-08](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-08/badge.svg)
-![2020-day-09](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-09/badge.svg)
-![2020-day-10](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-10/badge.svg)
-![2020-day-11](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-11/badge.svg)
-![2020-day-12](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-12/badge.svg)
-![2020-day-13](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-13/badge.svg)
-![2020-day-14](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-14/badge.svg)
-![2020-day-15](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-15/badge.svg)
-![2020-day-16](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-16/badge.svg)
-![2020-day-17](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-17/badge.svg)
-![2020-day-18](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-18/badge.svg)
-![2020-day-19](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-19/badge.svg)
-![2020-day-20](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-20/badge.svg)
-![2020-day-21](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-21/badge.svg)
-![2020-day-22](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-22/badge.svg)
-![2020-day-23](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-23/badge.svg)
-![2020-day-24](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-24/badge.svg)
-![2020-day-25](https://github.com/Arxcis/adventofcode2020/workflows/2020-day-25/badge.svg)
+![2021](https://github.com/Arxcis/adventofcode2020/workflows/2021/badge.svg)
+![2020](https://github.com/Arxcis/adventofcode2020/workflows/2020/badge.svg)
 
 *Github CI runs the `days/<day>/test.sh` for each day. Example: [days/day-01/test.sh](./days/day-01/test.sh)*
-
 
 ![day-example](https://github.com/Arxcis/adventofcode2020/workflows/day-example/badge.svg)
 
