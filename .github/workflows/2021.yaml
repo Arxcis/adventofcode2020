@@ -6,6 +6,9 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/2021.yaml'
+      - 'lang/**'
+      - 'lib/**'
       - '2021/**/test.sh'
       - '2021/**/io/**'
       - '2021/**/solutions/**'
@@ -14,6 +17,9 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/2021.yaml'
+      - 'lang/**'
+      - 'lib/**'
       - '2021/**/test.sh'
       - '2021/**/io/**'
       - '2021/**/solutions/**'

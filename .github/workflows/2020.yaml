@@ -6,6 +6,9 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/2020.yaml'
+      - 'lang/**'
+      - 'lib/**'
       - '2020/**/test.sh'
       - '2020/**/io/**'
       - '2020/**/solutions/**'
@@ -14,6 +17,9 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/2020.yaml'
+      - 'lang/**'
+      - 'lib/**'
       - '2020/**/test.sh'
       - '2020/**/io/**'
       - '2020/**/solutions/**'
