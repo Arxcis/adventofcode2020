@@ -99,6 +99,7 @@ cat INPUT | rustc    day01.rs                662ms      ✅
 ```sh
 make example
 make
+make all
 make 2020
 make 2020.day01
 ```

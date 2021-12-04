@@ -11,5 +11,8 @@ $D/../../lang/zig.sh    "$D/solutions/*.zig"  "$D/io/*"
 $D/../../lang/sml.sh    "$D/solutions/*.sml"  "$D/io/*"
 $D/../../lang/python.sh "$D/solutions/*.py"   "$D/io/*"
 $D/../../lang/deno.sh   "$D/solutions/*.ts"   "$D/io/*"
-$D/../../lang/go.sh     "$D/solutions/tholok97.go" "$D/io/*" # fails
+$D/../../lang/go.sh     "$D/solutions/day05.stektpotet.go" "$D/io/*"
+
+# Disabled because it fails
+# $D/../../lang/go.sh     "$D/solutions/tholok97.go" "$D/io/*"
 echo ""

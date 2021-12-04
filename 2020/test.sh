@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 D=$(dirname $(realpath $0))
 
-for day in $(ls $D); do $D/$day/test.sh; done
+DAYS=$(ls -d $D/*/)
+
+for DAY in $DAYS; do $DAY/test.sh; done
