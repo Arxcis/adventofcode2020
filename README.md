@@ -1,6 +1,6 @@
 # adventofcode2020 🕯️ 🎄 ⛄
 
-Welcome to this community project, where we collaboratively solve the 2020 edition of https://adventofcode.com/.
+Welcome to this community project, where we collaboratively solve https://adventofcode.com/.
 
 
 ## Test status
