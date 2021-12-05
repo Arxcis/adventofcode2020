@@ -4,14 +4,14 @@
 
 1. Pop some popcorn :popcorn: (or whatever you enjoy :lollipop: :champagne: :milk_glass: :wine_glass: :tropical_drink: :chocolate_bar: :beer:)
 2. Fork
-3. Write a solution, in the language of your choice. Example: `vim 2020/day-03/solutions/my-solution.py`
+3. Write a solution, in the language of your choice. Example: `vim 2020/day03/solutions/my-solution.py`
 4. Test your solution
 
 ```sh
-$ ./lang/python.sh "2020/day-03/solutions/my-solution.py" "2020/day-03/io/my.input 2020/day-03/io/my.output"
+$ ./lang/python.sh "2020/day03/solutions/my-solution.py" "2020/day03/io/my.input 2020/day03/io/my.output"
 
 # ..or use this short-hand
-$ ./lang/python.sh "2020/day-03/solutions/my-solution.py" "2020/day-03/io/*"
+$ ./lang/python.sh "2020/day03/solutions/my-solution.py" "2020/day03/io/*"
 
 cat INPUT | python3  my-solution.py          13ms       ✅
 ```
@@ -35,7 +35,7 @@ make 2020.day03
 
 1. Add the language you want to the `Dockerfile`
 2. Add a language test-script in `lang/<new-language>.sh`
-3. Add an example solution in `day-example/solutions/example.<new-language>`
+3. Add an example solution in `examples/solutions/example.<new-language>`
 4. Make a PR to `main`-branch.
 5. One of the maintainers will push a new docker-image to dockerhub.com, based on your PR.
 6. ...then make sure Github workflows uses the new docker-image.
@@ -48,8 +48,8 @@ Every solution gets the `io/*.input`-files for a given day delivered to `stdin`,
 *Example:*
 ```sh
 #!/usr/bin/env bash
-cat day-03/io/my.input | <solution-in-any-language> | diff - day-03/io/my.output
+cat day03/io/my.input | <solution-in-any-language> | diff - day03/io/my.output
 ```
 
-See [day-example/solutions/](https://github.com/Arxcis/adventofcode2020/tree/main/day-example/solutions), for examples on how to read from `stdin` and how to write to `stdout` in different languages.
+See [examples/solutions/](https://github.com/Arxcis/adventofcode2020/tree/main/examples/solutions), for examples on how to read from `stdin` and how to write to `stdout` in different languages.
 

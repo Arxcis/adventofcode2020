@@ -1,0 +1,30 @@
+name: examples
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'examples/**'
+      - 'lang/**'
+      - 'Makefile'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'examples/**'
+      - 'lang/**'
+      - 'Makefile'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
+    steps:
+      - uses: actions/checkout@v2
+      - name: running ./scripts/print-versions.sh
+        run: ./scripts/print-versions.sh
+      - name: running ./examples/test.sh
+        run: ./examples/test.sh
+
