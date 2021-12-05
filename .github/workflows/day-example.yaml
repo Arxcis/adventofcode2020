@@ -20,7 +20,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh

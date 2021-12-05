@@ -28,7 +28,7 @@ jobs:
   day-01:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -38,7 +38,7 @@ jobs:
   day-02:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -48,7 +48,7 @@ jobs:
   day-03:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -58,7 +58,7 @@ jobs:
   day-04:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -68,7 +68,7 @@ jobs:
   day-05:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -78,7 +78,7 @@ jobs:
   day-06:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -88,7 +88,7 @@ jobs:
   day-07:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -98,7 +98,7 @@ jobs:
   day-08:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -108,7 +108,7 @@ jobs:
   day-09:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -118,7 +118,7 @@ jobs:
   day-10:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -128,7 +128,7 @@ jobs:
   day-11:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -138,7 +138,7 @@ jobs:
   day-12:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -148,7 +148,7 @@ jobs:
   day-13:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -158,7 +158,7 @@ jobs:
   day-14:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -168,7 +168,7 @@ jobs:
   day-15:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -178,7 +178,7 @@ jobs:
   day-16:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -188,7 +188,7 @@ jobs:
   day-17:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -198,7 +198,7 @@ jobs:
   day-18:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -208,7 +208,7 @@ jobs:
   day-19:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -218,7 +218,7 @@ jobs:
   day-20:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -228,7 +228,7 @@ jobs:
   day-21:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -238,7 +238,7 @@ jobs:
   day-22:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -248,7 +248,7 @@ jobs:
   day-23:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -258,7 +258,7 @@ jobs:
   day-24:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
@@ -268,7 +268,7 @@ jobs:
   day-25:
     runs-on: ubuntu-latest
     container:
-      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32
+      image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
     steps:
       - uses: actions/checkout@v2
       - name: running ./scripts/print-versions.sh
