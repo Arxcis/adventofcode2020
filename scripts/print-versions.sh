@@ -51,3 +51,8 @@ echo ""
 echo "$ zig version"
 zig version
 echo ""
+
+echo "$ kotlinc-native -version"
+kotlinc-native -version
+echo ""
+
