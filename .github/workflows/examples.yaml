@@ -19,7 +19,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  examples:
     runs-on: ubuntu-latest
     container:
       image: jonasjso/adventofcode2020:2021-12-04-with-kotlin-1.5.32-take3
