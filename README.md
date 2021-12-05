@@ -66,10 +66,12 @@ cat INPUT | rustc    day01.rs                662ms      ✅
 
 ### Test inside docker container
 ```sh
-make example
+# Test everything:
 make
-make all
-make 2020
-make 2020.day01
-```
 
+# Test year:
+make name=2021
+
+# Test day:
+make name=2021/day01
+```

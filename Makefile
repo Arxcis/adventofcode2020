@@ -2,9 +2,8 @@ include .env
 
 .PHONY: test versions build login push
 
-# Test:
+# Test everything:
 # 	- make
-# 	- make name=examples
 #
 # Test year:
 # 	- make name=(2021|2020)
