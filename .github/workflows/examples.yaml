@@ -8,7 +8,6 @@ on:
       - 'lang/**'
       - 'lib/**'
       - 'examples/**'
-      - 'Makefile'
   pull_request:
     branches:
       - main
@@ -17,7 +16,6 @@ on:
       - 'lang/**'
       - 'lib/**'
       - 'examples/**'
-      - 'Makefile'
   workflow_dispatch:
 
 jobs:
