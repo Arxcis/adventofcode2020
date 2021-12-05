@@ -5,11 +5,11 @@ Welcome to this community project, where we collaboratively solve https://advent
 
 ## Test status
 
-![examples](https://github.com/Arxcis/adventofcode2020/workflows/day-example/badge.svg)
-![2020](https://github.com/Arxcis/adventofcode2020/workflows/2020/badge.svg)
+![examples](https://github.com/Arxcis/adventofcode2020/workflows/examples/badge.svg)
 ![2021](https://github.com/Arxcis/adventofcode2020/workflows/2021/badge.svg)
+![2020](https://github.com/Arxcis/adventofcode2020/workflows/2020/badge.svg)
 
-*Github CI runs the `<year>/<day>/test.sh` for each day. Example: [2020/day-01/test.sh](./2020/day-01/test.sh)*
+*Github CI runs the `<year>/<day>/test.sh` for each day. Example: [2020/day01/test.sh](./2020/day01/test.sh)*
 
 
 ## Solved days by language
@@ -58,9 +58,9 @@ If you enjoy working on this project, consider sharing it with your friends. The
 
 ## Getting started
 
-### Test solutions on your system 
+### Test solutions on your system
 ```sh
-$ ./lang/rust.sh "2020/day-01/solutions/day01.rs" "2020/day-01/io/*"
+$ ./lang/rust.sh "2020/day01/solutions/day01.rs" "2020/day01/io/*"
 cat INPUT | rustc    day01.rs                662ms      ✅
 ```
 

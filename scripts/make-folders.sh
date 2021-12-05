@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Make folders for all the days in the calendar
-for DAY in {day-01,day-02,day-03,day-04,day-05,day-06,day-07,day-08,day-09,day-10,day-11,day-12,day-13,day-14,day-15,day-16,day-17,day-18,day-19,day-20,day-21,day-22,day-23,day-24,day-25}
+for DAY in {day01,day02,day03,day04,day05,day06,day07,day08,day09,day10,day11,day12,day13,day14,day15,day16,day17,day18,day19,day20,day21,day22,day23,day24,day25}
 do
     DAY="$YEAR/$DAY"
 
@@ -25,7 +25,7 @@ set -euo pipefail
 
 D=\$(dirname \$(realpath \$0))
 
-echo "--- $DAY: --- ????? --- ❌"
+echo "$YEAR / --- $DAY: --- ????? --- ❌"
 #\$D/../../lang/go.sh     "\$D/solutions/*.go"  "\$D/io/*"
 #\$D/../../lang/sml.sh    "\$D/solutions/*.sml" "\$D/io/*"
 #\$D/../../lang/python.sh "\$D/solutions/*.py"  "\$D/io/*"
