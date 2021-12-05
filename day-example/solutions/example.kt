@@ -1,7 +1,13 @@
 
 fun main() {
-    var input: List<Int> = (readLine()?.split("\n") ?: ArrayList<String>())
-        .map{ it.toInt() }
+    // Parse input
+    val input = ArrayList<Int>()
+    var rawLine = readLine()
+    while (rawLine != null) {
+      val ints = rawLine.split("\n").map{ it.toInt() }
+      input.addAll(ints)
+      rawLine = readLine()
+    }
 
     // Part 1
     println(input.sum())

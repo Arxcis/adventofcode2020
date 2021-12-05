@@ -2,3 +2,6 @@
 .class
 .vscode/
 .idea/
+build/
+out/
+*.iml
