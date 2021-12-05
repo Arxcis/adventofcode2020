@@ -1,5 +1,7 @@
 include .env
 
+.PHONY: test versions build login push
+
 # Test:
 # 	- make
 # 	- make name=examples
@@ -18,6 +20,9 @@ versions:
 
 build: Dockerfile
 	docker build . --tag $(DOCKER_TAG)
+
+login:
+	docker login
 
 push:
 	docker push $(DOCKER_TAG)
