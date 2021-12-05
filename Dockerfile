@@ -13,7 +13,9 @@ RUN apt-get update && apt-get install -yqq --no-install-recommends\
 # 3. Install zig compiler, from ziglang.org
 RUN cd /tmp && wget https://ziglang.org/download/0.7.1/zig-linux-x86_64-0.7.1.tar.xz\
   && tar xf zig-linux-x86_64-0.7.1.tar.xz\
-  && cp zig-linux-x86_64-0.7.1/zig /bin/zig\
+  && mkdir -p /bin/lib\
+  && cp zig-linux-x86_64-0.7.1/zig /bin/\
+  && cp -ru zig-linux-x86_64-0.7.1/lib/* /bin/lib/\
   && chmod ugo+x /bin/zig\
   && rm -rf /tmp/*
 
@@ -35,12 +37,12 @@ RUN curl -fsSL https://deno.land/x/install/install.sh | sh\
 RUN cd /tmp && wget https://github.com/JetBrains/kotlin/releases/download/v1.5.32/kotlin-native-linux-x86_64-1.5.32.tar.gz\
     && tar xf kotlin-native-linux-x86_64-1.5.32.tar.gz\
     && mkdir -p /usr/tools /usr/klib /usr/dist /usr/sources /usr/konan\
-    && cp -r kotlin-native-linux-x86_64-1.5.32/bin/* /bin/\
-    && cp -r kotlin-native-linux-x86_64-1.5.32/tools/* /usr/tools\
-    && cp -r kotlin-native-linux-x86_64-1.5.32/klib/* /usr/klib\
-    && cp -r kotlin-native-linux-x86_64-1.5.32/dist/* /usr/dist\
-    && cp -r kotlin-native-linux-x86_64-1.5.32/sources/* /usr/sources\
-    && cp -r kotlin-native-linux-x86_64-1.5.32/konan/* /usr/konan\
+    && cp -ru kotlin-native-linux-x86_64-1.5.32/bin/* /bin/\
+    && cp -ru kotlin-native-linux-x86_64-1.5.32/tools/* /usr/tools\
+    && cp -ru kotlin-native-linux-x86_64-1.5.32/klib/* /usr/klib\
+    && cp -ru kotlin-native-linux-x86_64-1.5.32/dist/* /usr/dist\
+    && cp -ru kotlin-native-linux-x86_64-1.5.32/sources/* /usr/sources\
+    && cp -ru kotlin-native-linux-x86_64-1.5.32/konan/* /usr/konan\
     && chmod ugo+x /bin/kotlinc-native\
     && rm /bin/kotlinc\
     && rm -rf /tmp/*
