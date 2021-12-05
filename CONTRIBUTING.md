@@ -23,7 +23,7 @@ cat INPUT | python3  my-solution.py          13ms       ✅
 ./2020/day03/test.sh
 
 # or test in docker container
-make 2020.day03
+make name=2020/day03
 ```
 
 7. When you are happy with local testing, make a Pull Request to the `main` branch.
