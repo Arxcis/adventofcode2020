@@ -4,8 +4,9 @@ set -euo pipefail
 D=$(dirname $(realpath $0))
 
 echo "--- 2021/day01: Sonar Sweep ---"
-$D/../../lang/kotlin.sh  $D/solutions/arxcis.kt  "$D/io/*"
-$D/../../lang/python.sh  $D/solutions/arxcis.py  "$D/io/*"
+$D/../../lang/kotlin.sh  $D/solutions/arxcis.kt                       "$D/io/*"
+$D/../../lang/python.sh  $D/solutions/day01.arxcis.py                 "$D/io/*"
+$D/../../lang/python.sh  $D/solutions/day01.stektpotet.one-liner.py   "$D/io/*"
 #$D/../../lang/go.sh     "$D/solutions/*.go"  "$D/io/*"
 #$D/../../lang/sml.sh    "$D/solutions/*.sml" "$D/io/*"
 #$D/../../lang/python.sh "$D/solutions/*.py"  "$D/io/*"
