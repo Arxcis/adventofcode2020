@@ -1,0 +1,1 @@
+import sys; [print(sum(s)) for d in [[int(l) for l in sys.stdin.read().splitlines() if l]] for l in [list(range(len(d)))] for s in [(d[i] < d[i+1] for i in l[:-1]), (sum(d[i:i+3]) < sum(d[i+1:i+4]) for i in l[:-3])]]
