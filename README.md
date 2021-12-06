@@ -3,7 +3,7 @@
 Welcome to this community project, where we collaboratively solve https://adventofcode.com/.
 
 
-## Test status
+## CI test status
 
 ![examples](https://github.com/Arxcis/adventofcode2020/workflows/examples/badge.svg)
 ![2021](https://github.com/Arxcis/adventofcode2020/workflows/2021/badge.svg)
