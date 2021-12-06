@@ -1,1 +1,1 @@
-import fileinput; print(*(sum(s) for d in [[int(l) for l in fileinput.input()]] for s in [(d[i] < q for i, q in enumerate(d[1:])), (sum(d[i:i+3]) < sum(d[i+1:i+4]) for i, _ in enumerate(d[3:]))]), sep='\n')
+import fileinput; [print(sum(s)) for d in [[int(l) for l in fileinput.input() if l.strip().isdigit()]] for l in [list(range(len(d)))] for s in [(d[i] < d[i+1] for i in l[:-1]), (sum(d[i:i+3]) < sum(d[i+1:i+4]) for i in l[:-3])]]
