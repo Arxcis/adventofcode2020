@@ -20,10 +20,6 @@ echo "$ go version"
 go version
 echo ""
 
-echo "$ java --version"
-java --version
-echo ""
-
 echo "$ node --version"
 node --version
 echo ""
@@ -51,8 +47,3 @@ echo ""
 echo "$ zig version"
 zig version
 echo ""
-
-echo "$ kotlinc-native -version"
-kotlinc-native -version
-echo ""
-
