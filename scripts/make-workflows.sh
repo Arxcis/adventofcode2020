@@ -2,15 +2,13 @@
 
 . .env
 
-#
-# Make Github workflows for all the days in the calendar
-# We make one workflow for every day,instead of one job for every day,
-# to enable selectively trigger when the workflow runs using the paths:
-# to make sure the workflow only runs when needed.
-#
-for YEAR in {2020,2021}
-do
-  cat > "./.github/workflows/$YEAR.yaml" << WORKFLOW
+if [ -z "$YEAR" ]
+then
+  echo "\$YEAR="" is empty. Example usage: ./scripts/make-workflows.sh YEAR=2021"
+  exit 1
+fi
+
+cat > "./.github/workflows/$YEAR.yaml" << WORKFLOW_YAML
 name: ${YEAR}
 on:
   workflow_dispatch:
@@ -38,11 +36,11 @@ on:
       - '${YEAR}/**/solutions/**'
 
 jobs:
-WORKFLOW
+WORKFLOW_YAML
 
-  for DAY in {day01,day02,day03,day04,day05,day06,day07,day08,day09,day10,day11,day12,day13,day14,day15,day16,day17,day18,day19,day20,day21,day22,day23,day24,day25}
-  do
-    cat >> "./.github/workflows/$YEAR.yaml" << WORKFLOW
+for DAY in {day01,day02,day03,day04,day05,day06,day07,day08,day09,day10,day11,day12,day13,day14,day15,day16,day17,day18,day19,day20,day21,day22,day23,day24,day25}
+do
+  cat >> "./.github/workflows/$YEAR.yaml" << WORKFLOW_YAML
   ${DAY}:
     runs-on: ubuntu-latest
     container:
@@ -53,13 +51,6 @@ WORKFLOW
         run: ./scripts/print-versions.sh
       - name: running ./${YEAR}/${DAY}/test.sh
         run: ./${YEAR}/${DAY}/test.sh
-WORKFLOW
 
-  done
-
-  cat >> "./.github/workflows/$YEAR.yaml" << WORKFLOW
-
-WORKFLOW
-
+WORKFLOW_YAML
 done
-

@@ -7,7 +7,6 @@ echo ""
 echo "------------------------ Examples ------------------------"
 
 
-$D/../lang/kotlin.sh "$D/solutions/example.kt" "$D/io/*"
 $D/../lang/rust.sh   "$D/solutions/*.rs"   "$D/io/*"
 $D/../lang/go.sh     "$D/solutions/*.go"   "$D/io/*"
 $D/../lang/c.sh      "$D/solutions/*.c"    "$D/io/*"
