@@ -11,10 +11,10 @@ RUN apt-get update && apt-get install -yqq --no-install-recommends\
   build-essential git wget ca-certificates curl unzip
 
 # 3. Install zig compiler, from ziglang.org
-RUN cd /tmp && wget https://ziglang.org/builds/zig-linux-x86_64-0.9.0-dev.1919+0812b5746.tar.xz
+RUN cd /tmp && wget https://ziglang.org/builds/zig-linux-x86_64-0.9.0-dev.1919+0812b5746.tar.xz\
   && tar xf zig-linux-x86_64-0.9.0-dev.1919+0812b5746.tar.xz\
   && mkdir -p /bin/lib\
-  && cp zig-linux-x86_64-0.9.0-dev.1919+0812b5746/zig /bin/\
+  && cp "zig-linux-x86_64-0.9.0-dev.1919+0812b5746/zig" /bin/\
   && cp -ru zig-linux-x86_64-0.9.0-dev.1919+0812b5746/lib/* /bin/lib/\
   && chmod ugo+x /bin/zig\
   && rm -rf /tmp/*
