@@ -23,6 +23,7 @@ do
 
   cd - >/dev/null
 
+  $D/print/start.sh "polyc" "$SOLUTION"
   START=$($D/time/start.sh)
 
   # Pair-wise iteration
@@ -32,5 +33,6 @@ do
 
   TIME=$($D/time/stop.sh $START)
 
-  $D/print/success.sh "polyc" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
+

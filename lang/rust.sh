@@ -17,6 +17,7 @@ for SOLUTION in $SOLUTION_FILES
 do
   rustc $SOLUTION -o $OUT;
 
+  $D/print/start.sh "rustc" "$SOLUTION"
   START=$($D/time/start.sh)
 
   # Pair-wise iteration
@@ -25,8 +26,8 @@ do
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "rustc" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
 
 rm $OUT;
+

@@ -17,16 +17,16 @@ for SOLUTION in $SOLUTION_FILES
 do
   gcc $SOLUTION -o $OUT;
 
+  $D/print/start.sh "gcc" "$SOLUTION"
   START=$($D/time/start.sh)
 
-  # Pair-wise iteration
   while read INPUT OUTPUT; do
     cat $INPUT | $OUT | diff - $OUTPUT
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "gcc" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME" 
 done
 
 rm $OUT;
+

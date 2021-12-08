@@ -26,6 +26,7 @@ do
   zig build-exe $TEMP_SOURCE --name $SOLUTION_NAME
   cd - >/dev/null
 
+  $D/print/start.sh "zig" "$SOLUTION"
   START=$($D/time/start.sh)
 
   # Pair-wise iteration
@@ -34,6 +35,6 @@ do
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "zig" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
+

@@ -17,16 +17,16 @@ for SOLUTION in $SOLUTION_FILES
 do
   go build -o $OUT $SOLUTION;
 
+  $D/print/start.sh "go" "$SOLUTION"
   START=$($D/time/start.sh)
 
-  # Pair-wise iteration
   while read INPUT OUTPUT; do
     cat $INPUT | $OUT | diff - $OUTPUT
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "go" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
 
 rm $OUT;
+
