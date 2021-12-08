@@ -26,9 +26,8 @@ Welcome to this community project, where we collaboratively solve https://advent
 | c++       | **2**  |  2   |      |
 | ruby      | **2**  |  2   |      |
 | rust      | **1**  |  1   |      |
-| kotlin    | **1**  |      |   1  |
 
-*Last updated: 2021-12-05 21:55:00Z*
+*Last updated: 2021-12-08 12:51:00Z*
 
 See all languages we support in our [Dockerfile](./Dockerfile).
 
