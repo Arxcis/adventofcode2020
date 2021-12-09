@@ -11,9 +11,10 @@ SOLUTION_FILES=$1
 IO_FILES=$2
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "deno" "$SOLUTION"
+  
   deno install -f --quiet "$SOLUTION" >/dev/null
 
-  $D/print/start.sh "deno" "$SOLUTION"
   START=$($D/time/start.sh)
 
   while read INPUT OUTPUT; do

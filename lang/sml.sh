@@ -16,6 +16,7 @@ trap 'rm -f "$OUT"' EXIT
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "polyc" "$SOLUTION"
 
   cd $(dirname $(realpath $SOLUTION))
 
@@ -23,7 +24,6 @@ do
 
   cd - >/dev/null
 
-  $D/print/start.sh "polyc" "$SOLUTION"
   START=$($D/time/start.sh)
 
   # Pair-wise iteration

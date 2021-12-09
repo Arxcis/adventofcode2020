@@ -15,9 +15,10 @@ OUT="$(mktemp)"
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "rustc" "$SOLUTION"
+
   rustc $SOLUTION -o $OUT;
 
-  $D/print/start.sh "rustc" "$SOLUTION"
   START=$($D/time/start.sh)
 
   # Pair-wise iteration

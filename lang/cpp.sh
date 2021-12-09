@@ -15,9 +15,10 @@ OUT="$(mktemp)"
 
 for SOLUTION in $SOLUTION_FILES
 do
-  g++ $SOLUTION -o $OUT;
-
   $D/print/start.sh "g++" "$SOLUTION"
+
+  g++ $SOLUTION -o $OUT;
+  
   START=$($D/time/start.sh)
 
   while read INPUT OUTPUT; do

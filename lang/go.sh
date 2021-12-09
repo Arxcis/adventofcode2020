@@ -15,9 +15,10 @@ OUT="$(mktemp)"
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "go" "$SOLUTION"
+
   go build -o $OUT $SOLUTION;
 
-  $D/print/start.sh "go" "$SOLUTION"
   START=$($D/time/start.sh)
 
   while read INPUT OUTPUT; do

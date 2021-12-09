@@ -15,9 +15,10 @@ OUT="$(mktemp)"
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "gcc" "$SOLUTION"
+
   gcc $SOLUTION -o $OUT;
 
-  $D/print/start.sh "gcc" "$SOLUTION"
   START=$($D/time/start.sh)
 
   while read INPUT OUTPUT; do
@@ -25,7 +26,7 @@ do
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-  $D/print/stop.sh "$TIME" 
+  $D/print/stop.sh "$TIME"
 done
 
 rm $OUT;

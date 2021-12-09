@@ -15,6 +15,8 @@ OUT="$(mktemp)"
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "zig" "$SOLUTION"
+
   SOLUTION_NAME="zig_solution"
   TEMP_SOURCE="/tmp/$SOLUTION_NAME.zig"
   TEMP_BIN="/tmp/$SOLUTION_NAME"
@@ -26,7 +28,6 @@ do
   zig build-exe $TEMP_SOURCE --name $SOLUTION_NAME
   cd - >/dev/null
 
-  $D/print/start.sh "zig" "$SOLUTION"
   START=$($D/time/start.sh)
 
   # Pair-wise iteration
