@@ -14,7 +14,7 @@ Welcome to this community project, where we collaboratively solve https://advent
 
 ## Solved days by language
 
-| Language  |**Days**| 2020 | 2021 |
+| Language  |**Total days**| 2020 days | 2021 days |
 |-----------|--------|------|------|
 | python3   | **28** |  25  |   3  |
 | sml       | **19** |  19  |      |
