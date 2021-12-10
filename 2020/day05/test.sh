@@ -3,7 +3,6 @@ set -euo pipefail
 
 D=$(dirname $(realpath $0))
 
-echo ""
 echo "--- Day 5: Boarding pass ---"
 $D/../../lang/go.sh     "$D/solutions/day05.stektpotet.go"   "$D/io/*"
 $D/../../lang/c.sh      "$D/solutions/*.c"    "$D/io/*"
@@ -15,4 +14,3 @@ $D/../../lang/go.sh     "$D/solutions/day05.stektpotet.go" "$D/io/*"
 
 # Disabled because it fails
 # $D/../../lang/go.sh     "$D/solutions/tholok97.go" "$D/io/*"
-echo ""

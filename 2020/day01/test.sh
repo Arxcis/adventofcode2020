@@ -3,7 +3,6 @@ set -euo pipefail
 
 D=$(dirname $(realpath $0))
 
-echo ""
 echo "--- Day 1: Report Repair ---"
 
 $D/../../lang/go.sh     "$D/solutions/*.go"   "$D/io/*"
@@ -16,5 +15,3 @@ $D/../../lang/cpp.sh    "$D/solutions/*.cpp"  "$D/io/*"
 $D/../../lang/rust.sh   "$D/solutions/*.rs"   "$D/io/*"
 $D/../../lang/python.sh "$D/solutions/*.py"   "$D/io/*"
 $D/../../lang/ruby.sh   "$D/solutions/*.rb"   "$D/io/*"
-
-echo ""
