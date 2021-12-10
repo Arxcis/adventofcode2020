@@ -5,3 +5,6 @@
 build/
 out/
 *.iml
+
+# ignore any zig compiler cache
+zig-cache/
