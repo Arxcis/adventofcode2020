@@ -1,6 +1,5 @@
 use std::{io, io::prelude::*};
 
-#[derive(Debug)]
 struct Line {
   command: String,
   value: i32,
