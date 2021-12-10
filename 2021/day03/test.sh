@@ -3,7 +3,7 @@ set -euo pipefail
 
 D=$(dirname $(realpath $0))
 
-echo "* day03: ???? -------------------------------------------❌---"
+$D/../../scripts/print-empty-test-title.sh "day03"
 #$D/../../lang/go.sh     "$D/solutions/*.go"  "$D/io/*"
 #$D/../../lang/sml.sh    "$D/solutions/*.sml" "$D/io/*"
 #$D/../../lang/python.sh "$D/solutions/*.py"  "$D/io/*"
