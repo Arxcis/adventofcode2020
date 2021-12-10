@@ -1,7 +1,6 @@
-# 2021/ --- Day 2: Dive! ---
-## --- Part 1 ---
+# 2021 / --- Day 2: Dive! ---
 
---- Day 2: Dive! ---
+## --- Part 1 ---
 
 Now, you need to figure out how to pilot this thing.
 
@@ -34,6 +33,7 @@ Your horizontal position and depth both start at 0. The steps above would then m
 After following these instructions, you would have a horizontal position of 15 and a depth of 10. (Multiplying these together produces 150.)
 
 Calculate the horizontal position and depth you would have after following the planned course. What do you get if you multiply your final horizontal position by your final depth?
+
 
 ## --- Part 2 ---
 
