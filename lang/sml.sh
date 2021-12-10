@@ -16,6 +16,7 @@ trap 'rm -f "$OUT"' EXIT
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "polyc" "$SOLUTION"
 
   cd $(dirname $(realpath $SOLUTION))
 
@@ -32,5 +33,6 @@ do
 
   TIME=$($D/time/stop.sh $START)
 
-  $D/print/success.sh "polyc" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
+

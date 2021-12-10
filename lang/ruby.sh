@@ -12,6 +12,7 @@ IO_FILES=$2
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "ruby" "$SOLUTION"
   START=$($D/time/start.sh)
 
   while read INPUT OUTPUT; do
@@ -19,6 +20,5 @@ do
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "ruby" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done

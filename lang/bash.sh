@@ -12,14 +12,14 @@ IO_FILES=$2
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "bash" "$SOLUTION"
   START=$($D/time/start.sh)
-
-  # Pair-wise iteration
+ 
   while read INPUT OUTPUT; do
     cat $INPUT | bash $SOLUTION | diff - $OUTPUT
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "bash" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
+

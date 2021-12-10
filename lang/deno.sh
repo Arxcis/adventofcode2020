@@ -11,6 +11,8 @@ SOLUTION_FILES=$1
 IO_FILES=$2
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "deno" "$SOLUTION"
+  
   deno install -f --quiet "$SOLUTION" >/dev/null
 
   START=$($D/time/start.sh)
@@ -20,6 +22,6 @@ do
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "deno" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
+

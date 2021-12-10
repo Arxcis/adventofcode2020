@@ -8,3 +8,4 @@ echo ""
 echo "------------------------ 2021 ------------------------"
 
 for DAY in $DAYS; do $DAY/test.sh; done
+

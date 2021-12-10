@@ -15,6 +15,8 @@ OUT="$(mktemp)"
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "rustc" "$SOLUTION"
+
   rustc $SOLUTION -o $OUT;
 
   START=$($D/time/start.sh)
@@ -25,8 +27,8 @@ do
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "rustc" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
 
 rm $OUT;
+
