@@ -21,11 +21,11 @@ fn main() -> io::Result<()> {
         let _g: Vec<u8> = input[i+3].trim().replace("  ", " ").split(" ").map(|val|val.parse().unwrap()).collect();
         let _o: Vec<u8> = input[i+4].trim().replace("  ", " ").split(" ").map(|val|val.parse().unwrap()).collect();
 
-        let b: Vec<u8> = vec![_b[0],_i[1],_n[2],_g[3],_o[4]];
-        let i: Vec<u8> = vec![_b[0],_i[1],_n[2],_g[3],_o[4]];
-        let n: Vec<u8> = vec![_b[0],_i[1],_n[2],_g[3],_o[4]];
-        let g: Vec<u8> = vec![_b[0],_i[1],_n[2],_g[3],_o[4]];
-        let o: Vec<u8> = vec![_b[0],_i[1],_n[2],_g[3],_o[4]];
+        let b: Vec<u8> = vec![_b[0],_i[0],_n[0],_g[0],_o[0]];
+        let i: Vec<u8> = vec![_b[1],_i[1],_n[1],_g[1],_o[1]];
+        let n: Vec<u8> = vec![_b[2],_i[2],_n[2],_g[2],_o[2]];
+        let g: Vec<u8> = vec![_b[3],_i[3],_n[3],_g[3],_o[3]];
+        let o: Vec<u8> = vec![_b[4],_i[4],_n[4],_g[4],_o[4]];
 
         let board = vec![_b,_i,_n,_g,_o,b,i,n,g,o];
 
@@ -57,14 +57,15 @@ fn main() -> io::Result<()> {
                 }
                 min_line_attempts = cmp::min(max_cell_attempts,min_line_attempts);
             }
-            min_board_attempts = cmp::min(min_line_attempts, min_board_attempts);
-
-            if min_line_attempts == min_board_attempts {
+ 
+            if min_line_attempts < min_board_attempts {
                 winning_board = board;
+                min_board_attempts = min_line_attempts;
             }
         }
         let winning_number = u64::from(numbers[min_board_attempts-1]);
 
+        println!("{:?}", winning_board);
         let winning_board: HashSet<u64> = HashSet::from_iter(
             winning_board.iter()
                 .flatten()
