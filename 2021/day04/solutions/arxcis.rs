@@ -38,7 +38,7 @@ fn main() -> io::Result<()> {
         let mut winning_board = Vec::<Vec::<u8>>::new();
         let mut min_board_attempts = 255;
 
-        for board in boards {
+        for board in &boards[..] {
             let mut min_line_attempts = 255;
 
             for line in &board[..] {
@@ -55,17 +55,16 @@ fn main() -> io::Result<()> {
                     }
                     max_cell_attempts = cmp::max(attempts, max_cell_attempts);
                 }
-                min_line_attempts = cmp::min(max_cell_attempts,min_line_attempts);
+                min_line_attempts = cmp::min(max_cell_attempts, min_line_attempts);
             }
  
             if min_line_attempts < min_board_attempts {
-                winning_board = board;
+                winning_board = board.to_vec();
                 min_board_attempts = min_line_attempts;
             }
         }
         let winning_number = u64::from(numbers[min_board_attempts-1]);
 
-        println!("{:?}", winning_board);
         let winning_board: HashSet<u64> = HashSet::from_iter(
             winning_board.iter()
                 .flatten()
@@ -89,11 +88,70 @@ fn main() -> io::Result<()> {
             .map(|num| u64::from(*num))
             .collect();
 
-        println!("{:?}\n{:?}\n{:?}\n{:?}", winning_board, said_numbers, marked_numbers, unmarked_numbers);
+        let unmarked_sum: u64 = unmarked_numbers.iter().sum();
+        println!("{}", winning_number * unmarked_sum);
+    }
+    //
+    // Part 2 
+    //
+    {
+        let mut winning_board = Vec::<Vec::<u8>>::new();
+        let mut max_board_attempts = 0;
+
+        for board in &boards[..] {
+            let mut min_line_attempts = 255;
+
+            for line in &board[..] {
+                let mut max_cell_attempts = 0;
+
+                for cell in &line[..] {
+                    let mut attempts = 0;
+
+                    for num in &numbers[..] {
+                        attempts += 1;
+                        if num == cell {
+                            break;
+                        }
+                    }
+                    max_cell_attempts = cmp::max(attempts, max_cell_attempts);
+                }
+               min_line_attempts = cmp::min(max_cell_attempts, min_line_attempts);
+            }
+ 
+            if min_line_attempts > max_board_attempts {
+                winning_board = board.to_vec();
+                max_board_attempts = min_line_attempts;
+            }
+        }
+        let winning_number = u64::from(numbers[max_board_attempts-1]);
+
+        let winning_board: HashSet<u64> = HashSet::from_iter(
+            winning_board.iter()
+                .flatten()
+                .map(|num| u64::from(*num))
+                .collect::<Vec<u64>>()
+                .iter()
+                .cloned()
+        );
+
+        let said_numbers: Vec<u64> = numbers.iter()
+            .take(max_board_attempts)
+            .map(|num| u64::from(*num))
+            .collect();
+
+        let marked_numbers: Vec<&u64> = winning_board.iter()
+            .filter(|number| said_numbers.contains(number))
+            .collect();
+
+        let unmarked_numbers: Vec<u64> = winning_board.iter()
+            .filter(|number| !marked_numbers.contains(number))
+            .map(|num| u64::from(*num))
+            .collect();
 
         let unmarked_sum: u64 = unmarked_numbers.iter().sum();
         println!("{}", winning_number * unmarked_sum);
     }
+
 
     Ok(())
 }
