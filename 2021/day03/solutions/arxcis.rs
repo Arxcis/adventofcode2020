@@ -12,7 +12,7 @@ fn main() -> io::Result<()> {
     input.push(line?);
   }
   //
-  // Measure most common bit for each line
+  // Measure most common bit for each column
   //
   let compute_weights = |input: &[String]| {
     let mut weights = Vec::<i32>::new();
