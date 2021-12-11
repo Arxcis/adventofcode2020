@@ -15,6 +15,8 @@ OUT="$(mktemp)"
 
 for SOLUTION in $SOLUTION_FILES
 do
+  $D/print/start.sh "zig" "$SOLUTION"
+
   SOLUTION_NAME="zig_solution"
   TEMP_SOURCE="/tmp/$SOLUTION_NAME.zig"
   TEMP_BIN="/tmp/$SOLUTION_NAME"
@@ -34,6 +36,6 @@ do
   done < <(echo $IO_FILES | xargs -n2)
 
   TIME=$($D/time/stop.sh $START)
-
-  $D/print/success.sh "zig" "$TIME" "$SOLUTION"
+  $D/print/stop.sh "$TIME"
 done
+
