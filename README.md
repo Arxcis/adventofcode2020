@@ -19,11 +19,11 @@ Welcome to this community project, where we collaboratively solve https://advent
 | python3   | **28** |  25  |   3  |
 | sml       | **19** |  19  |      |
 | deno.ts   | **15** |  15  |      |
-| zig       | **10** |  9   |   1  |
+| zig       | **11** |  9   |   2  |
 | golang    | **8**  |  8   |      |
 | c         | **6**  |  6   |      |
+| rust      | **4**  |  1   |   3  |
 | node.js   | **4**  |  4   |      |
-| rust      | **3**  |  1   |   2  |
 | c++       | **2**  |  2   |      |
 | ruby      | **2**  |  2   |      |
 
