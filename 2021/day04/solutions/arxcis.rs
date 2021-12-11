@@ -152,7 +152,6 @@ fn main() -> io::Result<()> {
         println!("{}", winning_number * unmarked_sum);
     }
 
-
     Ok(())
 }
 
