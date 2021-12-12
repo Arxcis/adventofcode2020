@@ -1,4 +1,4 @@
-# 2021 / --- Day 3: Binary Diagnostic ---
+# --- Day 3: Binary Diagnostic ---
 
 ## --- Part 1 ---
 
