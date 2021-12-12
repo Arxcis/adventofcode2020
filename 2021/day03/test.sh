@@ -4,7 +4,7 @@ set -euo pipefail
 D=$(dirname $(realpath $0))
 
 
-echo "* day03: Binary Diagnostic -----------------------------------"
+echo "# Day 3: Binary Diagnostic ------------------------------------"
 $D/../../lang/rust.sh     "$D/solutions/arxcis.rs"  "$D/io/*"
 #$D/../../lang/go.sh     "$D/solutions/*.go"  "$D/io/*"
 #$D/../../lang/sml.sh    "$D/solutions/*.sml" "$D/io/*"

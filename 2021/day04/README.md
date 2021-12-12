@@ -1,4 +1,4 @@
-# 2021/day04
+# --- Day 4: Giant Squid ---
 
 ## --- Part 1 ---
 
