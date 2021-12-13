@@ -77,25 +77,14 @@ fn main() -> io::Result<()> {
             let mut sixers = Vec::<u8>::new();
 
             for pattern in patterns {
-                if pattern.count_ones() == 2 {
-                    one = pattern;
-                } else
-                if pattern.count_ones() == 4 {
-                    four = pattern;
-                } else
-                if pattern.count_ones() == 3 {
-                    seven = pattern;
-                } else
-                if pattern.count_ones() == 7 {
-                    eight = pattern;
-                } else
-                if pattern.count_ones() == 5 {
-                    fivers.push(pattern);
-                } else
-                if pattern.count_ones() == 6 {
-                    sixers.push(pattern);
-                } else {
-                    panic!("Error pattern.len(): {}, pattern: {}", pattern.count_ones(), pattern);
+                match pattern.count_ones() {
+                    2 => one = pattern,
+                    3 => seven = pattern,
+                    4 => four = pattern,
+                    5 => fivers.push(pattern),
+                    6 => sixers.push(pattern),
+                    7 => eight = pattern,
+                    _ => panic!("Error pattern.len(): {}, pattern: {}", pattern.count_ones(), pattern),
                 }
             }
             
