@@ -1,6 +1,5 @@
 use std::{io, io::prelude::*};
 
-// From: "x1,y1 -> x2,y2"
 struct Entry {
     unique_signal_patterns: Vec<String>,
     four_digit_output_value: Vec<String>,
