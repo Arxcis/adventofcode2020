@@ -21,7 +21,7 @@ Welcome to this community project, where we collaboratively solve https://advent
 | deno.ts   | **15** |  15  |      |
 | zig       | **11** |  9   |   2  |
 | golang    | **8**  |  8   |      |
-| rust      | **6**  |  1   |   5  |
+| rust      | **7**  |  1   |   6  |
 | c         | **6**  |  6   |      |
 | node.js   | **4**  |  4   |      |
 | c++       | **2**  |  2   |      |
