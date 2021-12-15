@@ -54,7 +54,47 @@ fn main() -> io::Result<()> {
     // Part 2
     //
     {
+        let mut scores = Vec::<u64>::new();
+        for line in incomplete_lines.iter() {
 
+            let mut prev_stack = Vec::<char>::new();
+           
+            for it in line.chars() {
+                match it {
+                    '['|'('|'{'|'<' => prev_stack.push(it),
+                    ']'|')'|'}'|'>' => { prev_stack.pop().unwrap(); },
+                    _ => panic!("ERROR uknown char: {}", it),
+                }
+            }
+
+            let mut missing_chars = Vec::<char>::new();
+            for it in prev_stack {
+                match it {
+                    '[' => missing_chars.push(']'),
+                    '{' => missing_chars.push('}'),
+                    '(' => missing_chars.push(')'),
+                    '<' => missing_chars.push('>'),
+                    _ => panic!("ERROR uknown char: {}", it),
+                }
+            }
+
+            let mut score = 0;
+            while let Some(missing_char) = missing_chars.pop() {
+                score *= 5;
+                match missing_char {
+                    ')' => score += 1,
+                    ']' => score += 2,
+                    '}' => score += 3,
+                    '>' => score += 4,
+                    _ => panic!("Error unknown missing char: {}", missing_char),
+                }
+            }
+            scores.push(score);
+        }
+        scores.sort();
+
+        let mid_score = scores[scores.len()/2];
+        println!("{}", mid_score);
     }
     Ok(())
 }
