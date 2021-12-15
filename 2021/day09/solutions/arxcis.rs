@@ -73,9 +73,15 @@ fn main() -> io::Result<()> {
     {
         let mut basin_counts = Vec::<usize>::new();
         for (lowx,lowy) in low_coords {
-            let mut visited: HashSet::<(usize,usize)> = HashSet::from([(lowx,lowy)]);
+            let mut visited: HashSet::<(usize,usize)> = HashSet::new();
             let mut next_neighbors: HashSet::<(usize,usize)> = HashSet::<(usize,usize)>::new();
-            let mut current_neighbors: HashSet::<(usize,usize)> = HashSet::from([(lowx-1,lowy),(lowx+1,lowy),(lowx,lowy+1),(lowx,lowy-1)]);
+            let mut current_neighbors: HashSet::<(usize,usize)> = HashSet::new();
+
+            current_neighbors.insert((lowx-1,lowy));
+            current_neighbors.insert((lowx+1,lowy));
+            current_neighbors.insert((lowx,lowy+1));
+            current_neighbors.insert((lowx,lowy-1));
+            visited.insert((lowx,lowy));
 
             while current_neighbors.len() > 0 {
                 for (x, y) in current_neighbors {
