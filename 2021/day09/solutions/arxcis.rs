@@ -1,6 +1,7 @@
 use std::{io, io::prelude::*};
+use std::collections::HashSet;
 
-const PADDING: u64 = 100;
+const PADDING: u64 = 9;
 
 fn main() -> io::Result<()> {
     //
@@ -37,6 +38,7 @@ fn main() -> io::Result<()> {
     //
     // Part 1
     //
+    let mut low_coords = Vec::<(usize,usize)>::new();
     {
         let mut low_points = Vec::<u64>::new();
 
@@ -54,6 +56,7 @@ fn main() -> io::Result<()> {
                         if center < right {
                             if center < bot {
                                 low_points.push(center);
+                                low_coords.push((x,y));
                             }
                         }
                     }
@@ -68,7 +71,37 @@ fn main() -> io::Result<()> {
     // Part 2
     //
     {
+        let mut basin_counts = Vec::<usize>::new();
+        for (lowx,lowy) in low_coords {
+            let mut visited: HashSet::<(usize,usize)> = HashSet::from([(lowx,lowy)]);
+            let mut next_neighbors: HashSet::<(usize,usize)> = HashSet::<(usize,usize)>::new();
+            let mut current_neighbors: HashSet::<(usize,usize)> = HashSet::from([(lowx-1,lowy),(lowx+1,lowy),(lowx,lowy+1),(lowx,lowy-1)]);
 
+            while current_neighbors.len() > 0 {
+                for (x, y) in current_neighbors {
+                    if visited.contains(&(x,y)) {
+                        continue;
+                    }
+
+                    let neighbor = heights[y][x];
+                    if neighbor == 9 {
+                        continue;
+                    }
+
+                    next_neighbors.insert((x+1,y));
+                    next_neighbors.insert((x-1,y));
+                    next_neighbors.insert((x,y+1));
+                    next_neighbors.insert((x,y-1));
+                    visited.insert((x,y));
+                }
+                current_neighbors = next_neighbors.clone();
+                next_neighbors.drain();
+            }
+            basin_counts.push(visited.len());
+        }
+        basin_counts.sort_by(|a,b| b.cmp(a));
+        let three_highest = basin_counts.into_iter().take(3).collect::<Vec<usize>>();
+        println!("{:?}", three_highest[0]*three_highest[1]*three_highest[2]);
     }
     Ok(())
 }
