@@ -6,11 +6,9 @@ fn main() -> io::Result<()> {
     //
     // Parse
     //
-    // @optimization
     let mut rules: Vec<u8> = vec![0; 2*2*2*2 * 2*2*2*2 * 2*2*2*2 * 2]; // 2^13 u8 = 8kB
     let mut counts: Vec<u64> = vec![0; 2*2*2*2 * 2]; // 2^5 u64 = 128B
     let mut template: Vec<u8> = Vec::new();
-    // @optimization
 
     let mut i: u64 = 0;
     for line in io::stdin().lock().lines() {
@@ -23,11 +21,10 @@ fn main() -> io::Result<()> {
                 }
             },
             1 => {},
-            2.. => {
+            _ => {
                 let split = line.split(" -> ").collect::<Vec<&str>>();
                 let (key, value) = (split[0], split[1]);
 
-                // @optimization
                 let bytes = key.chars().map(|c| (c as u8) - OFFSET).collect::<Vec<u8>>();
 
                 let (high_byte, low_byte) = (bytes[0], bytes[1]);
@@ -35,7 +32,6 @@ fn main() -> io::Result<()> {
 
                 let rule_byte = (value.chars().next().unwrap() as u8) - OFFSET;
                 rules[key_byte] = rule_byte;
-                // @optimization
             },
         }
         i += 1;
