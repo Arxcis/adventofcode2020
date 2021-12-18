@@ -27,7 +27,7 @@ Welcome to this community project, where we collaboratively solve https://advent
 | c++       | **2**  |  2   |      |
 | ruby      | **2**  |  2   |      |
 
-*Last updated: 2021-12-14*
+*Last updated: 2021-12-18*
 
 See all languages we support in our [Dockerfile](./Dockerfile).
 
