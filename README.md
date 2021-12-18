@@ -1,4 +1,4 @@
-# adventofcode(2020|2021) 🕯️ 🎄 ⛄
+# adventofcode2020 🕯️ 🎄 ⛄
 
 Welcome to this community project, where we collaboratively solve https://adventofcode.com/.
 
