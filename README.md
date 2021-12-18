@@ -14,20 +14,20 @@ Welcome to this community project, where we collaboratively solve https://advent
 
 ## Solved days by language
 
-| Language  |**Total days**| 2020 days | 2021 days |
+| Language  |**Total**| 2020 | 2021 |
 |-----------|--------|------|------|
 | python3   | **28** |  25  |   3  |
 | sml       | **19** |  19  |      |
 | deno.ts   | **15** |  15  |      |
+| rust      | **14** |  1   |  13  |
 | zig       | **11** |  9   |   2  |
-| rust      | **9**  |  1   |   8  |
 | golang    | **8**  |  8   |      |
 | c         | **6**  |  6   |      |
 | node.js   | **4**  |  4   |      |
 | c++       | **2**  |  2   |      |
 | ruby      | **2**  |  2   |      |
 
-*Last updated: 2021-12-13 20:47:00Z*
+*Last updated: 2021-12-18*
 
 See all languages we support in our [Dockerfile](./Dockerfile).
 
