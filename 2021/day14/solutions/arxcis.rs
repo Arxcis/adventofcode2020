@@ -20,7 +20,7 @@ fn main() -> io::Result<()> {
                     template.push(c as u8 - OFFSET);
                 }
             },
-            1 => {},
+            1 => (),
             _ => {
                 let split = line.split(" -> ").collect::<Vec<&str>>();
                 let (key, value) = (split[0], split[1]);
@@ -58,35 +58,86 @@ fn main() -> io::Result<()> {
     //     println!("{:?}", max-min);
     // }
     // @optimization
+  //  {
+     //   for i in 0..template.len()-1 {
+       //     let current = template[i] as usize;
+         //   let next = template[i+1] as usize;
+        //    counts[current] += 1;
+        //    extend_polymer_recursive(&rules, current, next, 0, 25, &mut counts);
+     //   }
+ //       counts[template[template.len()-1] as usize] += 1;
+//
+   //     counts.sort_by(|a,b| b.cmp(a));
+       // let counts = counts.into_iter().filter(|&a| a != 0).collect::<Vec<u64>>();
+     //   let max = counts[0];
+      //  let min = counts[counts.len() - 1];
+     //   println!("{:?}", max-min);
+   // }
     {
-        for i in 0..template.len()-1 {
-            let current = template[i] as usize;
-            let next = template[i+1] as usize;
-            counts[current] += 1;
-            extend_polymer_recursive(&rules, current, next, 0, 25, &mut counts);
+        let mut pairs: Vec<u64> = vec![0; 1 << 13]; // 8kB * 8 = 64kB
+        // Init pairs
+        for i in 0..template.len() {
+            let left = template[i] as usize;
+            counts[left] += 1;
+            if i == template.len() - 1 {
+                break; 
+            }
+            let right = template[i+1] as usize;
+            let pair = left << 8 | right;
+
+            pairs[pair] += 1;
         }
-        counts[template[template.len()-1] as usize] += 1;
 
-        counts.sort_by(|a,b| b.cmp(a));
-        let counts = counts.into_iter().filter(|&a| a != 0).collect::<Vec<u64>>();
-        let max = counts[0];
-        let min = counts[counts.len() - 1];
-        println!("{:?}", max-min);
+        // Count polymer letters
+        for i in 0..40 {
+            let mut next_pairs: Vec<u64> = vec![0; 1 << 13]; // 8kB * 8 = 64kB
+            for pair in 0..pairs.len() {
+                if pairs[pair] == 0 {
+                    continue;
+                }
+                
+                let insertion = rules[pair] as usize;
+                let left = (pair & 0b1111_1111_0000_0000) >> 8;
+                let right = pair & 0b0000_0000_1111_1111;
+        
+                counts[insertion] += 1 * pairs[pair];
+
+                next_pairs[left << 8 | insertion] += 1 * pairs[pair];
+                next_pairs[insertion << 8 | right] += 1 * pairs[pair];
+           }
+           pairs = next_pairs;
+           //
+           // Part 1: N == 10
+           //
+           if i == 9 {
+               // Count
+               let counts = counts.iter().filter(|&it| *it != 0).map(|&it| u64::from(it)).collect::<Vec<u64>>();
+               let max = counts.iter().max().unwrap();
+               let min = counts.iter().min().unwrap();
+               println!("{:?}", max-min);
+           }
+        }
+        //
+        // Part 2: N == 40
+        //
+        let counts = counts.iter().filter(|&it| *it != 0).map(|&it| u64::from(it)).collect::<Vec<u64>>();
+        let max = counts.iter().max().unwrap();
+        let min = counts.iter().min().unwrap();
+        println!("{:?}", max-min);       
     }
-
     Ok(())
 }
 
 
-fn extend_polymer_recursive(rules: &Vec<u8>, current: usize, next: usize, i: usize, n: usize, counts: &mut Vec<u64>)  {
+fn _extend_polymer_recursive(rules: &Vec<u8>, current: usize, next: usize, i: usize, n: usize, counts: &mut Vec<u64>)  {
     let pair: usize = current << 8 | next;
     let insert = rules[pair] as usize;
 
     counts[insert] += 1;
 
     if i + 1 < n {
-        extend_polymer_recursive(rules, current, insert, i + 1, n, counts);
-        extend_polymer_recursive(rules, insert, next, i + 1, n, counts);
+        _extend_polymer_recursive(rules, current, insert, i + 1, n, counts);
+        _extend_polymer_recursive(rules, insert, next, i + 1, n, counts);
     }
 }
 
