@@ -19,8 +19,8 @@ Welcome to this community project, where we collaboratively solve https://advent
 | python3   | **28** |  25  |   3  |
 | sml       | **19** |  19  |      |
 | deno.ts   | **15** |  15  |      |
+| rust      | **14** |  1   |  13  |
 | zig       | **11** |  9   |   2  |
-| rust      | **11** |  1   |  10  |
 | golang    | **8**  |  8   |      |
 | c         | **6**  |  6   |      |
 | node.js   | **4**  |  4   |      |
