@@ -6,8 +6,8 @@ fn main() -> io::Result<()> {
     //
     // Parse
     //
-    let mut rules: Vec<u8> = vec![0; 2*2*2*2 * 2*2*2*2 * 2*2*2*2 * 2]; // 2^13 u8 = 8kB
-    let mut counts: Vec<u64> = vec![0; 2*2*2*2 * 2]; // 2^5 u64 = 128B
+    let mut rules: Vec<u8> = vec![0; 1 << 13]; // 2^13 u8 = 8kB
+    let mut counts: Vec<u64> = vec![0; 1 << 5]; // 2^5 u64 = 128B
     let mut template: Vec<u8> = Vec::new();
 
     let mut i: u64 = 0;
@@ -28,7 +28,7 @@ fn main() -> io::Result<()> {
                 let bytes = key.chars().map(|c| (c as u8) - OFFSET).collect::<Vec<u8>>();
 
                 let (high_byte, low_byte) = (bytes[0], bytes[1]);
-                let key_byte = (high_byte as usize * (2*2*2*2 * 2*2*2*2)) | low_byte as usize;
+                let key_byte = (high_byte as usize) << 8 | low_byte as usize;
 
                 let rule_byte = (value.chars().next().unwrap() as u8) - OFFSET;
                 rules[key_byte] = rule_byte;
@@ -43,7 +43,7 @@ fn main() -> io::Result<()> {
     //     let mut polymer = template.clone();
 
     //     let now = std::time::Instant::now();
-    //     for _ in 0..20 {
+    //     for _ in 0..25 {
     //         polymer = extend_polymer_naive(&polymer, &rules);
     //     }
     //     println!("total elapsed: {}ms", now.elapsed().as_millis());
@@ -79,7 +79,7 @@ fn main() -> io::Result<()> {
 
 
 fn extend_polymer_recursive(rules: &Vec<u8>, current: usize, next: usize, i: usize, n: usize, counts: &mut Vec<u64>)  {
-    let pair: usize = (current * (2*2*2*2 * 2*2*2*2)) | next;
+    let pair: usize = current << 8 | next;
     let insert = rules[pair] as usize;
 
     counts[insert] += 1;
@@ -101,7 +101,7 @@ fn _extend_polymer_naive(polymer: &Vec<u8>, rules: &Vec<u8>) -> Vec<u8> {
         // 25%
         let next = polymer[i+1];
         // 15%
-        let key: usize = (current as usize * (2*2*2*2 * 2*2*2*2)) | next as usize;
+        let key: usize = (current as usize) << 8 | next as usize;
         // 25%
         let rule = rules[key];
         // 18%
